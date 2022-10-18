@@ -754,6 +754,7 @@ a {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  white-space: nowrap;
 }
 .titles.open-drawer-title {
   cursor: pointer;
