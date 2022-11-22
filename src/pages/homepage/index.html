@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/src/css/homepage/homepage.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <title>Nolk</title>
 </head>
 
@@ -14,61 +15,92 @@
 
 
   <div class="container">
+
+    <!-- NAVIGATION BAR -->
+
     <div class="navbar-container">
       <div class="close-menu"></div>
-      <div class="menu">
-        <div class="div-block-5">
-          <a id="brands" href="/src/pages/explore-brand/explore-brand.html"
+      <div class="menu open" id="sidebar" style="opacity: 0;">
+        <div class="div-block-5"><a id="brands" href="/src/pages/explore-brand/explore-brand.html"
             class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Explore our brands</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="work" href="/work-with-us" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="work" href="/work-with-us" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Work with us</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">GeniusWire™</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Sell your business</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="team" href="/meet-our-team" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="team" href="/meet-our-team" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Meet our team</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="cares" href="/nolk-cares" class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links">nolk cares</div>
             <div class="line white anim-line-hover"></div>
           </a>
         </div>
-        <div class="footer-links-container bas vertical">
-          <a href="mailto:info@nolk.com" class="menu-links-container w-inline-block">
+        <div class="footer-links-container bas vertical is-in-menu"><a href="mailto:info@nolk.com"
+            class="menu-links-container w-inline-block">
             <div class="footer-links">info@nolk.com</div>
             <div class="line white anim-line-hover"></div>
           </a>
-          <div class="div-block-31">
-            <a href="https://www.linkedin.com/company/nolkco" target="_blank" class="social-link w-inline-block"><img
+          <div class="div-block-31"><a href="https://www.linkedin.com/company/nolkco" target="_blank"
+              class="social-link w-inline-block"><img
                 src="https://assets.website-files.com/610c251287ec86f4848cd877/61291fcd9c24d84fa7cc2bfb_linkedin.png"
-                loading="lazy" alt="" class="social-icone"></a>
-          </div>
+                loading="lazy" alt="" class="social-icone"></a></div>
         </div>
       </div>
-      <div class="burger">
-        <div class="burger-line first"></div>
-        <div class="burger-line second"></div>
+      <div class="burger" id="line-main" onclick="openMenu()" style="opacity: 1;">
+        <div class=" burger-line first" id="line-1"></div>
+        <div class="burger-line second" id="line-2"></div>
       </div>
+
+      <script>
+        function openMenu() {
+          console.log("Open side bar menu");
+          if (document.getElementById("line-main").style.opacity === "0" || document.getElementById("sidebar").style.opacity === "1") {
+            document.getElementById("sidebar").style.opacity = "0"
+            document.getElementById("line-1").style.transform = "translate(0px) rotate(0)"
+            document.getElementById("line-2").style.transform = "translate(0px) rotate(0)"
+            window.onscroll = function () { };
+
+
+          } else {
+            document.getElementById("line-1").style.transform = "translate(0px, 8px) rotate(-45deg)"
+            document.getElementById("line-2").style.transform = "translate(0px, -3px) rotate(45deg)"
+            document.getElementById("sidebar").style.opacity = "1"
+
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+              window.onscroll = function () {
+                window.scrollTo(scrollLeft, scrollTop);
+              };
+          }
+        }
+
+
+      </script>
       <a href="/src/pages/homepage/index.html" aria-current="page" class="logo-nolk-wrapper w-inline-block w--current">
         <img src="https://assets.website-files.com/610c251287ec86f4848cd877/6125707395f3ae72c08dfcd3_logo-bleu.png"
           loading="lazy" alt=""></a>
     </div>
+
+
     <div class="rounded-section first white">
       <div class="section-overflow-scroll">
         <div id="Top" class="section hero-section">
           <div class="hero-text-container desktop">
             <div class="line-text">
-              <div id="typed-hi" class="big-title typewriter">Hi, we're&nbsp;
-                <h5>nolk,</h5>
+              <div id="typed-hi" class="big-title typewriter">
+                Hi, we're&nbsp;
+                <h5>nolk,
+                  <!-- <img class="smile-img" src="/src/assets/image/smile.png"> -->
+                </h5>
               </div>
-              <div class="lottie-intext-container no-padding-left">
+              <!-- <div class="lottie-intext-container no-padding-left">
                 <div data-w-id="d5753429-ddae-a5ac-5f8c-4f44a189016c" class="icone-intext-lottie"
                   data-animation-type="lottie"
                   data-src="https://assets.website-files.com/610c251287ec86f4848cd877/6129536a6635b674fbe4da63_clindoeil-V02.json"
@@ -76,10 +108,9 @@
                   data-default-duration="6.5" data-duration="0"
                   style="opacity: 1; transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
 
-                  <!-- SVG FILE -->
 
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="line-text">
               <div id="stewards" class="big-title"><br></div>
@@ -397,7 +428,7 @@
                     loading="lazy" alt="" class="plus bigger"></div>
                 <div class="subtitles values-paragraph padding-left">that companies that do good, do better in the long
                   run. Our brand family consists of forward-thinking, beautifully designed products meet the needs and
-                  expectations of today’s consumers.</div>
+                  expectations of today's consumers.</div>
               </div>
               <div class="blocks block-02">
                 <div class="collection-list-wrapper-4 w-dyn-list">
@@ -561,7 +592,7 @@
               <div class="big-title">tools<br></div>
             </div>
             <div class="line-text">
-              <div class="big-title">that give us an edge in realizing your brand’s potential.</div>
+              <div class="big-title">that give us an edge in realizing your brand's potential.</div>
             </div>
           </div>
           <div class="hero-text-container mobile-portrait">
@@ -615,11 +646,13 @@
             <div class="collection-list-wrapper-3 w-dyn-list"
               style="transform: translate3d(-15.969%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;">
               <div role="list" class="collection-list-2 w-dyn-items hori-scroll">
-                <div role="listitem" class="collection-item-logo-carroussel w-dyn-item"><img
+                <div role="listitem" class="collection-item-logo-carroussel w-dyn-item">
+                  <img
                     src="https://assets.website-files.com/6113db8b6628664e9136dbfd/612801d763c177528a6dbbe5_Group%20329.png"
                     loading="lazy" alt="" sizes="(max-width: 479px) 25vw, (max-width: 767px) 14vw, 12vw"
                     srcset="https://assets.website-files.com/6113db8b6628664e9136dbfd/612801d763c177528a6dbbe5_Group%20329-p-500.png  500w,https://assets.website-files.com/6113db8b6628664e9136dbfd/612801d763c177528a6dbbe5_Group%20329-p-800.png  800w,https://assets.website-files.com/6113db8b6628664e9136dbfd/612801d763c177528a6dbbe5_Group%20329.png  1264w"
-                    class="logos-carroussel-homepage"></div>
+                    class="logos-carroussel-homepage">
+                </div>
                 <div role="listitem" class="collection-item-logo-carroussel w-dyn-item"><img
                     src="https://assets.website-files.com/6113db8b6628664e9136dbfd/612801e113fa7c86d8a113d5_Group%20332.png"
                     loading="lazy" alt="" sizes="(max-width: 479px) 25vw, (max-width: 767px) 14vw, 12vw"
@@ -723,10 +756,74 @@
 
                           </div>
                         </div>
-                        <div id="typed-name" class="big-title">Wha</div><span class="typed-cursor white">&nbsp;</span>
+
+                        <div href="" class="big-title typewrite" data-period="2000"
+                          data-type='[ "Hi!", "What is your name?"]'>
+                          <span class="wrap"></span>
+                        </div>
+                        <script>
+                          var TxtType = function (el, toRotate, period) {
+                            this.toRotate = toRotate;
+                            this.el = el;
+                            this.loopNum = 0;
+                            this.period = parseInt(period, 8) || 2000;
+                            this.txt = '';
+                            this.tick();
+                            this.isDeleting = false;
+                          };
+
+                          TxtType.prototype.tick = function () {
+                            var i = this.loopNum % this.toRotate.length;
+                            var fullTxt = this.toRotate[i];
+
+                            if (this.isDeleting) {
+                              this.txt = fullTxt.substring(0, this.txt.length - 1);
+                            } else {
+                              this.txt = fullTxt.substring(0, this.txt.length + 1);
+                            }
+
+                            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+                            var that = this;
+                            var delta = 200 - Math.random() * 100;
+
+                            if (this.isDeleting) { delta /= 2; }
+
+                            if (!this.isDeleting && this.txt === fullTxt) {
+                              delta = this.period;
+                              this.isDeleting = true;
+                            } else if (this.isDeleting && this.txt === '') {
+                              this.isDeleting = false;
+                              this.loopNum++;
+                              delta = 500;
+                            }
+
+                            setTimeout(function () {
+                              that.tick();
+                            }, delta);
+                          };
+
+                          window.onload = function () {
+                            var elements = document.getElementsByClassName('typewrite');
+                            for (var i = 0; i < elements.length; i++) {
+                              var toRotate = elements[i].getAttribute('data-type');
+                              var period = elements[i].getAttribute('data-period');
+                              if (toRotate) {
+                                new TxtType(elements[i], JSON.parse(toRotate), period);
+                              }
+                            }
+                            // INJECT CSS
+                            var css = document.createElement("style");
+                            css.type = "text/css";
+                            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+                            document.body.appendChild(css);
+                          };
+                        </script>
+
                       </div>
                     </div>
-                    <div class="hero-text-container mobile-landscape">
+
+                    <!-- <div class="hero-text-container mobile-landscape">
                       <div class="line-text">
                         <div class="lottie-intext-container no-padding-left more-padding-right">
                           <div class="icone-intext-lottie" data-w-id="c1074286-8513-314f-52f4-3fde4e0a6354"
@@ -735,13 +832,13 @@
                             data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
                             data-renderer="svg" data-default-duration="3" data-duration="0">
 
-                            <!-- SVG FILES -->
 
                           </div>
                         </div>
                         <div class="big-title">Hi ! What is your name ?</div>
                       </div>
-                    </div>
+                    </div> -->
+
                     <div class="hero-text-container mobile-portrait">
                       <div class="line-text">
                         <div class="lottie-intext-container no-padding-left more-padding-right">
@@ -761,14 +858,19 @@
                         <div class="big-title">name?</div>
                       </div>
                     </div>
+
+
                     <input type="text" class="text-field w-input" maxlength="256" name="myname" data-name="myname"
                       placeholder="My name is..." id="myname">
+
+
                   </div>
                   <div data-w-tab="message" class="w-tab-pane" id="w-tabs-0-data-w-pane-1" role="tabpanel"
                     aria-labelledby="w-tabs-0-data-w-tab-1">
                     <div class="hero-text-container desktop">
                       <div class="line-text">
-                        <div class="big-title">Nice&nbsp;to meet you&nbsp;</div>
+                        <div class="big-title">Nice&nbsp;to meet you&nbsp;
+                        </div>
                         <div id="yourname" class="big-title margin-right">you</div>
                         <div class="big-title">!</div>
                         <div class="lottie-intext-container">
@@ -824,8 +926,10 @@
                       <div class="line-text">
                         <div class="big-title">How can we help you ?<br></div>
                       </div>
-                    </div><textarea placeholder="Leave us a message..." maxlength="5000" id="message" name="message"
-                      data-name="message" class="text-field w-input"></textarea>
+                    </div>
+                    <textarea placeholder="Leave us a message..." maxlength="5000" id="message" name="message"
+                      data-name="message" class="text-field w-input">
+                    </textarea>
                   </div>
                   <div data-w-tab="email" class="w-tab-pane" id="w-tabs-0-data-w-pane-2" role="tabpanel"
                     aria-labelledby="w-tabs-0-data-w-tab-2">
@@ -852,8 +956,12 @@
                       <div class="line-text">
                         <div class="big-title">So we can reach you.</div>
                       </div>
-                    </div><input type="text" class="text-field w-input" maxlength="256" name="Email" data-name="Email"
+                    </div>
+
+                    <input type="text" class="text-field w-input" maxlength="256" name="Email" data-name="Email"
                       placeholder="My email is..." id="Email-3" required="">
+
+
                     <div bloc="submit" class="submit-bouttons-container submit">
                       <div bloc="prev-question" class="submit-button">Prev</div>
                       <div class="submit-button submit-form">Submit</div>
@@ -862,8 +970,73 @@
                 </div>
               </div>
               <div bloc="prevnext" class="submit-bouttons-container">
-                <div bloc="prev-question" class="submit-button">Prev</div>
-                <div bloc="next-question" class="submit-button">Next</div>
+                <div bloc="prev-question" class="submit-button" id="prevBtn">Prev</div>
+                <div bloc="next-question" class="submit-button" id="nextBtn" onclick="changeTheColorOfButtonDemo()">Next
+                </div>
+
+                <!-- <script>
+
+                  var currentTab = 0;
+                  showTab(currentTab);
+
+                  function fixStepIndicator(n) {
+                    // This function removes the "active" class of all steps...
+                    var i, x = document.getElementsByClassName("step");
+                    for (i = 0; i < x.length; i++) {
+                      x[i].className = x[i].className.replace(" active", "");
+                    }
+                    //... and adds the "active" class on the current step:
+                    x[n].className += " active";
+                  }
+
+                  function showTab(n) {
+                    var x = document.getElementsByClassName("message");
+                    x[n].style.display = "block";
+                    if (n == 0) {
+                      document.getElementById("prevBtn").style.display = "none";
+                    } else {
+                      document.getElementById("prevBtn").style.display = "inline";
+                    }
+                    if (n == (x.length - 1)) {
+                      document.getElementById("nextBtn").innerHTML = "Submit";
+                    } else {
+                      document.getElementById("nextBtn").innerHTML = "Next";
+                    }
+                    fixStepIndicator(n)
+                  }
+
+                  function validateForm() {
+                    var x, y, i, valid = true;
+                    x = document.getElementsByClassName("message");
+                    y = x[currentTab].getElementsByTagName("input");
+                    for (i = 0; i < y.length; i++) {
+                      if (y[i].value == "") {
+                        // add an "invalid" class to the field:
+                        y[i].className += " invalid";
+                        valid = false;
+                      }
+                    }
+                    if (valid) {
+                      document.getElementsByClassName("step")[currentTab].className += " finish";
+                    }
+                    return valid;
+                  }
+
+                  function nextPrev(n) {
+                    var x = document.getElementById("myname");
+                    if (n == 1 && !validateForm()) return false;
+                    x[currentTab].style.display = "none";
+                    currentTab = currentTab + n;
+                    if (currentTab >= x.length) {
+                      document.getElementById("regForm").submit();
+                      return false;
+                    }
+                    showTab(currentTab);
+                  }
+
+
+                </script> -->
+
               </div>
             </div>
           </form>
@@ -884,7 +1057,7 @@
                 <div class="big-title">Thank you ! <br></div>
               </div>
               <div class="line-text">
-                <div class="big-title">We’ll get back to you as soon as possible.</div>
+                <div class="big-title">We'll get back to you as soon as possible.</div>
               </div>
             </div>
             <div class="hero-text-container mobile-landscape">
@@ -901,7 +1074,7 @@
 
                   </div>
                 </div>
-                <div class="big-title">Thank you ! We’ll get back <br></div>
+                <div class="big-title">Thank you ! We'll get back <br></div>
               </div>
               <div class="line-text">
                 <div class="big-title">to you as soon as possible.</div>
@@ -966,7 +1139,7 @@
   <!-- BLUE FOOTER -->
 
 
-  <div data-w-id="2bd54801-3a58-4a90-e946-38c06dae88e0" class="rounded-section footer">
+  <div class="rounded-section footer">
     <div class="section footer">
       <div class="footer-links-container">
         <div class="div-block-5 fotter logo">
@@ -975,7 +1148,7 @@
               loading="lazy" alt=""></a>
         </div>
         <div class="div-block-5 fotter">
-          <a id="brands2" href="/our-brands" class="menu-links-container anim-transition w-inline-block">
+          <a id="brands2" href="/src/pages/explore-brand/" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links in-footer">Explore our brands</div>
             <div class="line white anim-line-hover"></div>
           </a>
@@ -995,6 +1168,10 @@
           </a>
           <a id="team2" href="/meet-our-team" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links in-footer">Meet our team</div>
+            <div class="line white anim-line-hover"></div>
+          </a>
+          <a id="team2" href="/meet-our-team" class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links in-footer">Nolk cares</div>
             <div class="line white anim-line-hover"></div>
           </a>
           <a id="pressrelease"

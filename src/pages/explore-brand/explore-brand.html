@@ -16,7 +16,7 @@
         <img src="https://assets.website-files.com/610c251287ec86f4848cd877/612570731160591235729b5d_logo-blanc.png"
           loading="lazy" alt=""></a>
       <div class="close-menu"></div>
-      <div class="menu">
+      <div class="menu open" id="sidebar" style="opacity: 0;">
         <div class="div-block-5">
           <a id="brands" href="/our-brands" aria-current="page"
             class="menu-links-container anim-transition w-inline-block w--current">
@@ -52,10 +52,35 @@
           </div>
         </div>
       </div>
-      <div class="burger">
-        <div class="burger-line first" style="background-color: rgb(244, 243, 243);"></div>
-        <div class="burger-line second" style="background-color: rgb(244, 243, 243);"></div>
+      <div class="burger" id="line-main" onclick="openMenu()" style="opacity: 1;">
+        <div class="burger-line first" style="background-color: rgb(244, 243, 243);" id="line-1"></div>
+        <div class="burger-line second" style="background-color: rgb(244, 243, 243);" id="line-2"></div>
       </div>
+      <script>
+        function openMenu() {
+          console.log("Open side bar menu");
+          if (document.getElementById("line-main").style.opacity === "0" || document.getElementById("sidebar").style.opacity === "1") {
+            document.getElementById("sidebar").style.opacity = "0"
+            document.getElementById("line-1").style.transform = "translate(0px) rotate(0)"
+            document.getElementById("line-2").style.transform = "translate(0px) rotate(0)"
+            window.onscroll = function () { };
+
+
+          } else {
+            document.getElementById("line-1").style.transform = "translate(0px, 8px) rotate(-45deg)"
+            document.getElementById("line-2").style.transform = "translate(0px, -3px) rotate(45deg)"
+            document.getElementById("sidebar").style.opacity = "1"
+
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+              window.onscroll = function () {
+                window.scrollTo(scrollLeft, scrollTop);
+              };
+          }
+        }
+
+
+      </script>
     </div>
     <div class="rounded-section first blue">
       <div id="Top" class="section no-padding ourbrands">
