@@ -16,31 +16,31 @@
         <img src="https://assets.website-files.com/610c251287ec86f4848cd877/612570731160591235729b5d_logo-blanc.png"
           loading="lazy" alt=""></a>
       <div class="close-menu"></div>
-      <div class="menu open" id="sidebar" style="opacity: 0;">
-        <div class="div-block-5">
-          <a id="brands" href="/our-brands" aria-current="page"
-            class="menu-links-container anim-transition w-inline-block w--current">
+
+
+      <div class="menu open" id="sidebar" style="display: none;">
+        <div class="div-block-5"><a id="brands" href="/src/pages/explore-brand/explore-brand.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Explore our brands</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="work" href="/work-with-us" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="work" href="/work-with-us" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Work with us</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">GeniusWire™</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Sell your business</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="team" href="/meet-our-team" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="team" href="/meet-our-team" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Meet our team</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="cares" href="/nolk-cares" class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links">nolk cares</div>
             <div class="line white anim-line-hover"></div>
           </a>
         </div>
-        <div class="footer-links-container bas vertical">
+        <div class="footer-links-container bas vertical is-in-menu">
           <a href="mailto:info@nolk.com" class="menu-links-container w-inline-block">
             <div class="footer-links">info@nolk.com</div>
             <div class="line white anim-line-hover"></div>
@@ -52,15 +52,19 @@
           </div>
         </div>
       </div>
-      <div class="burger" id="line-main" onclick="openMenu()" style="opacity: 1;">
-        <div class="burger-line first" style="background-color: rgb(244, 243, 243);" id="line-1"></div>
-        <div class="burger-line second" style="background-color: rgb(244, 243, 243);" id="line-2"></div>
+
+
+      <div class="burger" id="line-main" onclick="openMenu()" style="display: flex;">
+        <div class=" explore-burger-line first" id="line-1"></div>
+        <div class="explore-burger-line second" id="line-2"></div>
       </div>
+
+
       <script>
         function openMenu() {
           console.log("Open side bar menu");
-          if (document.getElementById("line-main").style.opacity === "0" || document.getElementById("sidebar").style.opacity === "1") {
-            document.getElementById("sidebar").style.opacity = "0"
+          if (document.getElementById("line-main").style.display === "none" || document.getElementById("sidebar").style.display === "flex") {
+            document.getElementById("sidebar").style.display = "none"
             document.getElementById("line-1").style.transform = "translate(0px) rotate(0)"
             document.getElementById("line-2").style.transform = "translate(0px) rotate(0)"
             window.onscroll = function () { };
@@ -69,7 +73,7 @@
           } else {
             document.getElementById("line-1").style.transform = "translate(0px, 8px) rotate(-45deg)"
             document.getElementById("line-2").style.transform = "translate(0px, -3px) rotate(45deg)"
-            document.getElementById("sidebar").style.opacity = "1"
+            document.getElementById("sidebar").style.display = "flex"
 
             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
@@ -212,7 +216,8 @@
             <div
               style="opacity: 1; transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
               class="line-text">
-              <div class="big-title">Our brands don't just become part of a portfolio. They become part of us.<br></div>
+              <div class="big-title">Our brands don't just become part of a portfolio. They become part of us.<br>
+              </div>
             </div>
           </div>
         </div>
@@ -242,6 +247,7 @@
                   if (document.getElementById("expand-opacity").style.opacity = "1") {
                     document.getElementById("expand-opacity").style.opacity = "0.3"
                     document.getElementById("collapse-opacity").style.opacity = "1"
+                    document.getElementById("plus-close-icon").style.display = "none"
 
                     // FIRST COLLAPSE
 
@@ -307,7 +313,7 @@
                     // FIRST COLLAPSE
 
                     document.getElementById("first-rachel").style.opacity = "1"
-                    // document.getElementById("plus-close-icon").style.display = "none"
+                    document.getElementById("plus-close-icon").style.display = "none"
                     document.getElementById("collapse-first").style.display = "none"
                     document.getElementById("collapse-first").style.opacity = "0"
                     document.getElementById("line-change").style.marginTop = "0.5em"
@@ -316,7 +322,7 @@
                     // SECOND COLLAPSE
 
                     document.getElementById("wolf-first").style.opacity = "1"
-                    // document.getElementById("plus-close-icon2").style.display = "none"
+                    document.getElementById("plus-close-icon2").style.display = "none"
                     document.getElementById("collapse-two").style.display = "none"
                     document.getElementById("collapse-two").style.opacity = "0"
                     document.getElementById("line-change2").style.marginTop = "0.5em"
@@ -325,7 +331,7 @@
                     // THIRD COLLAPSE
 
                     document.getElementById("kana-first").style.opacity = "1"
-                    // document.getElementById("plus-close-icon3").style.display = "none"
+                    document.getElementById("plus-close-icon3").style.display = "none"
                     document.getElementById("collapse-three").style.display = "none"
                     document.getElementById("collapse-three").style.opacity = "0"
                     document.getElementById("line-change3").style.marginTop = "0.5em"
@@ -334,7 +340,7 @@
                     // FOURTH COLLAPSE
 
                     document.getElementById("loctote-first").style.opacity = "1"
-                    // document.getElementById("plus-close-icon4").style.display = "none"
+                    document.getElementById("plus-close-icon4").style.display = "none"
                     document.getElementById("collapse-fourth").style.display = "none"
                     document.getElementById("collapse-fourth").style.opacity = "0"
                     document.getElementById("line-change4").style.marginTop = "0.5em"
@@ -343,7 +349,7 @@
                     // FIFTH COLLAPSE
 
                     document.getElementById("freak-first").style.opacity = "1"
-                    // document.getElementById("plus-close-icon").style.display = "none"
+                    document.getElementById("plus-close-icon5").style.display = "none"
                     document.getElementById("collapse-fifth").style.display = "none"
                     document.getElementById("collapse-fifth").style.opacity = "0"
                     document.getElementById("line-change5").style.marginTop = "0.5em"
@@ -366,25 +372,30 @@
           <div class="collection-list-wrapper w-dyn-list">
             <div role="list" class="w-dyn-items">
 
+
+              <!-- FIRST BLOCK -->
+
               <script>
 
                 function changeOpacity3() {
-                  if (document.getElementById("expand-opacity").style.opacity = "0.3") {
+                  if (document.getElementById("expand-opacity").style.opacity === "0.3") {
                     document.getElementById("expand-opacity").style.opacity = "1"
                     document.getElementById("collapse-opacity").style.opacity = "0.3"
 
                     // FIRST COLLAPSE
 
                     document.getElementById("first-rachel").style.opacity = "1"
-                    // document.getElementById("plus-close-icon").style.display = "none"
                     document.getElementById("collapse-first").style.display = "none"
                     document.getElementById("collapse-first").style.opacity = "0"
                     document.getElementById("line-change").style.marginTop = "0.5em"
                     document.getElementById("brand-change").style.paddingTop = "8em"
+                    // document.getElementById("plus-close-icon").style.display = "none"
 
                   } else {
                     document.getElementById("expand-opacity").style.opacity = "0.3"
                     document.getElementById("collapse-opacity").style.opacity = "1"
+                    // document.getElementById("plus-close-icon").style.display = "none"
+
                   }
 
                 }
@@ -407,7 +418,7 @@
                 </div>
 
 
-                <div class="brands-infos-container" id="first-rachel" style="opacity: 1;">
+                <div class="brands-infos-container" id="first-rachel" style="opacity: 1; display: flex;">
                   <div data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348"
                     style="background-image: url(&quot;https://assets.website-files.com/6113db8b6628664e9136dbfd/6129554b98e64be83646c226_Remplace%20la%20photo%201%20rachel%20par%20c%CC%A7a.jpg&quot;); width: 33%; height: 31vw;"
                     class="brands-image shape-add-1">
@@ -484,15 +495,17 @@
                       </div>
                     </div>
                   </div>
-
-                </div>
-                <div class="line-curved" id="line-change" onclick="changeOpacity2()">
-                  <div class="line-mask"></div>
-                  <div class="plus-container plus-brands turn45" id="plus-close-icon"><img
+                  <div class="plus-container plus-brands turn45" id="plus-close-icon" style="display: none;"><img
                       src="https://assets.website-files.com/610c251287ec86f4848cd877/61119bb129a12a1b8e96b4cd_%2B.png"
                       loading="lazy" alt="" class="plus"></div>
                 </div>
+                <div class="line-curved" id="line-change" onclick="changeOpacity2()">
+                  <div class="line-mask"></div>
+
+                </div>
               </div>
+
+              <!-- SECOND BLOCK -->
 
               <script>
 
@@ -613,11 +626,13 @@
                 </div>
                 <div class="line-curved" id="line-change2" onclick="changeOpacity2()">
                   <div class="line-mask"></div>
-                  <div class="plus-container plus-brands turn45" id="plus-close-icon2"><img
+                  <div class="plus-container plus-brands turn45" id="plus-close-icon2" style="display: none;"><img
                       src="https://assets.website-files.com/610c251287ec86f4848cd877/61119bb129a12a1b8e96b4cd_%2B.png"
                       loading="lazy" alt="" class="plus"></div>
                 </div>
               </div>
+
+              <!-- THIRD BLOCK -->
 
               <script>
 
@@ -736,11 +751,13 @@
                 </div>
                 <div class="line-curved" id="line-change3" onclick="changeOpacity2()">
                   <div class="line-mask"></div>
-                  <div class="plus-container plus-brands turn45" id="plus-close-icon3"><img
+                  <div class="plus-container plus-brands turn45" id="plus-close-icon3" style="display: none;"><img
                       src="https://assets.website-files.com/610c251287ec86f4848cd877/61119bb129a12a1b8e96b4cd_%2B.png"
                       loading="lazy" alt="" class="plus"></div>
                 </div>
               </div>
+
+              <!-- FOURTH BLCOK -->
 
               <script>
 
@@ -863,11 +880,13 @@
                 </div>
                 <div class="line-curved" id="line-change4" onclick="changeOpacity2()">
                   <div class="line-mask"></div>
-                  <div class="plus-container plus-brands turn45" id="plus-close-icon4"><img
+                  <div class="plus-container plus-brands turn45" id="plus-close-icon4" style="display: none;"><img
                       src="https://assets.website-files.com/610c251287ec86f4848cd877/61119bb129a12a1b8e96b4cd_%2B.png"
                       loading="lazy" alt="" class="plus"></div>
                 </div>
               </div>
+
+              <!-- FIFTH BLOCK   -->
 
               <script>
 
@@ -875,6 +894,42 @@
                   if (document.getElementById("expand-opacity").style.opacity = "0.3") {
                     document.getElementById("expand-opacity").style.opacity = "1"
                     document.getElementById("collapse-opacity").style.opacity = "0.3"
+
+                    // FIRST COLLAPSE
+
+                    document.getElementById("first-rachel").style.opacity = "1"
+                    document.getElementById("plus-close-icon").style.display = "none"
+                    document.getElementById("collapse-first").style.display = "none"
+                    document.getElementById("collapse-first").style.opacity = "0"
+                    document.getElementById("line-change").style.marginTop = "0.5em"
+                    document.getElementById("brand-change").style.paddingTop = "8em"
+
+                    // SECOND COLLAPSE
+
+                    document.getElementById("wolf-first").style.opacity = "1"
+                    document.getElementById("plus-close-icon2").style.display = "none"
+                    document.getElementById("collapse-two").style.display = "none"
+                    document.getElementById("collapse-two").style.opacity = "0"
+                    document.getElementById("line-change2").style.marginTop = "0.5em"
+                    document.getElementById("brand-change2").style.paddingTop = "8em"
+
+                    // THIRD COLLAPSE
+
+                    document.getElementById("kana-first").style.opacity = "1"
+                    document.getElementById("plus-close-icon3").style.display = "none"
+                    document.getElementById("collapse-three").style.display = "none"
+                    document.getElementById("collapse-three").style.opacity = "0"
+                    document.getElementById("line-change3").style.marginTop = "0.5em"
+                    document.getElementById("brand-change3").style.paddingTop = "8em"
+
+                    // FOURTH COLLAPSE
+
+                    document.getElementById("loctote-first").style.opacity = "1"
+                    document.getElementById("plus-close-icon4").style.display = "none"
+                    document.getElementById("collapse-fourth").style.display = "none"
+                    document.getElementById("collapse-fourth").style.opacity = "0"
+                    document.getElementById("line-change4").style.marginTop = "0.5em"
+                    document.getElementById("brand-change4").style.paddingTop = "8em"
 
                     // FIFTH COLLAPSE
 

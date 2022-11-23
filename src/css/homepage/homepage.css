@@ -125,6 +125,40 @@ h5 {
     border: 1px solid #cccccc;
 }
 
+.line-1{
+    position: relative;
+    top: 50%;  
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: start;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 6em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgb(0,42,153);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+
 .w-input:-moz-placeholder {
     color: #999;
 }
@@ -1274,6 +1308,22 @@ a {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+
+.blocks.block-02:hover {
+    border-radius: 0px 20em 20em 0%;
+}
+
+.blocks.block-05:hover {
+    border-radius: 8em;
+}
+
+.blocks.big-vertical:hover {
+    border-radius: 20em 0em;
+}
+.blocks.big-horizontal:hover{
+    border-radius: 15em 0em;
 }
 
 @media screen and (max-width: 991px) {
