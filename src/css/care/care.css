@@ -555,7 +555,7 @@ a {
   background-color: #002b99;
   -webkit-transition: -webkit-transform 300ms ease;
   transition: -webkit-transform 300ms ease;
-  transition: transform 300ms ease;
+  /* transition: transform 300ms ease; */
   transition: transform 300ms ease, -webkit-transform 300ms ease;
 }
 .burger-line.first {
@@ -611,9 +611,7 @@ a {
   border-top-left-radius: 10em;
   border-bottom-left-radius: 10em;
   background-color: #fe505d;
-  -webkit-transform: translate(101%, 0px);
-  -ms-transform: translate(101%, 0px);
-  transform: translate(101%, 0px);
+  /* transform: translate(101%, 0px); */
   -webkit-transition: -webkit-transform 350ms ease;
   transition: -webkit-transform 350ms ease;
   transition: transform 350ms ease;

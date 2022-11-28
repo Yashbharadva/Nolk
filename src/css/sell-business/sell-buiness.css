@@ -653,9 +653,7 @@ a {
   border-top-left-radius: 10em;
   border-bottom-left-radius: 10em;
   background-color: #fe505d;
-  -webkit-transform: translate(101%, 0px);
-  -ms-transform: translate(101%, 0px);
-  transform: translate(101%, 0px);
+  /* transform: translate(101%, 0px); */
   -webkit-transition: -webkit-transform 350ms ease;
   transition: -webkit-transform 350ms ease;
   transition: transform 350ms ease;

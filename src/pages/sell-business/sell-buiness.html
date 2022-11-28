@@ -25,31 +25,35 @@
 
     <div class="navbar-container">
       <div class="close-menu"></div>
-      <div class="menu">
-        <div class="div-block-5">
-          <a id="brands" href="/src/pages/explore-brand/explore-brand.html"
+
+
+      <div class="menu open" id="sidebar" style="display: none;">
+        <div class="div-block-5"><a id="brands" href="/src/pages/explore-brand/explore-brand.html"
             class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Explore our brands</div>
             <div class="line white anim-line-hover"></div>
           </a>
-          <a id="work" href="/work-with-us" class="menu-links-container anim-transition w-inline-block">
+          <a id="work" href="/src/pages/work-with-us/work-with-us.html"
+            class=" menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Work with us</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">GeniusWire™</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Sell your business</div>
             <div class="line white anim-line-hover"></div>
-          </a>
-          <a id="team" href="/meet-our-team" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="team" href="/src/pages/meet-our-team/meet-our-team.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Meet our team</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="cares" href="/src/pages/care/care.html"
+            class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links">nolk cares</div>
             <div class="line white anim-line-hover"></div>
           </a>
         </div>
-        <div class="footer-links-container bas vertical">
+        <div class="footer-links-container bas vertical is-in-menu">
           <a href="mailto:info@nolk.com" class="menu-links-container w-inline-block">
             <div class="footer-links">info@nolk.com</div>
             <div class="line white anim-line-hover"></div>
@@ -61,10 +65,40 @@
           </div>
         </div>
       </div>
-      <div class="burger">
-        <div class="burger-line first"></div>
-        <div class="burger-line second"></div>
+
+
+      <div class="burger" id="line-main" onclick="openMenu()" style="display: flex;">
+        <div class=" burger-line first" id="line-1"></div>
+        <div class="burger-line second" id="line-2"></div>
       </div>
+
+      <script>
+        function openMenu() {
+          console.log("Open side bar menu");
+          if (document.getElementById("line-main").style.display === "none" || document.getElementById("sidebar").style.display === "flex") {
+            document.getElementById("sidebar").style.display = "none"
+            document.getElementById("line-1").style.transform = "translate(0px) rotate(0)"
+            document.getElementById("line-2").style.transform = "translate(0px) rotate(0)"
+            window.onscroll = function () { };
+
+
+          } else {
+            document.getElementById("line-1").style.transform = "translate(0px, 8px) rotate(-45deg)"
+            document.getElementById("line-2").style.transform = "translate(0px, -3px) rotate(45deg)"
+            document.getElementById("sidebar").style.display = "flex"
+
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+              window.onscroll = function () {
+                window.scrollTo(scrollLeft, scrollTop);
+              };
+          }
+        }
+
+
+      </script>
+
+
       <a href="/src/pages/homepage/index.html" aria-current="page" class="logo-nolk-wrapper w-inline-block w--current">
         <img src="https://assets.website-files.com/610c251287ec86f4848cd877/612570731160591235729b5d_logo-blanc.png"
           loading="lazy" alt=""></a>

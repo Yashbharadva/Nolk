@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/css/geniusWire/geniusWire.css" />
+  <title>Genius Wire</title>
+</head>
+
+<body>
+  <div class="container">
+    <div style="opacity: 1;" class="navbar-container">
+      <a href="/src/pages/homepage/index.html" class="logo-nolk-wrapper w-inline-block"><img
+          src="https://assets.website-files.com/610c251287ec86f4848cd877/6125707395f3ae72c08dfcd3_logo-bleu.png"
+          loading="lazy" alt=""></a>
+      <div class="close-menu"></div>
+
+
+      <div class="menu open" id="sidebar" style="display: none;">
+        <div class="div-block-5"><a id="brands" href="/src/pages/explore-brand/explore-brand.html"
+            class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links">Explore our brands</div>
+            <div class="line white anim-line-hover"></div>
+          </a>
+          <a id="work" href="/src/pages/work-with-us/work-with-us.html"
+            class=" menu-links-container anim-transition w-inline-block">
+            <div class="footer-links">Work with us</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="genius" href="/src/pages/geniusWire/geniusWire.html"
+            class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links">GeniusWire™</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links">Sell your business</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="team" href="/src/pages/meet-our-team/meet-our-team.html"
+            class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links">Meet our team</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="cares" href="/src/pages/care/care.html"
+            class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links">nolk cares</div>
+            <div class="line white anim-line-hover"></div>
+          </a>
+        </div>
+        <div class="footer-links-container bas vertical is-in-menu">
+          <a href="mailto:info@nolk.com" class="menu-links-container w-inline-block">
+            <div class="footer-links">info@nolk.com</div>
+            <div class="line white anim-line-hover"></div>
+          </a>
+          <div class="div-block-31">
+            <a href="https://www.linkedin.com/company/nolkco" target="_blank" class="social-link w-inline-block"><img
+                src="https://assets.website-files.com/610c251287ec86f4848cd877/61291fcd9c24d84fa7cc2bfb_linkedin.png"
+                loading="lazy" alt="" class="social-icone"></a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="burger" id="line-main" onclick="openMenu()" style="display: flex;">
+        <div class=" burger-line first" id="line-1"></div>
+        <div class="burger-line second" id="line-2"></div>
+      </div>
+
+      <script>
+        function openMenu() {
+          console.log("Open side bar menu");
+          if (document.getElementById("line-main").style.display === "none" || document.getElementById("sidebar").style.display === "flex") {
+            document.getElementById("sidebar").style.display = "none"
+            document.getElementById("line-1").style.transform = "translate(0px) rotate(0)"
+            document.getElementById("line-2").style.transform = "translate(0px) rotate(0)"
+            window.onscroll = function () { };
+
+
+          } else {
+            document.getElementById("line-1").style.transform = "translate(0px, 8px) rotate(-45deg)"
+            document.getElementById("line-2").style.transform = "translate(0px, -3px) rotate(45deg)"
+            document.getElementById("sidebar").style.display = "flex"
+
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+              window.onscroll = function () {
+                window.scrollTo(scrollLeft, scrollTop);
+              };
+          }
+        }
+
+
+      </script>
+
+
+    </div>
+    <div class="rounded-section first pink">
+      <div class="section-overflow-scroll">
+        <div id="Top" class="section hero-section">
+          <div class="hero-text-container">
+            <div
+              style="opacity: 1; transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+              class="line-text">
+              <div class="big-title">nolk is a genius.</div>
+              <div class="lottie-intext-container">
+                <div class="icone-intext-lottie" data-w-id="0675b7db-ecc0-a2a5-92ef-c55a813c8351"
+                  data-animation-type="lottie"
+                  data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612576c48d5b8e49b0cb41bf_ampoule.json"
+                  data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg"
+                  data-default-duration="3" data-duration="0"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 240 240" width="240" height="240" preserveAspectRatio="xMidYMid meet"
+                    style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
+                    <defs>
+                      <clipPath id="__lottie_element_16">
+                        <rect width="240" height="240" x="0" y="0"></rect>
+                      </clipPath>
+                      <filter id="__lottie_element_21" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%"
+                        height="100%">
+                        <feComponentTransfer in="SourceGraphic">
+                          <feFuncA type="table" tableValues="1.0 0.0"></feFuncA>
+                        </feComponentTransfer>
+                      </filter>
+                      <mask id="__lottie_element_20" mask-type="alpha">
+                        <g filter="url(#__lottie_element_21)">
+                          <rect width="240" height="240" x="0" y="0" fill="#ffffff" opacity="0"></rect>
+                          <g clip-path="url(#__lottie_element_22)" transform="matrix(1,0,0,1,-10,-10)" opacity="1"
+                            style="display: block;">
+                            <g transform="matrix(1,0,0,1,106.51000213623047,10.076997756958008)" opacity="1"
+                              style="display: block;">
+                              <g opacity="1" transform="matrix(1,0,0,1,23.489999771118164,28.224000930786133)">
+                                <path fill="rgb(255,6,243)" fill-opacity="1"
+                                  d=" M23.239999771118164,27.974000930786133 C23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 C-23.239999771118164,27.974000930786133 -23.239999771118164,-27.974000930786133 -23.239999771118164,-27.974000930786133 C-23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 C23.239999771118164,-27.974000930786133 23.239999771118164,27.974000930786133 23.239999771118164,27.974000930786133z">
+                                </path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </mask>
+                      <clipPath id="__lottie_element_22">
+                        <path d="M0,0 L260,0 L260,260 L0,260z"></path>
+                      </clipPath>
+                      <filter id="__lottie_element_29" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%"
+                        height="100%">
+                        <feComponentTransfer in="SourceGraphic">
+                          <feFuncA type="table" tableValues="1.0 0.0"></feFuncA>
+                        </feComponentTransfer>
+                      </filter>
+                      <mask id="__lottie_element_28" mask-type="alpha">
+                        <g filter="url(#__lottie_element_29)">
+                          <rect width="240" height="240" x="0" y="0" fill="#ffffff" opacity="0"></rect>
+                          <g clip-path="url(#__lottie_element_30)"
+                            transform="matrix(0.7071067690849304,0.7071067690849304,-0.7071067690849304,0.7071067690849304,120,-63.84776306152344)"
+                            opacity="1" style="display: block;">
+                            <g transform="matrix(1,0,0,1,106.51000213623047,10.076997756958008)" opacity="1"
+                              style="display: block;">
+                              <g opacity="1" transform="matrix(1,0,0,1,23.489999771118164,28.224000930786133)">
+                                <path fill="rgb(255,6,243)" fill-opacity="1"
+                                  d=" M23.239999771118164,27.974000930786133 C23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 C-23.239999771118164,27.974000930786133 -23.239999771118164,-27.974000930786133 -23.239999771118164,-27.974000930786133 C-23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 C23.239999771118164,-27.974000930786133 23.239999771118164,27.974000930786133 23.239999771118164,27.974000930786133z">
+                                </path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </mask>
+                      <clipPath id="__lottie_element_30">
+                        <path d="M0,0 L260,0 L260,260 L0,260z"></path>
+                      </clipPath>
+                      <filter id="__lottie_element_37" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%"
+                        height="100%">
+                        <feComponentTransfer in="SourceGraphic">
+                          <feFuncA type="table" tableValues="1.0 0.0"></feFuncA>
+                        </feComponentTransfer>
+                      </filter>
+                      <mask id="__lottie_element_36" mask-type="alpha">
+                        <g filter="url(#__lottie_element_37)">
+                          <rect width="240" height="240" x="0" y="0" fill="#ffffff" opacity="0"></rect>
+                          <g clip-path="url(#__lottie_element_38)" transform="matrix(0,1,-1,0,250,-10)" opacity="1"
+                            style="display: block;">
+                            <g transform="matrix(1,0,0,1,106.51000213623047,10.076997756958008)" opacity="1"
+                              style="display: block;">
+                              <g opacity="1" transform="matrix(1,0,0,1,23.489999771118164,28.224000930786133)">
+                                <path fill="rgb(255,6,243)" fill-opacity="1"
+                                  d=" M23.239999771118164,27.974000930786133 C23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 C-23.239999771118164,27.974000930786133 -23.239999771118164,-27.974000930786133 -23.239999771118164,-27.974000930786133 C-23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 C23.239999771118164,-27.974000930786133 23.239999771118164,27.974000930786133 23.239999771118164,27.974000930786133z">
+                                </path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </mask>
+                      <clipPath id="__lottie_element_38">
+                        <path d="M0,0 L260,0 L260,260 L0,260z"></path>
+                      </clipPath>
+                      <filter id="__lottie_element_45" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%"
+                        height="100%">
+                        <feComponentTransfer in="SourceGraphic">
+                          <feFuncA type="table" tableValues="1.0 0.0"></feFuncA>
+                        </feComponentTransfer>
+                      </filter>
+                      <mask id="__lottie_element_44" mask-type="alpha">
+                        <g filter="url(#__lottie_element_45)">
+                          <rect width="240" height="240" x="0" y="0" fill="#ffffff" opacity="0"></rect>
+                          <g clip-path="url(#__lottie_element_46)"
+                            transform="matrix(-0.7071067690849304,0.7071067690849304,-0.7071067690849304,-0.7071067690849304,303.8477783203125,120)"
+                            opacity="1" style="display: block;">
+                            <g transform="matrix(1,0,0,1,106.51000213623047,10.076997756958008)" opacity="1"
+                              style="display: block;">
+                              <g opacity="1" transform="matrix(1,0,0,1,23.489999771118164,28.224000930786133)">
+                                <path fill="rgb(255,6,243)" fill-opacity="1"
+                                  d=" M23.239999771118164,27.974000930786133 C23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 C-23.239999771118164,27.974000930786133 -23.239999771118164,-27.974000930786133 -23.239999771118164,-27.974000930786133 C-23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 C23.239999771118164,-27.974000930786133 23.239999771118164,27.974000930786133 23.239999771118164,27.974000930786133z">
+                                </path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </mask>
+                      <clipPath id="__lottie_element_46">
+                        <path d="M0,0 L260,0 L260,260 L0,260z"></path>
+                      </clipPath>
+                      <filter id="__lottie_element_53" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%"
+                        height="100%">
+                        <feComponentTransfer in="SourceGraphic">
+                          <feFuncA type="table" tableValues="1.0 0.0"></feFuncA>
+                        </feComponentTransfer>
+                      </filter>
+                      <mask id="__lottie_element_52" mask-type="alpha">
+                        <g filter="url(#__lottie_element_53)">
+                          <rect width="240" height="240" x="0" y="0" fill="#ffffff" opacity="0"></rect>
+                          <g clip-path="url(#__lottie_element_54)" transform="matrix(-1,0,0,-1,250,250)" opacity="1"
+                            style="display: block;">
+                            <g transform="matrix(1,0,0,1,106.51000213623047,10.076997756958008)" opacity="1"
+                              style="display: block;">
+                              <g opacity="1" transform="matrix(1,0,0,1,23.489999771118164,28.224000930786133)">
+                                <path fill="rgb(255,6,243)" fill-opacity="1"
+                                  d=" M23.239999771118164,27.974000930786133 C23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 C-23.239999771118164,27.974000930786133 -23.239999771118164,-27.974000930786133 -23.239999771118164,-27.974000930786133 C-23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 C23.239999771118164,-27.974000930786133 23.239999771118164,27.974000930786133 23.239999771118164,27.974000930786133z">
+                                </path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </mask>
+                      <clipPath id="__lottie_element_54">
+                        <path d="M0,0 L260,0 L260,260 L0,260z"></path>
+                      </clipPath>
+                      <filter id="__lottie_element_61" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%"
+                        height="100%">
+                        <feComponentTransfer in="SourceGraphic">
+                          <feFuncA type="table" tableValues="1.0 0.0"></feFuncA>
+                        </feComponentTransfer>
+                      </filter>
+                      <mask id="__lottie_element_60" mask-type="alpha">
+                        <g filter="url(#__lottie_element_61)">
+                          <rect width="240" height="240" x="0" y="0" fill="#ffffff" opacity="0"></rect>
+                          <g clip-path="url(#__lottie_element_62)"
+                            transform="matrix(-0.7071067690849304,-0.7071067690849304,0.7071067690849304,-0.7071067690849304,120,303.8477783203125)"
+                            opacity="1" style="display: block;">
+                            <g transform="matrix(1,0,0,1,106.51000213623047,10.076997756958008)" opacity="1"
+                              style="display: block;">
+                              <g opacity="1" transform="matrix(1,0,0,1,23.489999771118164,28.224000930786133)">
+                                <path fill="rgb(255,6,243)" fill-opacity="1"
+                                  d=" M23.239999771118164,27.974000930786133 C23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 C-23.239999771118164,27.974000930786133 -23.239999771118164,-27.974000930786133 -23.239999771118164,-27.974000930786133 C-23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 C23.239999771118164,-27.974000930786133 23.239999771118164,27.974000930786133 23.239999771118164,27.974000930786133z">
+                                </path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </mask>
+                      <clipPath id="__lottie_element_62">
+                        <path d="M0,0 L260,0 L260,260 L0,260z"></path>
+                      </clipPath>
+                      <filter id="__lottie_element_69" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%"
+                        height="100%">
+                        <feComponentTransfer in="SourceGraphic">
+                          <feFuncA type="table" tableValues="1.0 0.0"></feFuncA>
+                        </feComponentTransfer>
+                      </filter>
+                      <mask id="__lottie_element_68" mask-type="alpha">
+                        <g filter="url(#__lottie_element_69)">
+                          <rect width="240" height="240" x="0" y="0" fill="#ffffff" opacity="0"></rect>
+                          <g clip-path="url(#__lottie_element_70)" transform="matrix(0,-1,1,0,-10,250)" opacity="1"
+                            style="display: block;">
+                            <g transform="matrix(1,0,0,1,106.51000213623047,10.076997756958008)" opacity="1"
+                              style="display: block;">
+                              <g opacity="1" transform="matrix(1,0,0,1,23.489999771118164,28.224000930786133)">
+                                <path fill="rgb(255,6,243)" fill-opacity="1"
+                                  d=" M23.239999771118164,27.974000930786133 C23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 C-23.239999771118164,27.974000930786133 -23.239999771118164,-27.974000930786133 -23.239999771118164,-27.974000930786133 C-23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 C23.239999771118164,-27.974000930786133 23.239999771118164,27.974000930786133 23.239999771118164,27.974000930786133z">
+                                </path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </mask>
+                      <clipPath id="__lottie_element_70">
+                        <path d="M0,0 L260,0 L260,260 L0,260z"></path>
+                      </clipPath>
+                      <filter id="__lottie_element_77" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%"
+                        height="100%">
+                        <feComponentTransfer in="SourceGraphic">
+                          <feFuncA type="table" tableValues="1.0 0.0"></feFuncA>
+                        </feComponentTransfer>
+                      </filter>
+                      <mask id="__lottie_element_76" mask-type="alpha">
+                        <g filter="url(#__lottie_element_77)">
+                          <rect width="240" height="240" x="0" y="0" fill="#ffffff" opacity="0"></rect>
+                          <g clip-path="url(#__lottie_element_78)"
+                            transform="matrix(0.7071067690849304,-0.7071067690849304,0.7071067690849304,0.7071067690849304,-63.84776306152344,120)"
+                            opacity="1" style="display: block;">
+                            <g transform="matrix(1,0,0,1,106.51000213623047,10.076997756958008)" opacity="1"
+                              style="display: block;">
+                              <g opacity="1" transform="matrix(1,0,0,1,23.489999771118164,28.224000930786133)">
+                                <path fill="rgb(255,6,243)" fill-opacity="1"
+                                  d=" M23.239999771118164,27.974000930786133 C23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 -23.239999771118164,27.974000930786133 C-23.239999771118164,27.974000930786133 -23.239999771118164,-27.974000930786133 -23.239999771118164,-27.974000930786133 C-23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 23.239999771118164,-27.974000930786133 C23.239999771118164,-27.974000930786133 23.239999771118164,27.974000930786133 23.239999771118164,27.974000930786133z">
+                                </path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </mask>
+                      <clipPath id="__lottie_element_78">
+                        <path d="M0,0 L260,0 L260,260 L0,260z"></path>
+                      </clipPath>
+                    </defs>
+                    <g clip-path="url(#__lottie_element_16)">
+                      <g mask="url(#__lottie_element_20)" style="display: block;">
+                        <g transform="matrix(1,0,0,1,100.77299499511719,5.884000778198242)" opacity="1">
+                          <g opacity="1" transform="matrix(1,0,0,1,19.22800064086914,21.92799949645996)">
+                            <path fill="rgb(0,204,195)" fill-opacity="1"
+                              d=" M-18.976999282836914,-21.67799949645996 C-18.976999282836914,-21.67799949645996 -18.976999282836914,-16.84600067138672 -18.976999282836914,-16.84600067138672 C-18.976999282836914,-16.84600067138672 -18.976999282836914,21.67799949645996 -18.976999282836914,21.67799949645996 C-12.923999786376953,20.054000854492188 -6.566999912261963,19.173999786376953 0,19.173999786376953 C6.565999984741211,19.173999786376953 12.923999786376953,20.054000854492188 18.976999282836914,21.67799949645996 C18.976999282836914,21.67799949645996 18.976999282836914,-16.84600067138672 18.976999282836914,-16.84600067138672 C18.976999282836914,-16.84600067138672 18.976999282836914,-21.67799949645996 18.976999282836914,-21.67799949645996 C18.976999282836914,-21.67799949645996 -18.976999282836914,-21.67799949645996 -18.976999282836914,-21.67799949645996z">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                      <g mask="url(#__lottie_element_28)" style="display: block;">
+                        <g transform="matrix(1,0,0,1,156.1790008544922,25.814001083374023)" opacity="1">
+                          <g opacity="1" transform="matrix(1,0,0,1,29.00200080871582,29.003000259399414)">
+                            <path fill="rgb(0,204,195)" fill-opacity="1"
+                              d=" M1.9149999618530273,-28.753000259399414 C1.9149999618530273,-28.753000259399414 -1.50600004196167,-25.33099937438965 -1.50600004196167,-25.33099937438965 C-1.50600004196167,-25.33099937438965 -28.753000259399414,1.9129999876022339 -28.753000259399414,1.9129999876022339 C-17.615999221801758,8.340999603271484 -8.34000015258789,17.615999221801758 -1.9129999876022339,28.753000259399414 C-1.9129999876022339,28.753000259399414 25.33300018310547,1.5080000162124634 25.33300018310547,1.5080000162124634 C25.33300018310547,1.5080000162124634 28.753000259399414,-1.9129999876022339 28.753000259399414,-1.9129999876022339 C28.753000259399414,-1.9129999876022339 1.9149999618530273,-28.753000259399414 1.9149999618530273,-28.753000259399414z">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                      <g mask="url(#__lottie_element_36)" style="display: block;">
+                        <g transform="matrix(1,0,0,1,190.26199340820312,100.77099609375)" opacity="1">
+                          <g opacity="1" transform="matrix(1,0,0,1,21.927000045776367,19.22800064086914)">
+                            <path fill="rgb(0,204,195)" fill-opacity="1"
+                              d=" M16.847000122070312,-18.97800064086914 C16.847000122070312,-18.97800064086914 -21.67799949645996,-18.97800064086914 -21.67799949645996,-18.97800064086914 C-20.05299949645996,-12.923999786376953 -19.172000885009766,-6.565999984741211 -19.172000885009766,0.0010000000474974513 C-19.172000885009766,6.566999912261963 -20.05299949645996,12.925000190734863 -21.67799949645996,18.97800064086914 C-21.67799949645996,18.97800064086914 16.847000122070312,18.97800064086914 16.847000122070312,18.97800064086914 C16.847000122070312,18.97800064086914 21.67799949645996,18.97800064086914 21.67799949645996,18.97800064086914 C21.67799949645996,18.97800064086914 21.67799949645996,-18.97800064086914 21.67799949645996,-18.97800064086914 C21.67799949645996,-18.97800064086914 16.847000122070312,-18.97800064086914 16.847000122070312,-18.97800064086914z">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                      <g mask="url(#__lottie_element_44)" style="display: block;">
+                        <g transform="matrix(1,0,0,1,156.17999267578125,156.18099975585938)" opacity="1">
+                          <g opacity="1" transform="matrix(1,0,0,1,29.003000259399414,29.00200080871582)">
+                            <path fill="rgb(0,204,195)" fill-opacity="1"
+                              d=" M25.33099937438965,-1.5080000162124634 C25.33099937438965,-1.5080000162124634 -1.9129999876022339,-28.75200080871582 -1.9129999876022339,-28.75200080871582 C-8.34000015258789,-17.614999771118164 -17.615999221801758,-8.340999603271484 -28.753000259399414,-1.9140000343322754 C-28.753000259399414,-1.9140000343322754 -1.5080000162124634,25.329999923706055 -1.5080000162124634,25.329999923706055 C-1.5080000162124634,25.329999923706055 1.9129999876022339,28.75200080871582 1.9129999876022339,28.75200080871582 C1.9129999876022339,28.75200080871582 28.753000259399414,1.9140000343322754 28.753000259399414,1.9140000343322754 C28.753000259399414,1.9140000343322754 25.33099937438965,-1.5080000162124634 25.33099937438965,-1.5080000162124634z">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                      <g mask="url(#__lottie_element_52)" style="display: block;">
+                        <g transform="matrix(1,0,0,1,100.77299499511719,190.260009765625)" opacity="1">
+                          <g opacity="1" transform="matrix(1,0,0,1,19.22800064086914,21.92799949645996)">
+                            <path fill="rgb(0,204,195)" fill-opacity="1"
+                              d=" M0,-19.17300033569336 C-6.565999984741211,-19.17300033569336 -12.923999786376953,-20.052000045776367 -18.97800064086914,-21.67799949645996 C-18.97800064086914,-21.67799949645996 -18.97800064086914,16.84600067138672 -18.97800064086914,16.84600067138672 C-18.97800064086914,16.84600067138672 -18.97800064086914,21.67799949645996 -18.97800064086914,21.67799949645996 C-18.97800064086914,21.67799949645996 18.97800064086914,21.67799949645996 18.97800064086914,21.67799949645996 C18.97800064086914,21.67799949645996 18.97800064086914,16.84600067138672 18.97800064086914,16.84600067138672 C18.97800064086914,16.84600067138672 18.97800064086914,-21.67799949645996 18.97800064086914,-21.67799949645996 C12.923999786376953,-20.052000045776367 6.565999984741211,-19.17300033569336 0,-19.17300033569336z">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                      <g mask="url(#__lottie_element_60)" style="display: block;">
+                        <g transform="matrix(1,0,0,1,25.815000534057617,156.1790008544922)" opacity="1">
+                          <g opacity="1" transform="matrix(1,0,0,1,29.00200080871582,29.003000259399414)">
+                            <path fill="rgb(0,204,195)" fill-opacity="1"
+                              d=" M1.9149999618530273,-28.753000259399414 C1.9149999618530273,-28.753000259399414 -25.32900047302246,-1.5080000162124634 -25.32900047302246,-1.5080000162124634 C-25.32900047302246,-1.5080000162124634 -28.753000259399414,1.9129999876022339 -28.753000259399414,1.9129999876022339 C-28.753000259399414,1.9129999876022339 -1.9129999876022339,28.753000259399414 -1.9129999876022339,28.753000259399414 C-1.9129999876022339,28.753000259399414 1.5080000162124634,25.32900047302246 1.5080000162124634,25.32900047302246 C1.5080000162124634,25.32900047302246 28.753000259399414,-1.9140000343322754 28.753000259399414,-1.9140000343322754 C17.617000579833984,-8.340999603271484 8.342000007629395,-17.615999221801758 1.9149999618530273,-28.753000259399414z">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                      <g mask="url(#__lottie_element_68)" style="display: block;">
+                        <g transform="matrix(1,0,0,1,5.884000778198242,100.77099609375)" opacity="1">
+                          <g opacity="1" transform="matrix(1,0,0,1,21.92799949645996,19.22800064086914)">
+                            <path fill="rgb(0,204,195)" fill-opacity="1"
+                              d=" M21.67799949645996,-18.97800064086914 C21.67799949645996,-18.97800064086914 -16.844999313354492,-18.97800064086914 -16.844999313354492,-18.97800064086914 C-16.844999313354492,-18.97800064086914 -21.67799949645996,-18.97800064086914 -21.67799949645996,-18.97800064086914 C-21.67799949645996,-18.97800064086914 -21.67799949645996,18.97800064086914 -21.67799949645996,18.97800064086914 C-21.67799949645996,18.97800064086914 -16.844999313354492,18.97800064086914 -16.844999313354492,18.97800064086914 C-16.844999313354492,18.97800064086914 21.67799949645996,18.97800064086914 21.67799949645996,18.97800064086914 C20.052000045776367,12.925000190734863 19.172000885009766,6.566999912261963 19.172000885009766,0.0010000000474974513 C19.172000885009766,-6.565999984741211 20.052000045776367,-12.923999786376953 21.67799949645996,-18.97800064086914z">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                      <g mask="url(#__lottie_element_76)" style="display: block;">
+                        <g transform="matrix(1,0,0,1,25.814001083374023,25.815000534057617)" opacity="1">
+                          <g opacity="1" transform="matrix(1,0,0,1,29.00200080871582,29.00200080871582)">
+                            <path fill="rgb(0,204,195)" fill-opacity="1"
+                              d=" M1.5080000162124634,-25.33099937438965 C1.5080000162124634,-25.33099937438965 -1.9129999876022339,-28.750999450683594 -1.9129999876022339,-28.750999450683594 C-1.9129999876022339,-28.750999450683594 -28.753000259399414,-1.9129999876022339 -28.753000259399414,-1.9129999876022339 C-28.753000259399414,-1.9129999876022339 -25.33099937438965,1.5080000162124634 -25.33099937438965,1.5080000162124634 C-25.33099937438965,1.5080000162124634 1.9129999876022339,28.750999450683594 1.9129999876022339,28.750999450683594 C8.340999603271484,17.61400032043457 17.615999221801758,8.34000015258789 28.753000259399414,1.9129999876022339 C28.753000259399414,1.9129999876022339 1.5080000162124634,-25.33099937438965 1.5080000162124634,-25.33099937438965z">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                      <g transform="matrix(0.9442639350891113,0,0,0.9442639350891113,89.43795013427734,89.43795013427734)"
+                        opacity="1" style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,32.36600112915039,32.36600112915039)">
+                          <path fill="rgb(0,204,195)" fill-opacity="1"
+                            d=" M31.708999633789062,-4.869999885559082 C30.910999298095703,-10.097000122070312 28.865999221801758,-14.89900016784668 25.868000030517578,-18.976999282836914 C23.93199920654297,-21.61199951171875 21.61199951171875,-23.93199920654297 18.97800064086914,-25.867000579833984 C14.89900016784668,-28.864999771118164 10.095999717712402,-30.90999984741211 4.869999885559082,-31.70800018310547 C3.2769999504089355,-31.951000213623047 1.6610000133514404,-32.1150016784668 0.0010000000474974513,-32.1150016784668 C-1.659000039100647,-32.1150016784668 -3.2780001163482666,-31.951000213623047 -4.869999885559082,-31.70800018310547 C-10.097000122070312,-30.90999984741211 -14.89900016784668,-28.864999771118164 -18.97800064086914,-25.867000579833984 C-21.610000610351562,-23.93199920654297 -23.93199920654297,-21.61199951171875 -25.867000579833984,-18.976999282836914 C-28.864999771118164,-14.89900016784668 -30.90999984741211,-10.097000122070312 -31.70800018310547,-4.869999885559082 C-31.950000762939453,-3.2769999504089355 -32.11600112915039,-1.659000039100647 -32.11600112915039,0.0010000000474974513 C-32.11600112915039,1.659999966621399 -31.950000762939453,3.2780001163482666 -31.70800018310547,4.869999885559082 C-30.90999984741211,10.097000122070312 -28.864999771118164,14.899999618530273 -25.867000579833984,18.979000091552734 C-23.93199920654297,21.611000061035156 -21.610000610351562,23.930999755859375 -18.97800064086914,25.867000579833984 C-14.89900016784668,28.863000869750977 -10.097000122070312,30.90999984741211 -4.869999885559082,31.70800018310547 C-3.2780001163482666,31.950000762939453 -1.659000039100647,32.1150016784668 0.0010000000474974513,32.1150016784668 C1.6610000133514404,32.1150016784668 3.2769999504089355,31.950000762939453 4.869999885559082,31.70800018310547 C10.095999717712402,30.90999984741211 14.89900016784668,28.863000869750977 18.97800064086914,25.867000579833984 C21.611000061035156,23.930999755859375 23.93199920654297,21.611000061035156 25.868000030517578,18.979000091552734 C28.865999221801758,14.899999618530273 30.910999298095703,10.097000122070312 31.708999633789062,4.869999885559082 C31.951000213623047,3.2780001163482666 32.11600112915039,1.659999966621399 32.11600112915039,0.0010000000474974513 C32.11600112915039,-1.659000039100647 31.951000213623047,-3.2769999504089355 31.708999633789062,-4.869999885559082z">
+                          </path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="opacity: 1; transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+            class="titles margin-top text-hero">Our proprietary <span class="bold-text">GeniusWire™</span> data platform
+            analyzes millions of eCommerce websites, delivering performance metrics and analytical insights with
+            unprecedented detail.</div>
+          <div style="opacity: 1;" class="bouttons-container"><a href="https://geniuswire.com/"
+              data-w-id="dbade0ca-2dcc-09e9-477b-7c4840009ab1"
+              style="border-color: rgb(0, 43, 153); background-color: rgb(0, 43, 153);" target="_blank"
+              class="boutton w-inline-block">
+              <div style="color:rgb(244,243,243)" class="btn-text">Visit GeniusWire™</div>
+              <div
+                style="transform: translate3d(0px, 102%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); background-color: rgb(255, 237, 225); transform-style: preserve-3d;"
+                class="btn-anim-bk"></div>
+            </a><a href="#what-is-genius" data-w-id="9f3312b5-be2f-4cc7-ce67-be07174a2c27"
+              style="border-color:rgb(0,43,153)" class="boutton w-inline-block">
+              <div style="color:rgb(0,43,153)" class="btn-text">What is GeniusWire™ ?</div>
+              <div
+                style="transform: translate3d(0px, 102%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); background-color: rgb(0, 43, 153); transform-style: preserve-3d;"
+                class="btn-anim-bk"></div>
+            </a></div>
+        </div>
+        <div id="what" data-w-id="f269e673-60d0-b3e7-844c-c7880453a96a" class="section no-padding-bottom">
+          <div
+            style="opacity: 0; transform: translate3d(0px, 2em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+            class="titles">How we use <span class="bold-text">GeniusWire™</span></div>
+          <div class="text-columns">
+            <div data-w-id="8569a035-7067-91b6-eacf-6b7cc9144c89"
+              style="opacity: 0; transform: translate3d(0px, 2em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+              class="paragraph columns max-ch">Driving scaleable brand growth can seem complex, but it starts with the
+              basics: verified data points and business metrics. GeniusWire enables an efficient analysis of performance
+              indicators during the early stages of communication between your business and nolk.</div>
+            <div data-w-id="825a5e1e-58be-86c7-649b-df0284894600"
+              style="transform: translate3d(0px, 2em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 0; transform-style: preserve-3d;"
+              class="paragraph columns max-ch">By minimizing inefficiencies during due diligence, we can come to a
+              profitable and transparent agreement more quickly, allowing you to move forwards with your business
+              projects. Because it works so well for us, we are now offering it as a service to other aspiring brand
+              builders.</div>
+          </div>
+        </div>
+        <div id="what-is-genius" class="section">
+          <div data-w-id="46f3a742-4aef-8e94-e8fc-c37d885fa9eb" class="box">
+            <div class="box-text-conatiner">
+              <div class="lottie-intext-container no-padding-left geniuswire">
+                <div data-w-id="49a97111-41a9-3adc-7569-5dc9a0ec7669" data-is-ix2-target="1" class="icone-intext-lottie"
+                  data-animation-type="lottie"
+                  data-src="https://assets.website-files.com/610c251287ec86f4848cd877/61255306a778891037b771d9_clindoeil-jaune.json"
+                  data-loop="1" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="2.5"
+                  data-duration="0" data-ix2-initial-state="0"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 280 280" width="280" height="280" preserveAspectRatio="xMidYMid meet"
+                    style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
+                    <defs>
+                      <clipPath id="__lottie_element_2">
+                        <rect width="280" height="280" x="0" y="0"></rect>
+                      </clipPath>
+                    </defs>
+                    <g clip-path="url(#__lottie_element_2)">
+                      <g transform="matrix(1,0,0,1,40.44200134277344,178.33999633789062)" opacity="1"
+                        style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,98.9739990234375,37.33300018310547)">
+                          <path fill="rgb(244,237,107)" fill-opacity="1"
+                            d=" M23.982999801635742,34.66400146484375 C31.635000228881836,33.09400177001953 39.16299819946289,30.756000518798828 46.34199905395508,27.7189998626709 C53.40700149536133,24.733999252319336 60.22100067138672,21.041000366210938 66.59200286865234,16.733999252319336 C72.89099884033203,12.47599983215332 78.81500244140625,7.586999893188477 84.19100189208984,2.2119998931884766 C89.57099914550781,-3.1630001068115234 94.46099853515625,-9.09000015258789 98.7249984741211,-15.397000312805176 C98.7249984741211,-15.397000312805176 66.6500015258789,-37.08300018310547 66.6500015258789,-37.08300018310547 C63.763999938964844,-32.81399917602539 60.45899963378906,-28.805999755859375 56.81700134277344,-25.172000885009766 C53.17499923706055,-21.524999618530273 49.16999816894531,-18.222000122070312 44.9119987487793,-15.340999603271484 C40.61899948120117,-12.440999984741211 36.03499984741211,-9.954999923706055 31.274999618530273,-7.940999984741211 C26.430999755859375,-5.894999980926514 21.36400032043457,-4.323999881744385 16.211999893188477,-3.2669999599456787 C5.644999980926514,-1.1009999513626099 -5.646999835968018,-1.1009999513626099 -16.21299934387207,-3.2669999599456787 C-21.363000869750977,-4.323999881744385 -26.43199920654297,-5.894999980926514 -31.288000106811523,-7.946000099182129 C-36.03300094604492,-9.949000358581543 -40.6150016784668,-12.440999984741211 -44.91400146484375,-15.347000122070312 C-49.16400146484375,-18.21500015258789 -53.17499923706055,-21.524999618530273 -56.82400131225586,-25.172000885009766 C-60.459999084472656,-28.805999755859375 -63.76499938964844,-32.81399917602539 -66.6500015258789,-37.08300018310547 C-66.6500015258789,-37.08300018310547 -98.7249984741211,-15.397000312805176 -98.7249984741211,-15.397000312805176 C-94.46499633789062,-9.097000122070312 -89.58000183105469,-3.174999952316284 -84.1969985961914,2.2119998931884766 C-78.8030014038086,7.598999977111816 -72.87899780273438,12.484999656677246 -66.59300231933594,16.733999252319336 C-60.21699905395508,21.047000885009766 -53.402000427246094,24.740999221801758 -46.354000091552734,27.711999893188477 C-39.15999984741211,30.756000518798828 -31.634000778198242,33.09400177001953 -23.985000610351562,34.66400146484375 C-16.14900016784668,36.268001556396484 -8.083000183105469,37.08300018310547 -0.003000000026077032,37.08300018310547 C8.074999809265137,37.08300018310547 16.148000717163086,36.268001556396484 23.982999801635742,34.66400146484375z">
+                          </path>
+                        </g>
+                      </g>
+                      <g transform="matrix(1,0,0,1,13.28000259399414,25.822998046875)" opacity="1"
+                        style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,56.779998779296875,56.779998779296875)">
+                          <path fill="rgb(244,237,107)" fill-opacity="1"
+                            d=" M-17.80900001525879,-0.0010000000474974513 C-17.80900001525879,-9.821000099182129 -9.821999549865723,-17.812000274658203 0.0010000000474974513,-17.812000274658203 C9.821000099182129,-17.812000274658203 17.81100082397461,-9.821000099182129 17.81100082397461,-0.0010000000474974513 C17.81100082397461,9.819999694824219 9.821000099182129,17.812000274658203 0.0010000000474974513,17.812000274658203 C-9.821999549865723,17.812000274658203 -17.80900001525879,9.819999694824219 -17.80900001525879,-0.0010000000474974513z M56.52899932861328,-0.0010000000474974513 C56.52899932861328,-31.172000885009766 31.170000076293945,-56.52899932861328 0.0010000000474974513,-56.52899932861328 C-31.17099952697754,-56.52899932861328 -56.52899932861328,-31.172000885009766 -56.52899932861328,-0.0010000000474974513 C-56.52899932861328,31.17099952697754 -31.17099952697754,56.52899932861328 0.0010000000474974513,56.52899932861328 C31.170000076293945,56.52899932861328 56.52899932861328,31.17099952697754 56.52899932861328,-0.0010000000474974513z">
+                          </path>
+                        </g>
+                      </g>
+                      <g transform="matrix(1,0,0,1,151.99398803710938,25.822998046875)" opacity="1"
+                        style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,56.77899932861328,56.779998779296875)">
+                          <path fill="rgb(244,237,107)" fill-opacity="1"
+                            d=" M-17.808000564575195,-0.0010000000474974513 C-17.808000564575195,-9.821000099182129 -9.821000099182129,-17.812000274658203 0.0010000000474974513,-17.812000274658203 C9.821000099182129,-17.812000274658203 17.809999465942383,-9.821000099182129 17.809999465942383,-0.0010000000474974513 C17.809999465942383,9.819999694824219 9.821000099182129,17.812000274658203 0.0010000000474974513,17.812000274658203 C-9.821000099182129,17.812000274658203 -17.808000564575195,9.819999694824219 -17.808000564575195,-0.0010000000474974513z M56.52899932861328,-0.0010000000474974513 C56.52899932861328,-31.172000885009766 31.17099952697754,-56.52899932861328 0.0010000000474974513,-56.52899932861328 C-31.170000076293945,-56.52899932861328 -56.52899932861328,-31.172000885009766 -56.52899932861328,-0.0010000000474974513 C-56.52899932861328,31.17099952697754 -31.170000076293945,56.52899932861328 0.0010000000474974513,56.52899932861328 C31.17099952697754,56.52899932861328 56.52899932861328,31.17099952697754 56.52899932861328,-0.0010000000474974513z">
+                          </path>
+                        </g>
+                      </g>
+                      <g transform="matrix(0.9948919415473938,0.1009455993771553,-0.1009455993771553,0.9948919415473938,163.70777893066406,16.670135498046875)"
+                        opacity="1" style="display: none;">
+                        <g opacity="1" transform="matrix(1,0,0,1,56.77899932861328,56.779998779296875)">
+                          <path fill="rgb(244,237,107)" fill-opacity="1"
+                            d=" M-17.808000564575195,-0.0010000000474974513 C-17.808000564575195,-9.821000099182129 -9.821000099182129,-17.812000274658203 0.0010000000474974513,-17.812000274658203 C9.821000099182129,-17.812000274658203 17.809999465942383,-9.821000099182129 17.809999465942383,-0.0010000000474974513 C17.809999465942383,9.819999694824219 9.821000099182129,17.812000274658203 0.0010000000474974513,17.812000274658203 C-9.821000099182129,17.812000274658203 -17.808000564575195,9.819999694824219 -17.808000564575195,-0.0010000000474974513z M56.52899932861328,-0.0010000000474974513 C56.52899932861328,-31.172000885009766 31.17099952697754,-56.52899932861328 0.0010000000474974513,-56.52899932861328 C-31.170000076293945,-56.52899932861328 -56.52899932861328,-31.172000885009766 -56.52899932861328,-0.0010000000474974513 C-56.52899932861328,31.17099952697754 -31.170000076293945,56.52899932861328 0.0010000000474974513,56.52899932861328 C31.17099952697754,56.52899932861328 56.52899932861328,31.17099952697754 56.52899932861328,-0.0010000000474974513z">
+                          </path>
+                        </g>
+                      </g>
+                      <g transform="matrix(1,0,0,1,151.98899841308594,82.35099792480469)" opacity="1"
+                        style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,56.777000427246094,28.516000747680664)">
+                          <path fill="rgb(244,237,107)" fill-opacity="1"
+                            d=" M16.41699981689453,-21.336000442504883 C15.524999618530273,-19.222999572753906 14.234000205993652,-17.312999725341797 12.60200023651123,-15.677000045776367 C10.960000038146973,-14.032999992370605 9.04699993133545,-12.741999626159668 6.922999858856201,-11.845999717712402 C2.569999933242798,-9.994999885559082 -2.556999921798706,-9.994999885559082 -6.916999816894531,-11.845999717712402 C-9.039999961853027,-12.741999626159668 -10.95300006866455,-14.032999992370605 -12.585000038146973,-15.664999961853027 C-14.232999801635742,-17.312999725341797 -15.52299976348877,-19.222999572753906 -16.41699981689453,-21.340999603271484 C-17.339000701904297,-23.518999099731445 -17.80699920654297,-25.85099983215332 -17.80699920654297,-28.266000747680664 C-17.80699920654297,-28.266000747680664 -56.527000427246094,-28.266000747680664 -56.527000427246094,-28.266000747680664 C-56.527000427246094,-20.641000747680664 -55.029998779296875,-13.234000205993652 -52.07899856567383,-6.26200008392334 C-49.236000061035156,0.4650000035762787 -45.16400146484375,6.510000228881836 -39.9640007019043,11.71399974822998 C-34.779998779296875,16.891000747680664 -28.743000030517578,20.958999633789062 -22.013999938964844,23.809999465942383 C-15.032999992370605,26.767000198364258 -7.622000217437744,28.266000747680664 0.0010000000474974513,28.266000747680664 C7.630000114440918,28.266000747680664 15.038000106811523,26.767000198364258 22.020000457763672,23.809999465942383 C28.749000549316406,20.958999633789062 34.78799819946289,16.885000228881836 39.986000061035156,11.696999549865723 C45.17300033569336,6.502999782562256 49.2400016784668,0.46000000834465027 52.077999114990234,-6.255000114440918 C55.03099822998047,-13.234000205993652 56.527000427246094,-20.641000747680664 56.527000427246094,-28.266000747680664 C56.527000427246094,-28.266000747680664 17.81100082397461,-28.266000747680664 17.81100082397461,-28.266000747680664 C17.81100082397461,-25.85099983215332 17.340999603271484,-23.518999099731445 16.41699981689453,-21.336000442504883z">
+                          </path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg></div>
+              </div>
+              <div style="opacity: 1;" class="titles">Discover the best curated collections of eCommerce brands in one
+                place.</div>
+              <div class="bouttons-container no-margin" style="opacity: 1;">
+                <a data-w-id="89c406ea-b6dc-20ae-480b-8cd0e55b94ad" style="border-color: rgb(244, 243, 243); "
+                  href="https://geniuswire.com/" target="_blank" class="boutton w-inline-block">
+                  <div style="color:rgb(244,243,243)" class="btn-text">Visit GeniusWire™</div>
+                  <div
+                    style="transform: translate3d(0px, 102%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); background-color: rgb(244, 243, 243); transform-style: preserve-3d;"
+                    class="btn-anim-bk"></div>
+                </a>
+              </div>
+            </div>
+            <div class="genius-image-wrapper"><img
+                src="https://assets.website-files.com/610c251287ec86f4848cd877/633c9651ec4506c5c6993cb1_gw_slide_1.png"
+                loading="lazy"
+                style="transform: translate3d(0px, 2vw, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                data-w-id="10f8e2e5-1e7a-aae0-5503-c5775858902b" alt="" class="image-6"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section no-padding">
+        <div class="list">
+
+          <div class="drawer-container blue-underline genius" onclick="expandThings1()">
+            <div class="div-block-37">
+              <div class="drawer-title-container">
+                <div class="drawer-title">
+                  <div class="titles open-drawer-title">Discover brands by city</div>
+                  <div class="plus-container plus-drawer" id="plusCross">
+                    <img
+                      src="https://assets.website-files.com/610c251287ec86f4848cd877/6122dc3cc8ee4c0c4a57e73a_%2Bblue.png"
+                      loading="lazy" alt="" class="plus bigger">
+                  </div>
+                </div>
+                <div class="open-drawer-02"></div>
+                <div class="paragraph p-drawer" id="show-text" style="opacity: 1; width: 956.688px; height: 0px;">The
+                  savviest way to
+                  scout out brands by geographical location.<br>Looking for key metrics of top brands based in New York
+                  City, London, or France? Get started here.a</div>
+              </div>
+              <div class="drawer-photo" id="show-image" style="opacity: 1;">
+                <img
+                  src="https://assets.website-files.com/610c251287ec86f4848cd877/633c9c117cdf0106718af29a_gw_slide_2.png"
+                  loading="lazy"
+                  srcset="https://assets.website-files.com/610c251287ec86f4848cd877/633c9c117cdf0106718af29a_gw_slide_2-p-500.png  500w,https://assets.website-files.com/610c251287ec86f4848cd877/633c9c117cdf0106718af29a_gw_slide_2-p-800.png  800w,https://assets.website-files.com/610c251287ec86f4848cd877/633c9c117cdf0106718af29a_gw_slide_2-p-1080.png  1080w,https://assets.website-files.com/610c251287ec86f4848cd877/633c9c117cdf0106718af29a_gw_slide_2.png  1270w"
+                  sizes="(max-width: 479px) 77vw, (max-width: 767px) 65vw, 18vw" alt="" class="image-6 drawer">
+              </div>
+            </div>
+            <div class="line blue"></div>
+          </div>
+
+          <script>
+
+            function expandThings1() {
+
+              if (document.getElementById("show-text").style.height !== "80px") {
+                document.getElementById("show-text").style.height = "80px"
+                document.getElementById("show-image").style.width = "45em"
+                document.getElementById("show-image").style.height = "28vw"
+                document.getElementById("show-image").style.flex = "0 0 auto"
+                document.getElementById("plusCross").style.transform = "rotate(45deg)"
+              } else {
+                document.getElementById("show-text").style.height = "0px"
+                document.getElementById("show-image").style.width = "0em"
+                document.getElementById("show-image").style.height = "0vw"
+                document.getElementById("show-image").style.flex = "0 0 auto"
+                document.getElementById("plusCross").style.transform = "rotate(0deg)"
+              }
+
+            }
+
+          </script>
+
+          <div class="drawer-container blue-underline genius" onclick="expandThings2()">
+            <div class="div-block-37">
+              <div class="drawer-title-container">
+                <div class="drawer-title">
+                  <div class="titles open-drawer-title">Discover brands in over 20+ categories.</div>
+                  <div class="plus-container plus-drawer" id="plusCross2"><img
+                      src="https://assets.website-files.com/610c251287ec86f4848cd877/6122dc3cc8ee4c0c4a57e73a_%2Bblue.png"
+                      loading="lazy" alt="" class="plus bigger"></div>
+                </div>
+                <div class="paragraph p-drawer" id="show-text2" style="opacity: 1; width: 956.688px; height: 0px;">To
+                  know which
+                  &nbsp;ecommerce is trending in growth, and who are the top players by category, we suggest you start
+                  here.</div>
+                <div class="open-drawer-02"></div>
+              </div>
+              <div class="drawer-photo"><img
+                  src="https://assets.website-files.com/610c251287ec86f4848cd877/633ca2107be14b1223f7bbd1_gw_slide_3.png"
+                  loading="lazy"
+                  srcset="https://assets.website-files.com/610c251287ec86f4848cd877/633ca2107be14b1223f7bbd1_gw_slide_3-p-500.png  500w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca2107be14b1223f7bbd1_gw_slide_3-p-800.png  800w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca2107be14b1223f7bbd1_gw_slide_3-p-1080.png  1080w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca2107be14b1223f7bbd1_gw_slide_3.png  1270w"
+                  sizes="(max-width: 479px) 77vw, (max-width: 767px) 65vw, 18vw" alt="" class="image-6 drawer"></div>
+            </div>
+            <div class="line blue"></div>
+          </div>
+
+          <script>
+
+            function expandThings2() {
+              console.log("open expnadThings2");
+            }
+
+          </script>
+
+
+          <div class="drawer-container blue-underline genius">
+            <div class="div-block-37">
+              <div class="drawer-title-container">
+                <div class="drawer-title">
+                  <div class="titles open-drawer-title">Find brands that take their values seriously.</div>
+                  <div class="plus-container plus-drawer"><img
+                      src="https://assets.website-files.com/610c251287ec86f4848cd877/6122dc3cc8ee4c0c4a57e73a_%2Bblue.png"
+                      loading="lazy" alt="" class="plus bigger"></div>
+                </div>
+                <div class="paragraph p-drawer" style="height: 0px; opacity: 0;">Learn more about brands making the
+                  world a better place. Discover sustainable brands that are 1% for the planet, B-Corporation and
+                  Climate Neutral.<br></div>
+                <div class="open-drawer-02"></div>
+              </div>
+              <div class="drawer-photo"><img
+                  src="https://assets.website-files.com/610c251287ec86f4848cd877/633ca18879aae4d3cce81150_gw_slide_4.png"
+                  loading="lazy"
+                  srcset="https://assets.website-files.com/610c251287ec86f4848cd877/633ca18879aae4d3cce81150_gw_slide_4-p-500.png  500w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca18879aae4d3cce81150_gw_slide_4-p-800.png  800w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca18879aae4d3cce81150_gw_slide_4-p-1080.png  1080w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca18879aae4d3cce81150_gw_slide_4.png  1270w"
+                  sizes="(max-width: 479px) 77vw, (max-width: 767px) 65vw, 18vw" alt="" class="image-6 drawer"></div>
+            </div>
+            <div class="line blue"></div>
+          </div>
+
+
+          <div class="drawer-container blue-underline genius">
+            <div class="div-block-37">
+              <div class="drawer-title-container">
+                <div class="drawer-title">
+                  <div class="titles open-drawer-title">Subscribe To Our Weekly Digest.</div>
+                  <div class="plus-container plus-drawer"><img
+                      src="https://assets.website-files.com/610c251287ec86f4848cd877/6122dc3cc8ee4c0c4a57e73a_%2Bblue.png"
+                      loading="lazy" alt="" class="plus bigger"></div>
+                </div>
+                <div class="paragraph p-drawer" style="height: 0px; opacity: 0;">Get key metrics on your favourite
+                  brands delivered to your inbox weekly in an easy to read digest.<br></div>
+                <div class="open-drawer-02"></div>
+              </div>
+              <div class="drawer-photo"><img
+                  src="https://assets.website-files.com/610c251287ec86f4848cd877/633ca17a53031b932780fa4e_gw_slide_5.png"
+                  loading="lazy"
+                  srcset="https://assets.website-files.com/610c251287ec86f4848cd877/633ca17a53031b932780fa4e_gw_slide_5-p-500.png  500w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca17a53031b932780fa4e_gw_slide_5-p-800.png  800w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca17a53031b932780fa4e_gw_slide_5-p-1080.png  1080w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca17a53031b932780fa4e_gw_slide_5.png  1270w"
+                  sizes="(max-width: 479px) 77vw, (max-width: 767px) 65vw, 18vw" alt="" class="image-6 drawer"></div>
+            </div>
+            <div class="line blue"></div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="section no-padding">
+        <div data-w-id="a35b09b8-946e-57e4-9745-6a02b5dfcba1" style="opacity: 1;" class="subtitles max-ch">GeniusWire is
+          a data platform that analyzes eCommerce brand performance indicators:
+          how well the brand is growing. You can browse this data for free, save brands in collections and use it to
+          make better decisions on any business project.</div>
+      </div>
+    </div>
+    <div class="div-block-6"></div>
+    <div class="grid-container">
+      <div class="grid-column first">
+        <div class="text-block-2">7,75</div>
+      </div>
+      <div class="grid-column">
+        <div class="text-block-2">15,5</div>
+      </div>
+      <div class="grid-column">
+        <div class="text-block-2">23,25</div>
+      </div>
+      <div class="grid-column">
+        <div class="text-block-2">31</div>
+      </div>
+      <div class="grid-column">
+        <div class="text-block-2">38,75</div>
+      </div>
+      <div class="grid-column">
+        <div class="text-block-2">46,5</div>
+      </div>
+      <div class="grid-column"></div>
+      <div class="grid-column"></div>
+      <div class="grid-column"></div>
+      <div class="grid-column"></div>
+      <div class="grid-column"></div>
+      <div class="grid-column"></div>
+    </div>
+  </div>
+  <div data-w-id="2bd54801-3a58-4a90-e946-38c06dae88e0" class="rounded-section footer">
+    <div class="section footer">
+      <div class="footer-links-container">
+        <div class="div-block-5 fotter logo"><a href="/" class="logo-nolk-wrapper w-inline-block"><img
+              src="https://assets.website-files.com/610c251287ec86f4848cd877/612570731160591235729b5d_logo-blanc.png"
+              loading="lazy" alt=""></a></div>
+        <div class="div-block-5 fotter"><a id="brands2" href="/our-brands"
+            class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links in-footer">Explore our brands</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="work2" href="/work-with-us" class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links in-footer">Work with us</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="genius2" href="/geniuswire" aria-current="page"
+            class="menu-links-container anim-transition w-inline-block w--current">
+            <div class="footer-links in-footer">GeniusWire™</div>
+            <div class="line white anim-line-hover"></div>
+          </a></div>
+        <div class="div-block-40"><a id="sell2" href="/sell-your-business"
+            class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links in-footer">Sell your business</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="team2" href="/meet-our-team" class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links in-footer">Meet our team</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="cares2" href="/nolk-cares" class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links in-footer">nolk cares</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="pressrelease"
+            href="https://assets.website-files.com/610c251287ec86f4848cd877/6352f0ed0af27d70babc307c_Nolk%20Series%20A%20Press%20Release%20EN%20.pdf"
+            target="_blank" class="menu-links-container anim-transition w-inline-block">
+            <div class="footer-links in-footer">Press release</div>
+            <div class="line white anim-line-hover"></div>
+          </a><a id="pressrelease" href="/geniuswire-fr" class="menu-links-container is-link-fr-en w-inline-block">
+            <div class="footer-links in-footer">FR</div>
+            <div class="line white anim-line-hover"></div>
+          </a>
+          <div class="w-dyn-list">
+            <div role="list" class="w-dyn-items">
+              <div role="listitem" class="w-dyn-item"><a href="#"
+                  class="menu-links-container w-inline-block w-condition-invisible">
+                  <div class="footer-links in-footer">Press release</div>
+                  <div class="line white anim-line-hover"></div>
+                </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-links-container bas">
+        <div class="div-block-32"><a href="https://www.linkedin.com/company/nolkco" target="_blank"
+            class="social-link footer w-inline-block"><img
+              src="https://assets.website-files.com/610c251287ec86f4848cd877/61291fcd9c24d84fa7cc2bfb_linkedin.png"
+              loading="lazy" alt="" class="social-icone"></a>
+          <div class="menu-links-container"><a href="mailto:info@nolk.com"
+              class="footer-links in-footer w-inline-block">info@nolk.com</a>
+            <div class="line white anim-line-hover"></div>
+          </div>
+        </div><a href="#Top" class="footer-links in-footer top w-inline-block w--current">
+          <div>Back to top</div><img
+            src="https://assets.website-files.com/610c251287ec86f4848cd877/6137bbd62e4c43b1e409f14b_Top.png"
+            loading="lazy" alt="" class="splide__arrow backtotop">
+        </a>
+      </div>
+    </div>
+    <div class="w-embed"></div>
+  </div>
+  <div class="transitions-container">
+    <div class="transition"></div>
+    <div class="transition-fade"></div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-column first">
+      <div class="text-block-2">7,75</div>
+    </div>
+    <div class="grid-column">
+      <div class="text-block-2">15,5</div>
+    </div>
+    <div class="grid-column">
+      <div class="text-block-2">23,25</div>
+    </div>
+    <div class="grid-column">
+      <div class="text-block-2">31</div>
+    </div>
+    <div class="grid-column">
+      <div class="text-block-2">38,75</div>
+    </div>
+    <div class="grid-column">
+      <div class="text-block-2">46,5</div>
+    </div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+  </div>
+  <!--[if lte IE 9]><![endif]-->
+</body>
+
+</html>

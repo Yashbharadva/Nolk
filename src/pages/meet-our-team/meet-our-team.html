@@ -11,16 +11,21 @@
 
 <body style="">
   <div class="container">
-    <div style="opacity: 1;" class="navbar-container"><a href="/" class="logo-nolk-wrapper w-inline-block"><img
-          src="https://assets.website-files.com/610c251287ec86f4848cd877/612570731160591235729b5d_logo-blanc.png"
+    <div style="opacity: 1;" class="navbar-container">
+      <a href="/src/pages/homepage/index.html" class="logo-nolk-wrapper w-inline-block">
+        <img src="https://assets.website-files.com/610c251287ec86f4848cd877/612570731160591235729b5d_logo-blanc.png"
           loading="lazy" alt=""></a>
       <div class="close-menu"></div>
-      <div class="menu">
-        <div class="div-block-5"><a id="brands" href="/our-brands"
+
+
+      <div class="menu open" id="sidebar" style="display: none;">
+        <div class="div-block-5"><a id="brands" href="/src/pages/explore-brand/explore-brand.html"
             class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Explore our brands</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="work" href="/work-with-us" class="menu-links-container anim-transition w-inline-block">
+          </a>
+          <a id="work" href="/src/pages/work-with-us/work-with-us.html"
+            class=" menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Work with us</div>
             <div class="line white anim-line-hover"></div>
           </a><a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
@@ -29,32 +34,62 @@
           </a><a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Sell your business</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="team" href="/meet-our-team" aria-current="page"
-            class="menu-links-container anim-transition w-inline-block w--current">
+          </a><a id="team" href="/src/pages/meet-our-team/meet-our-team.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Meet our team</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="cares" href="/nolk-cares" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="cares" href="/src/pages/care/care.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">nolk cares</div>
             <div class="line white anim-line-hover"></div>
-          </a><a href="/notre-equipe" class="menu-links-container link-langue w-inline-block">
-            <div class="footer-links">FR</div>
-            <div class="line white anim-line-hover"></div>
-          </a></div>
-        <div class="footer-links-container bas vertical is-in-menu"><a href="mailto:info@nolk.com"
-            class="menu-links-container w-inline-block">
+          </a>
+        </div>
+        <div class="footer-links-container bas vertical is-in-menu">
+          <a href="mailto:info@nolk.com" class="menu-links-container w-inline-block">
             <div class="footer-links">info@nolk.com</div>
             <div class="line white anim-line-hover"></div>
           </a>
-          <div class="div-block-31"><a href="https://www.linkedin.com/company/nolkco" target="_blank"
-              class="social-link w-inline-block"><img
+          <div class="div-block-31">
+            <a href="https://www.linkedin.com/company/nolkco" target="_blank" class="social-link w-inline-block"><img
                 src="https://assets.website-files.com/610c251287ec86f4848cd877/61291fcd9c24d84fa7cc2bfb_linkedin.png"
-                loading="lazy" alt="" class="social-icone"></a></div>
+                loading="lazy" alt="" class="social-icone"></a>
+          </div>
         </div>
       </div>
-      <div class="burger">
-        <div class="burger-line first" style="background-color: rgb(244, 243, 243);"></div>
-        <div class="burger-line second" style="background-color: rgb(244, 243, 243);"></div>
+
+
+      <div class="burger" id="line-main" onclick="openMenu()" style="display: flex;">
+        <div class=" burger-line first" id="line-1"></div>
+        <div class="burger-line second" id="line-2"></div>
       </div>
+
+      <script>
+        function openMenu() {
+          console.log("Open side bar menu");
+          if (document.getElementById("line-main").style.display === "none" || document.getElementById("sidebar").style.display === "flex") {
+            document.getElementById("sidebar").style.display = "none"
+            document.getElementById("line-1").style.transform = "translate(0px) rotate(0)"
+            document.getElementById("line-2").style.transform = "translate(0px) rotate(0)"
+            window.onscroll = function () { };
+
+
+          } else {
+            document.getElementById("line-1").style.transform = "translate(0px, 8px) rotate(-45deg)"
+            document.getElementById("line-2").style.transform = "translate(0px, -3px) rotate(45deg)"
+            document.getElementById("sidebar").style.display = "flex"
+
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+              window.onscroll = function () {
+                window.scrollTo(scrollLeft, scrollTop);
+              };
+          }
+        }
+
+
+      </script>
+
+
     </div>
     <div class="rounded-section first turquoise">
       <div id="Top" class="section hero-section">
@@ -561,7 +596,7 @@
                 <div class="div-block-24">
                   <div class="team-image-container board">
                     <div
-                      style="background-image:url(https://assets.website-files.com/6113db8b6628664e9136dbfd/6340bf6b23de2996c7c6127a_Nolk_Nicolas%20%20(1).jpeg)"
+                      style="background-image:url(https://assets.website-files.com/6113db8b6628664e9136dbfd/6340bf6b23de2996c7c6127a_Nolk_Nicolas%20%20.jpeg)"
                       class="div-block-33 board"></div>
                   </div>
                   <div class="team-image-container w-condition-invisible">
@@ -583,7 +618,7 @@
                 <div class="div-block-24">
                   <div class="team-image-container board">
                     <div
-                      style="background-image:url(&quot;https://assets.website-files.com/6113db8b6628664e9136dbfd/6340bf7feae8f4689276096c_Yohan_nolk%20(1).jpeg&quot;)"
+                      style="background-image:url(&quot;https://assets.website-files.com/6113db8b6628664e9136dbfd/6340bf7feae8f4689276096c_Yohan_nolk%20.jpeg&quot;)"
                       class="div-block-33 board"></div>
                   </div>
                   <div class="team-image-container w-condition-invisible">

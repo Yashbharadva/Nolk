@@ -11,17 +11,21 @@
 
 <body style="">
   <div class="container">
-    <div style="opacity: 1;" class="navbar-container"><a href="/" class="logo-nolk-wrapper w-inline-block"><img
+    <div style="opacity: 1;" class="navbar-container"><a href="/src/pages/homepage/index.html"
+        class="logo-nolk-wrapper w-inline-block"><img
           src="https://assets.website-files.com/610c251287ec86f4848cd877/61256feee5462d4ae9bd84f3_logo-rouge.png"
           loading="lazy" alt=""></a>
       <div class="close-menu"></div>
-      <div class="menu">
-        <div class="div-block-5"><a id="brands" href="/our-brands"
+
+
+      <div class="menu open" id="sidebar" style="display: none;">
+        <div class="div-block-5"><a id="brands" href="/src/pages/explore-brand/explore-brand.html"
             class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Explore our brands</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="work" href="/work-with-us" aria-current="page"
-            class="menu-links-container anim-transition w-inline-block w--current">
+          </a>
+          <a id="work" href="/src/pages/work-with-us/work-with-us.html"
+            class=" menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Work with us</div>
             <div class="line white anim-line-hover"></div>
           </a><a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
@@ -30,31 +34,62 @@
           </a><a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Sell your business</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="team" href="/meet-our-team" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="team" href="/src/pages/meet-our-team/meet-our-team.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Meet our team</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="cares" href="/nolk-cares" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="cares" href="/src/pages/care/care.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">nolk cares</div>
             <div class="line white anim-line-hover"></div>
-          </a><a href="/travailler-avec-nous" class="menu-links-container link-langue w-inline-block">
-            <div class="footer-links">FR</div>
-            <div class="line white anim-line-hover"></div>
-          </a></div>
-        <div class="footer-links-container bas vertical is-in-menu"><a href="mailto:info@nolk.com"
-            class="menu-links-container w-inline-block">
+          </a>
+        </div>
+        <div class="footer-links-container bas vertical is-in-menu">
+          <a href="mailto:info@nolk.com" class="menu-links-container w-inline-block">
             <div class="footer-links">info@nolk.com</div>
             <div class="line white anim-line-hover"></div>
           </a>
-          <div class="div-block-31"><a href="https://www.linkedin.com/company/nolkco" target="_blank"
-              class="social-link w-inline-block"><img
+          <div class="div-block-31">
+            <a href="https://www.linkedin.com/company/nolkco" target="_blank" class="social-link w-inline-block"><img
                 src="https://assets.website-files.com/610c251287ec86f4848cd877/61291fcd9c24d84fa7cc2bfb_linkedin.png"
-                loading="lazy" alt="" class="social-icone"></a></div>
+                loading="lazy" alt="" class="social-icone"></a>
+          </div>
         </div>
       </div>
-      <div class="burger">
-        <div class="burger-line first"></div>
-        <div class="burger-line second"></div>
+
+
+      <div class="burger" id="line-main" onclick="openMenu()" style="display: flex;">
+        <div class=" burger-line first" id="line-1"></div>
+        <div class="burger-line second" id="line-2"></div>
       </div>
+
+      <script>
+        function openMenu() {
+          console.log("Open side bar menu");
+          if (document.getElementById("line-main").style.display === "none" || document.getElementById("sidebar").style.display === "flex") {
+            document.getElementById("sidebar").style.display = "none"
+            document.getElementById("line-1").style.transform = "translate(0px) rotate(0)"
+            document.getElementById("line-2").style.transform = "translate(0px) rotate(0)"
+            window.onscroll = function () { };
+
+
+          } else {
+            document.getElementById("line-1").style.transform = "translate(0px, 8px) rotate(-45deg)"
+            document.getElementById("line-2").style.transform = "translate(0px, -3px) rotate(45deg)"
+            document.getElementById("sidebar").style.display = "flex"
+
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+              window.onscroll = function () {
+                window.scrollTo(scrollLeft, scrollTop);
+              };
+          }
+        }
+
+
+      </script>
+
+
     </div>
     <div class="rounded-section first white">
       <div class="section-overflow-scroll">
@@ -269,57 +304,209 @@
           </div>
         </div>
         <div id="Values" class="section">
-          <div data-w-id="60e002ac-7526-187c-59f6-fb000467569f"
-            style="opacity: 0; transform: translate3d(0px, 2em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-            class="titles">Our <span class="bold-text">core values</span> define who we are and the workplace
+          <div data-w-id="60e002ac-7526-187c-59f6-fb000467569f" style="opacity: 1;" class="titles">Our <span
+              class="bold-text">core values</span> define who we are and the workplace
             environment that we cultivate.</div>
           <div class="blocks-value-conatiner">
             <div class="values-row">
               <div class="row-mobile">
-                <div class="block-container">
-                  <div class="block-values block-01">
+
+
+                <div class="block-container" id="block-take-control" onclick="takeControlBlock()" style="opacity: 1;">
+                  <div class="block-values block-01" id="block-color">
                     <div class="values-text">Take control, <br>make your own decisions</div>
-                    <div class="plus-container"><img
+                    <div class="plus-container" id="plus" style="opacity: 1;">
+                      <img
                         src="https://assets.website-files.com/610c251287ec86f4848cd877/61119bb129a12a1b8e96b4cd_%2B.png"
-                        loading="lazy" alt="" class="plus"></div>
-                    <div class="text-under">We are independent thinkers and self-starters, but know when to be team
+                        loading="lazy" alt="" class="plus">
+                    </div>
+                    <div class="text-under" style="opacity: 0;" id="rotate-text">We are independent thinkers and
+                      self-starters, but know
+                      when to be team
                       players.</div>
                   </div>
                 </div>
-                <div class="block-container">
-                  <div class="block-values block-02">
+
+                <script>
+
+                  function takeControlBlock() {
+
+                    if (document.getElementById("block-take-control").style.opacity === "1") {
+                      document.getElementById("block-color").style.transform = "rotateX(0deg) rotateY(180deg) rotateZ(0deg)";
+                      document.getElementById("block-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text").style.opacity = "1"
+                      document.getElementById("plus").style.opacity = "0"
+
+                      document.getElementById("block2-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block2-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text2").style.opacity = "0"
+                      document.getElementById("plus2").style.opacity = "1"
+
+                      document.getElementById("block3-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block3-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text3").style.opacity = "0"
+                      document.getElementById("plus3").style.opacity = "1"
+
+                      document.getElementById("block4-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block4-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text4").style.opacity = "0"
+                      document.getElementById("plus4").style.opacity = "1"
+                    } else {
+                      document.getElementById("block-color").style.backgroundColor = "aqua"
+                    }
+                  }
+
+                </script>
+
+
+                <div class="block-container" id="own-your-shit" onclick="ownShitBlock()" style="opacity: 1;">
+                  <div class="block-values block-02" id="block2-color">
                     <div class="values-text">Own your sh*t, <br>learn from mistakes</div>
-                    <div class="plus-container"><img
+                    <div class="plus-container" id="plus2">
+                      <img
                         src="https://assets.website-files.com/610c251287ec86f4848cd877/6122dc3cc8ee4c0c4a57e73a_%2Bblue.png"
-                        loading="lazy" alt="" class="plus"></div>
-                    <div class="text-under">We take risks and admit our failures. Our kind and transparent work
+                        loading="lazy" alt="" class="plus">
+                    </div>
+                    <div class="text-under" id="rotate-text2">We take risks and admit our failures. Our kind and
+                      transparent work
                       environment makes everyone accountable, without the toxic finger-pointing.</div>
                   </div>
                 </div>
+
+                <script>
+
+                  function ownShitBlock() {
+
+                    if (document.getElementById("block-color").style.transform === "rotateX(0deg) rotateY(180deg) rotateZ(0deg)") {
+                      document.getElementById("block2-color").style.transform = "rotateX(0deg) rotateY(180deg) rotateZ(0deg)"
+                      document.getElementById("block2-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("plus2").style.opacity = "0"
+                      document.getElementById("rotate-text2").style.opacity = "1"
+
+                      document.getElementById("block-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text").style.opacity = "0"
+                      document.getElementById("plus").style.opacity = "1"
+
+                      document.getElementById("block3-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block3-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text3").style.opacity = "0"
+                      document.getElementById("plus3").style.opacity = "1"
+
+                      document.getElementById("block4-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block4-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text4").style.opacity = "0"
+                      document.getElementById("plus4").style.opacity = "1"
+
+                    } else {
+
+                      document.getElementById("block2-color").style.transform = "rotateX(0deg) rotateY(180deg) rotateZ(0deg)"
+                      document.getElementById("block2-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("plus2").style.opacity = "0"
+                      document.getElementById("rotate-text2").style.opacity = "1"
+                    }
+                  }
+
+                </script>
+
+
               </div>
               <div class="row-mobile">
-                <div class="block-container">
-                  <div class="block-values block-03">
+
+
+                <div class="block-container" id="block-ego" onclick="egoBlock()" style="opacity: 1;">
+                  <div class="block-values block-03" id="block3-color">
                     <div class="values-text">Erase ego, <br>embrace empathy</div>
-                    <div class="text-under">If you can’t put yourself in someone else’s shoes, it’s going to be hard to
+                    <div class="text-under" id="rotate-text3">If you can't put yourself in someone else's shoes, it's
+                      going to be hard to
                       offer them something of relevance. We strive to always listen and understand before we act,
-                      whether we’re talking to a coworker or a consumer.</div>
-                    <div class="plus-container"><img
+                      whether we're talking to a coworker or a consumer.</div>
+                    <div class="plus-container" id="plus3">
+                      <img
                         src="https://assets.website-files.com/610c251287ec86f4848cd877/61119bb129a12a1b8e96b4cd_%2B.png"
-                        loading="lazy" alt="" class="plus"></div>
-                  </div>
-                </div>
-                <div class="block-container">
-                  <div class="block-values block-04">
-                    <div class="values-text">Keep it real, <br>keep it positive</div>
-                    <div class="plus-container"><img
-                        src="https://assets.website-files.com/610c251287ec86f4848cd877/61119bb129a12a1b8e96b4cd_%2B.png"
-                        loading="lazy" alt="" class="plus"></div>
-                    <div class="text-under">Being honest, sharing knowledge, and keeping things transparent are key to
-                      life at nolk. It’s every employee’s responsibility to lead by example and inspire by integrity.
+                        loading="lazy" alt="" class="plus">
                     </div>
                   </div>
                 </div>
+
+                <script>
+                  function egoBlock() {
+
+                    if (document.getElementById("block-ego").style.opacity === "1") {
+                      document.getElementById("block3-color").style.transform = "rotateX(0deg) rotateY(180deg) rotateZ(0deg)"
+                      document.getElementById("block3-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("plus3").style.opacity = "0"
+                      document.getElementById("rotate-text3").style.opacity = "1"
+
+                      document.getElementById("block-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text").style.opacity = "0"
+                      document.getElementById("plus").style.opacity = "1"
+
+                      document.getElementById("block2-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block2-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text2").style.opacity = "0"
+                      document.getElementById("plus2").style.opacity = "1"
+
+                      document.getElementById("block4-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block4-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text4").style.opacity = "0"
+                      document.getElementById("plus4").style.opacity = "1"
+
+
+
+                    } else {
+                      document.getElementById("block3-color").style.backgroundColor = "aqua"
+                    }
+                  }
+                </script>
+
+
+                <div class="block-container" id="keep-block" onclick="keepItBlock()" style="opacity: 1;">
+                  <div class="block-values block-04" id="block4-color">
+                    <div class="values-text">Keep it real, <br>keep it positive</div>
+                    <div class="plus-container" id="plus4">
+                      <img
+                        src="https://assets.website-files.com/610c251287ec86f4848cd877/61119bb129a12a1b8e96b4cd_%2B.png"
+                        loading="lazy" alt="" class="plus">
+                    </div>
+                    <div class="text-under" id="rotate-text4">Being honest, sharing knowledge, and keeping things
+                      transparent are key to
+                      life at nolk. It's every employee's responsibility to lead by example and inspire by integrity.
+                    </div>
+                  </div>
+                </div>
+
+                <script>
+                  function keepItBlock() {
+
+                    if (document.getElementById("keep-block").style.opacity === "1") {
+                      document.getElementById("block4-color").style.transform = "rotateX(0deg) rotateY(180deg) rotateZ(0deg)"
+                      document.getElementById("block4-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("plus4").style.opacity = "0"
+                      document.getElementById("rotate-text4").style.opacity = "1"
+
+                      document.getElementById("block-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text").style.opacity = "0"
+                      document.getElementById("plus").style.opacity = "1"
+
+                      document.getElementById("block2-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block2-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text2").style.opacity = "0"
+                      document.getElementById("plus2").style.opacity = "1"
+
+                      document.getElementById("block3-color").style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+                      document.getElementById("block3-color").style.transformStyle = "preserve-3d"
+                      document.getElementById("rotate-text3").style.opacity = "0"
+                      document.getElementById("plus3").style.opacity = "1"
+                    } else {
+                      document.getElementById("block4-color").style.backgroundColor = "aqua"
+                    }
+                  }
+                </script>
+
+
               </div>
             </div>
             <div class="values-row hide">
@@ -370,6 +557,8 @@
     </div>
     <div class="rounded-section red last">
       <div class="section no-padding">
+
+
         <div id="Benefits" data-w-id="371cee10-814a-affb-4ff1-47fea8cc37d9"
           style="opacity: 1; transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
           class="subtitles">Employee benefits*</div>
@@ -435,8 +624,7 @@
             <div class="line white" style="width: 100%; height: 1px;"></div>
           </div>
           <div class="list-element-container">
-            <div class="drawer-title line-under values"
-              style="opacity: 0; transform: translate3d(0px, 2em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+            <div class="drawer-title line-under values" style="opacity: 1;">
               <div class="div-block-20">
                 <div class="icone-container-wwu"><img
                     src="https://assets.website-files.com/610c251287ec86f4848cd877/61256e6047169bc57c4c638d_team.png"
@@ -444,14 +632,16 @@
               </div>
               <div class="titles smaller-mobile">Team building events</div>
             </div>
-            <div class="line white" style="width: 0%; height: 1px;"></div>
+            <div class="line white" style="width: 100%; height: 1px;"></div>
           </div>
         </div>
-        <div data-w-id="d6a334b6-b71b-8bfe-ae51-5952d1ba2113"
-          style="opacity: 0; transform: translate3d(0px, 2em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-          class="paragraph align-right">*Applies to Canadian employees only</div>
+        <div data-w-id="d6a334b6-b71b-8bfe-ae51-5952d1ba2113" style="opacity: 1;" class="paragraph align-right">*Applies
+          to Canadian employees only</div>
       </div>
-      <<div id="wellness" data-w-id="810d4ca2-192d-c822-a090-1d82ee5e6f95" class="section no-padding">
+
+
+
+      <div id="wellness" class="section no-padding">
         <div data-w-id="810d4ca2-192d-c822-a090-1d82ee5e6f96"
           style="opacity: 1; transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
           class="subtitles">Wellness at work</div>
@@ -485,52 +675,56 @@
               the importance of overall health.<br></div>
           </div>
         </div>
-    </div>
-    <div class="section no-padding">
-      <div class="bouttons-container no-m-top" style="opacity: 1;"><a href="https://nolk.bamboohr.com/jobs/"
-          data-w-id="5c144414-029b-0d81-ae61-58cd0e4422c0" style="border-color:rgb(244,243,243)" target="_blank"
-          class="boutton is-bigger w-inline-block">
-          <div style="color:rgb(244,243,243)" class="btn-text">Job opening</div>
-          <div
-            style="transform: translate3d(0px, 102%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); background-color: rgb(244, 243, 243); transform-style: preserve-3d;"
-            class="btn-anim-bk"></div>
-        </a></div>
-      <div class="list">
-        <div class="w-dyn-list">
-          <div class="empty-state w-dyn-empty">
-            <div class="titles">They are no job oppening for the moment.<br>Come back later!</div>
+      </div>
+
+
+
+      <div class="section no-padding">
+        <div class="bouttons-container no-m-top" style="opacity: 1;"><a href="https://nolk.bamboohr.com/jobs/"
+            data-w-id="5c144414-029b-0d81-ae61-58cd0e4422c0" style="border-color:rgb(244,243,243)" target="_blank"
+            class="boutton is-bigger w-inline-block">
+            <div style="color:rgb(244,243,243)" class="btn-text">Job opening</div>
+            <div
+              style="transform: translate3d(0px, 102%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); background-color: rgb(244, 243, 243); transform-style: preserve-3d;"
+              class="btn-anim-bk"></div>
+          </a></div>
+        <div class="list">
+          <div class="w-dyn-list">
+            <div class="empty-state w-dyn-empty">
+              <div class="titles">They are no job oppening for the moment.<br>Come back later!</div>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
-  </div>
-  <div class="div-block-6"></div>
-  <div class="grid-container">
-    <div class="grid-column first">
-      <div class="text-block-2">7,75</div>
+    <div class="div-block-6"></div>
+    <div class="grid-container">
+      <div class="grid-column first">
+        <div class="text-block-2">7,75</div>
+      </div>
+      <div class="grid-column">
+        <div class="text-block-2">15,5</div>
+      </div>
+      <div class="grid-column">
+        <div class="text-block-2">23,25</div>
+      </div>
+      <div class="grid-column">
+        <div class="text-block-2">31</div>
+      </div>
+      <div class="grid-column">
+        <div class="text-block-2">38,75</div>
+      </div>
+      <div class="grid-column">
+        <div class="text-block-2">46,5</div>
+      </div>
+      <div class="grid-column"></div>
+      <div class="grid-column"></div>
+      <div class="grid-column"></div>
+      <div class="grid-column"></div>
+      <div class="grid-column"></div>
+      <div class="grid-column"></div>
     </div>
-    <div class="grid-column">
-      <div class="text-block-2">15,5</div>
-    </div>
-    <div class="grid-column">
-      <div class="text-block-2">23,25</div>
-    </div>
-    <div class="grid-column">
-      <div class="text-block-2">31</div>
-    </div>
-    <div class="grid-column">
-      <div class="text-block-2">38,75</div>
-    </div>
-    <div class="grid-column">
-      <div class="text-block-2">46,5</div>
-    </div>
-    <div class="grid-column"></div>
-    <div class="grid-column"></div>
-    <div class="grid-column"></div>
-    <div class="grid-column"></div>
-    <div class="grid-column"></div>
-    <div class="grid-column"></div>
-  </div>
   </div>
   <div data-w-id="2bd54801-3a58-4a90-e946-38c06dae88e0" class="rounded-section footer">
     <div class="section footer">
