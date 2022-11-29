@@ -556,7 +556,6 @@
           <script>
 
             function expandThings1() {
-
               if (document.getElementById("show-text").style.height !== "80px") {
                 document.getElementById("show-text").style.height = "80px"
                 document.getElementById("show-image").style.width = "45em"
@@ -570,7 +569,6 @@
                 document.getElementById("show-image").style.flex = "0 0 auto"
                 document.getElementById("plusCross").style.transform = "rotate(0deg)"
               }
-
             }
 
           </script>
@@ -590,11 +588,13 @@
                   here.</div>
                 <div class="open-drawer-02"></div>
               </div>
-              <div class="drawer-photo"><img
+              <div class="drawer-photo" id="show-image2" style="opacity: 1;">
+                <img
                   src="https://assets.website-files.com/610c251287ec86f4848cd877/633ca2107be14b1223f7bbd1_gw_slide_3.png"
                   loading="lazy"
                   srcset="https://assets.website-files.com/610c251287ec86f4848cd877/633ca2107be14b1223f7bbd1_gw_slide_3-p-500.png  500w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca2107be14b1223f7bbd1_gw_slide_3-p-800.png  800w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca2107be14b1223f7bbd1_gw_slide_3-p-1080.png  1080w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca2107be14b1223f7bbd1_gw_slide_3.png  1270w"
-                  sizes="(max-width: 479px) 77vw, (max-width: 767px) 65vw, 18vw" alt="" class="image-6 drawer"></div>
+                  sizes="(max-width: 479px) 77vw, (max-width: 767px) 65vw, 18vw" alt="" class="image-6 drawer">
+              </div>
             </div>
             <div class="line blue"></div>
           </div>
@@ -602,63 +602,125 @@
           <script>
 
             function expandThings2() {
-              console.log("open expnadThings2");
+              if (document.getElementById("show-text2").style.height !== "80px") {
+                document.getElementById("show-text2").style.height = "80px"
+                document.getElementById("show-image2").style.width = "45em"
+                document.getElementById("show-image2").style.height = "28vw"
+                document.getElementById("show-image2").style.flex = "0 0 auto"
+                document.getElementById("plusCross2").style.transform = "rotate(45deg)"
+              } else {
+                document.getElementById("show-text2").style.height = "0px"
+                document.getElementById("show-image2").style.width = "0em"
+                document.getElementById("show-image2").style.height = "0vw"
+                document.getElementById("show-image2").style.flex = "0 0 auto"
+                document.getElementById("plusCross2").style.transform = "rotate(0deg)"
+              }
             }
 
           </script>
 
 
-          <div class="drawer-container blue-underline genius">
+          <div class="drawer-container blue-underline genius" onclick="expandThings3()">
             <div class="div-block-37">
               <div class="drawer-title-container">
                 <div class="drawer-title">
                   <div class="titles open-drawer-title">Find brands that take their values seriously.</div>
-                  <div class="plus-container plus-drawer"><img
+                  <div class="plus-container plus-drawer" id="plusCross3">
+                    <img
                       src="https://assets.website-files.com/610c251287ec86f4848cd877/6122dc3cc8ee4c0c4a57e73a_%2Bblue.png"
-                      loading="lazy" alt="" class="plus bigger"></div>
+                      loading="lazy" alt="" class="plus bigger">
+                  </div>
                 </div>
-                <div class="paragraph p-drawer" style="height: 0px; opacity: 0;">Learn more about brands making the
+                <div class="paragraph p-drawer" id="show-text3" style="height: 0px; opacity: 1;">Learn more about brands
+                  making the
                   world a better place. Discover sustainable brands that are 1% for the planet, B-Corporation and
                   Climate Neutral.<br></div>
                 <div class="open-drawer-02"></div>
               </div>
-              <div class="drawer-photo"><img
+              <div class="drawer-photo" id="show-image3" style="opacity: 1;">
+                <img
                   src="https://assets.website-files.com/610c251287ec86f4848cd877/633ca18879aae4d3cce81150_gw_slide_4.png"
                   loading="lazy"
                   srcset="https://assets.website-files.com/610c251287ec86f4848cd877/633ca18879aae4d3cce81150_gw_slide_4-p-500.png  500w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca18879aae4d3cce81150_gw_slide_4-p-800.png  800w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca18879aae4d3cce81150_gw_slide_4-p-1080.png  1080w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca18879aae4d3cce81150_gw_slide_4.png  1270w"
-                  sizes="(max-width: 479px) 77vw, (max-width: 767px) 65vw, 18vw" alt="" class="image-6 drawer"></div>
+                  sizes="(max-width: 479px) 77vw, (max-width: 767px) 65vw, 18vw" alt="" class="image-6 drawer">
+              </div>
             </div>
             <div class="line blue"></div>
           </div>
 
+          <script>
 
-          <div class="drawer-container blue-underline genius">
+            function expandThings3() {
+              if (document.getElementById("show-text3").style.height !== "80px") {
+                document.getElementById("show-text3").style.height = "80px"
+                document.getElementById("show-image3").style.width = "45em"
+                document.getElementById("show-image3").style.height = "28vw"
+                document.getElementById("show-image3").style.flex = "0 0 auto"
+                document.getElementById("plusCross3").style.transform = "rotate(45deg)"
+              } else {
+                document.getElementById("show-text3").style.height = "0px"
+                document.getElementById("show-image3").style.width = "0em"
+                document.getElementById("show-image3").style.height = "0vw"
+                document.getElementById("show-image3").style.flex = "0 0 auto"
+                document.getElementById("plusCross3").style.transform = "rotate(0deg)"
+              }
+            }
+
+          </script>
+
+
+          <div class="drawer-container blue-underline genius" onclick="expandThings4()">
             <div class="div-block-37">
               <div class="drawer-title-container">
                 <div class="drawer-title">
                   <div class="titles open-drawer-title">Subscribe To Our Weekly Digest.</div>
-                  <div class="plus-container plus-drawer"><img
+                  <div class="plus-container plus-drawer" id="plusCross4">
+                    <img
                       src="https://assets.website-files.com/610c251287ec86f4848cd877/6122dc3cc8ee4c0c4a57e73a_%2Bblue.png"
-                      loading="lazy" alt="" class="plus bigger"></div>
+                      loading="lazy" alt="" class="plus bigger">
+                  </div>
                 </div>
-                <div class="paragraph p-drawer" style="height: 0px; opacity: 0;">Get key metrics on your favourite
+                <div class="paragraph p-drawer" id="show-text4" style="height: 0px; opacity: 1;">Get key metrics on your
+                  favourite
                   brands delivered to your inbox weekly in an easy to read digest.<br></div>
                 <div class="open-drawer-02"></div>
               </div>
-              <div class="drawer-photo"><img
+              <div class="drawer-photo" id="show-image4" style="opacity: 1;">
+                <img
                   src="https://assets.website-files.com/610c251287ec86f4848cd877/633ca17a53031b932780fa4e_gw_slide_5.png"
                   loading="lazy"
                   srcset="https://assets.website-files.com/610c251287ec86f4848cd877/633ca17a53031b932780fa4e_gw_slide_5-p-500.png  500w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca17a53031b932780fa4e_gw_slide_5-p-800.png  800w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca17a53031b932780fa4e_gw_slide_5-p-1080.png  1080w,https://assets.website-files.com/610c251287ec86f4848cd877/633ca17a53031b932780fa4e_gw_slide_5.png  1270w"
-                  sizes="(max-width: 479px) 77vw, (max-width: 767px) 65vw, 18vw" alt="" class="image-6 drawer"></div>
+                  sizes="(max-width: 479px) 77vw, (max-width: 767px) 65vw, 18vw" alt="" class="image-6 drawer">
+              </div>
             </div>
             <div class="line blue"></div>
           </div>
+
+          <script>
+
+            function expandThings4() {
+              if (document.getElementById("show-text4").style.height !== "80px") {
+                document.getElementById("show-text4").style.height = "80px"
+                document.getElementById("show-image4").style.width = "45em"
+                document.getElementById("show-image4").style.height = "28vw"
+                document.getElementById("show-image4").style.flex = "0 0 auto"
+                document.getElementById("plusCross4").style.transform = "rotate(45deg)"
+              } else {
+                document.getElementById("show-text4").style.height = "0px"
+                document.getElementById("show-image4").style.width = "0em"
+                document.getElementById("show-image4").style.height = "0vw"
+                document.getElementById("show-image4").style.flex = "0 0 auto"
+                document.getElementById("plusCross4").style.transform = "rotate(0deg)"
+              }
+            }
+
+          </script>
 
 
         </div>
       </div>
       <div class="section no-padding">
-        <div data-w-id="a35b09b8-946e-57e4-9745-6a02b5dfcba1" style="opacity: 1;" class="subtitles max-ch">GeniusWire is
+        <div style="opacity: 1;" class="subtitles max-ch">GeniusWire is
           a data platform that analyzes eCommerce brand performance indicators:
           how well the brand is growing. You can browse this data for free, save brands in collections and use it to
           make better decisions on any business project.</div>

@@ -503,6 +503,11 @@ a {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
+
+/* .text {
+  position: fixed;
+} */
+
 .div-block-6 {
   height: 100vh;
 }

@@ -351,18 +351,53 @@
         <div class="section">
           <div class="blocks-container">
             <div class="blocks-line">
-              <div class="blocks block-01 anim-01">
+
+
+              <div class="blocks block-01 anim-01 believe12" id="believe" onclick="openBelieve()">
                 <div class="blocks-title">nolk believes<br></div>
-                <div class="plus-container casse-tete-home"><img
+                <div class="plus-container casse-tete-home" id="plus-icon1"><img
                     src="https://assets.website-files.com/610c251287ec86f4848cd877/61119bb129a12a1b8e96b4cd_%2B.png"
                     loading="lazy" alt="" class="plus bigger"></div>
-                <div class="subtitles values-paragraph padding-left">that companies that do good, do better in the long
+                <div class="subtitles values-paragraph padding-left" id="believe-text" style="opacity: 0;">that
+                  companies that do good, do
+                  better in the long
                   run. Our brand family consists of forward-thinking, beautifully designed products that address social
                   and environmental issues meet the needs and expectations of today's
                   consumers.
                 </div>
                 <div class="anim-trigger-block"></div>
               </div>
+
+              <script>
+
+                function openBelieve() {
+                  if (document.getElementById("believe-text").style.opacity === "0") {
+                    document.getElementById("believe").style.width = "62vw"
+                    document.getElementById("believe-text").style.opacity = "1"
+                    document.getElementById("plus-icon1").style.transform = "rotate(45deg)"
+                  } else {
+                    document.getElementById("believe").style.width = "31vw"
+                    document.getElementById("believe-text").style.opacity = "0"
+                    document.getElementById("plus-icon1").style.transform = "rotate(0deg)"
+                  }
+                }
+
+                $(document).ready(function () {
+                  var scroll_pos = 0;
+                  $(document).scroll(function () {
+                    scroll_pos = $(this).scrollTop();
+                    if (scroll_pos > 750) {
+                      $('.believe12').css('border-radius', '0px 0 20em 0px');
+                      $('.nolkKnow12').css('border-radius', '15em 0px 0% 15em');
+                    } else {
+                      $('.believe12').css('border-radius', '0px 20em 0px 0px');
+                      $('.nolkKnow12').css('border-radius', '0em 0px 0% 20em');
+                    }
+                  });
+                });
+
+              </script>
+
               <div class="blocks block-02">
                 <div class="collection-list-wrapper-4 w-dyn-list">
                   <div role="list" class="collection-list-3 w-dyn-items">
@@ -374,28 +409,84 @@
                   </div>
                 </div>
               </div>
-              <div class="blocks block-03 anim-01">
+
+
+              <div class="blocks block-03 anim-01 nolkKnow12" id="nolk-know" onclick="nolkKnow()">
                 <div class="blocks-title">nolk knows<br></div>
-                <div class="subtitles values-paragraph padding-right">a thing or two about tech and data. . Our
+                <div class="subtitles values-paragraph padding-right" id="nolk-know-text" style="opacity: 0;">a thing or
+                  two about tech and
+                  data. . Our
                   experienced team is equipped with proprietary tools that give us an edge in realizing your brand’s
                   potential.</div>
-                <div class="plus-container casse-tete-home align-right"><img
+                <div class="plus-container casse-tete-home align-right" id="plus-icon2"><img
                     src="https://assets.website-files.com/610c251287ec86f4848cd877/61119bb129a12a1b8e96b4cd_%2B.png"
                     loading="lazy" alt="" class="plus bigger"></div>
               </div>
+
+              <script>
+
+                function nolkKnow() {
+                  if (document.getElementById("nolk-know-text").style.opacity === "0") {
+                    document.getElementById("nolk-know").style.width = "62vw"
+                    document.getElementById("nolk-know-text").style.opacity = "1"
+                    document.getElementById("plus-icon2").style.transform = "rotate(45deg)"
+                  } else {
+                    document.getElementById("nolk-know").style.width = "31vw"
+                    document.getElementById("nolk-know-text").style.opacity = "0"
+                    document.getElementById("plus-icon2").style.transform = "rotate(0deg)"
+                  }
+                }
+
+              </script>
+
+
             </div>
             <div class="blocks-line second">
               <div class="div-block-2">
                 <div class="div-block-3">
-                  <div class="blocks block-04 anim-01">
+
+
+                  <div class="blocks block-04 anim-01 nolkRemember12" id="remembers" onclick="openRemember()">
                     <div class="blocks-title">nolk remembers<br></div>
-                    <div class="subtitles values-paragraph padding-left">what it's like to start small, grow fast and
+                    <div class="subtitles values-paragraph padding-left" id="remember-text" style="opacity: 0;">what
+                      it's like to start small, grow fast and
                       then hit a wall. The founders of nolk have been there, having started and sold companies with
                       exits totalling over $500M.</div>
-                    <div class="plus-container casse-tete-home"><img
+                    <div class="plus-container casse-tete-home" id="plus-icon3"><img
                         src="https://assets.website-files.com/610c251287ec86f4848cd877/6122dc3cc8ee4c0c4a57e73a_%2Bblue.png"
                         loading="lazy" alt="" class="plus bigger"></div>
                   </div>
+
+                  <script>
+
+                    function openRemember() {
+                      if (document.getElementById("remember-text").style.opacity === "0") {
+                        document.getElementById("remembers").style.width = "62vw"
+                        document.getElementById("remember-text").style.opacity = "1"
+                        document.getElementById("plus-icon3").style.transform = "rotate(45deg)"
+                      } else {
+                        document.getElementById("remembers").style.width = "31vw"
+                        document.getElementById("remember-text").style.opacity = "0"
+                        document.getElementById("plus-icon3").style.transform = "rotate(0deg)"
+                      }
+                    }
+
+                    $(document).ready(function () {
+                      let scrollPosition = 0;
+                      $(document).scroll(function () {
+                        scrollPosition = $(this).scrollTop();
+                        console.log(scrollPosition);
+                        if (scrollPosition > 750) {
+                          $('.nolkRemember12').css('border-radius', '5em')
+                        } else {
+                          $('.nolkRemember12').css('border-radius', '0em 0em 20em 0em')
+                        }
+                      })
+                    })
+
+                  </script>
+
+
                   <div class="blocks block-05">
                     <div class="collection-list-wrapper-4 w-dyn-list">
                       <div role="list" class="collection-list-3 w-dyn-items">

@@ -242,15 +242,25 @@
         </div>
       </div>
       <div id="Family" data-w-id="4b3413ab-0b96-cc9c-70cf-506dd2dfe4a1" class="section">
-        <div class="section-horizontal">
-          <div class="big-icones family"><img
+        <div class="section-horizontal round-main">
+          <div class="big-icones family round">
+            <img
               src="https://assets.website-files.com/610c251287ec86f4848cd877/63338d55cdda285d6f6af000_Group%20353.svg"
-              loading="lazy" data-w-id="f38b4313-0e64-09e9-25a7-dcfb151858dd" alt=""
-              style="will-change: transform; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(180deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+              loading="lazy" data-w-id="f38b4313-0e64-09e9-25a7-dcfb151858dd" alt="" class="text">
           </div>
+
+          <script>
+
+            window.onscroll = function () {
+              var theta = document.documentElement.scrollTop / 75 % Math.PI;
+
+              document.getElementsByClassName("text").style.transform = 'rotate(' + theta + 'rad)';
+            }
+
+          </script>
           <div class="b first">
             <div class="titles">We believe</div>
-            <div class="paragraph max-ch">Purpose is as important as profit and we’re structured to prove it. From
+            <div class="paragraph max-ch">Purpose is as important as profit and we're structured to prove it. From
               internal processes to supply chain partners and beyond, we have made it a priority to do good, and always
               try to do better. Our portfolio of brands is a reflection of this commitment, providing consumers with
               sustainable products they want, need, and care for.</div>
