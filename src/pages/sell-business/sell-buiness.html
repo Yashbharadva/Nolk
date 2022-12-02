@@ -393,20 +393,20 @@
 
               <!-- FIRST PART -->
 
-              <div class="horizontal-section first">
+              <div class="horizontal-section first" onclick="openValue()">
 
-                <a href="#valuation-part" class="div-block-26 w-inline-block">
+                <a href="#valuation-part" class="div-block-26 w-inline-block" id="nameValue">
                   <div class="plus-container plus-drawer" id="plusdrawer1"></div>
                   <div class="titles vertical">Valuation</div>
                 </a>
 
-                <div class="horizontal-drawer first-drawer" id="valuation-part">
-                  <div class="subtitles min-wtdh">
+                <div class="horizontal-drawer first-drawer" id="valuation-part" style="display: none;">
+                  <div class="subtitles min-wtdh" id="days-value">
                     (5-10 days)*
                     <br>
                   </div>
 
-                  <div class="subtitles horizontal-scroll">
+                  <div class="subtitles horizontal-scroll" id="subtitle-text-value">
                     This is where the conversation kicks off. We will begin an interview process and review key
                     financial metrics to get a good grasp on the business health. If your brand is determined to be a
                     good fit, we will make an offer and proceed to the next steps..
@@ -415,6 +415,27 @@
                 </div>
 
               </div>
+
+              <script>
+
+                function openValue() {
+                  if (document.getElementById("valuation-part").style.display === "flex") {
+                    document.getElementById("valuation-part").style.display = "none";
+                    document.getElementById("valuation-part").style.opacity = "0";
+                    document.getElementById("valuation-part").style.width = "0em";
+                  } else {
+                    document.getElementById("valuation-part").style.display = "flex";
+                    document.getElementById("valuation-part").style.flexDirection = "column";
+                    document.getElementById("valuation-part").style.marginLeft = "50px";
+                    document.getElementById("subtitle-text-value").style.width = "50vw";
+                    document.getElementById("subtitle-text-value").style.marginTop = "3vw";
+                    document.getElementById("valuation-part").style.justifyContent = "end";
+                    document.getElementById("valuation-part").style.width = "70vw";
+                    document.getElementById("valuation-part").style.opacity = "1";
+                  }
+                }
+
+              </script>
 
 
 
@@ -644,7 +665,72 @@
 
                           </div>
                         </div>
-                        <div id="typed-name" class="big-title">Hi !</div><span class="typed-cursor white">&nbsp;</span>
+
+                        <div href="" class="big-title typewriter" data-period="2000"
+                          data-type='["HI!", "What is your name?"]'>
+                          <span class="wrap"></span>
+                        </div>
+
+                        <script>
+
+                          var TxtType = function (el, toRotate, period) {
+                            this.toRotate = toRotate;
+                            this.el = el;
+                            this.loopNum = 0;
+                            this.period = parseInt(period, 8) || 2000;
+                            this.tick();
+                            this.isDeleting = false;
+                          };
+
+                          TxtType.prototype.tick = function () {
+                            var i = this.loopNum % this.toRotate.length;
+                            var fullTxt = this.toRotate[i];
+
+                            if (this.isDeleting) {
+                              this.txt = fullText.subString(0, this.txt.length - 1);
+                            } else {
+                              this.txt = fullTxt.subString(0, this.txt.length + 1);
+                            }
+
+                            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+                            var that = this;
+                            var delta = 200 - Math.random() * 100;
+
+                            if (this.isDeleting) { delta /= 2; }
+
+                            if (!this.isDeleting && this.txt === fullTxt) {
+                              delta = this.period;
+                              this.isDeleting = true;
+                            } else if (this.isDeleting && this.txt === '') {
+                              this.isDeleting = false;
+                              this.loopNum++;
+                              delta = 500;
+                            }
+
+                            setTimeout(function () {
+                              that.tick();
+                            }, delta);
+                          };
+
+                          window.onload = function () {
+                            var elements = document.getElementsByClassName('typewrite');
+                            for (var i = 0; i < elements.length; i++) {
+                              var toRotate = elements[i].getAttribute('data-type');
+                              var period = elements[i].getAttribute('data-period');
+                              if (toRotate) {
+                                new TxtType(elements[i], JSON.parse(toRotate), period);
+                              }
+                            }
+
+                            var css = document.createElement("style");
+                            css.type = "text/css";
+                            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid white }";
+                            document.body.appendChild(css);
+                          }
+
+                        </script>
+
                       </div>
                     </div>
 
