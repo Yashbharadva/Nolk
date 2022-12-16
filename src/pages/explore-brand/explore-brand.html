@@ -23,19 +23,19 @@
             class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Explore our brands</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="work" href="/work-with-us" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="work" href="/src/pages/work-with-us/work-with-us.html" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Work with us</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="genius" href="/src/pages/geniusWire/geniusWire.html" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">GeniusWire™</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="sell" href="/src/pages/sell-business/sell-buiness.html" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Sell your business</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="team" href="/meet-our-team" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="team" href="/src/pages/meet-our-team/meet-our-team.html" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Meet our team</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="cares" href="/nolk-cares" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="cares" href="/src/pages/care/care.html" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">nolk cares</div>
             <div class="line white anim-line-hover"></div>
           </a>
@@ -964,8 +964,8 @@
                     <div class="subtitles">A phone mount that's built different </div>
                   </div>
                 </div>
-                <div class="brands-infos-container" id="freak-first" style="opacity: 1;">
-                  <div data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348"
+                <div onclick="expandImage()" class="brands-infos-container" id="freak-first" style="opacity: 1;">
+                  <div id="image-to-expand" data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348"
                     style="background-image: url(&quot;https://assets.website-files.com/6113db8b6628664e9136dbfd/61295536426e80295e463c47_Freakmount_3.jpg&quot;); width: 33%; height: 31vw;"
                     class="brands-image shape-add-5">
                     <div data-delay="4000" data-animation="fade" class="slider w-slider" data-autoplay="false"
@@ -993,7 +993,8 @@
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140540ffa05a338e2878d4_Arrow.png"
                           loading="lazy" alt="" class="image-3"></div>
                       <div class="right-arrow w-slider-arrow-right" role="button" tabindex="0"
-                        aria-controls="w-slider-mask-4" aria-label="next slide"><img
+                        aria-controls="w-slider-mask-4" aria-label="next slide">
+                        <img id="right-arrow-side" style="opacity: 0;"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140596d72abbbb9771c369_Arrow-right.png"
                           loading="lazy" alt="" class="image-3"></div>
                       <div class="slide-nav w-slider-nav w-round">
@@ -1043,6 +1044,16 @@
                     </div>
                   </div>
                 </div>
+
+                <script>
+                  function expandImage(){
+                    document.getElementById("image-to-expand").style.width = "950px"
+                    document.getElementById("image-to-expand").style.height = "440px"
+                    document.getElementById("image-to-expand").style.borderRadius = "50px"
+                    document.getElementById("right-arrow-side").style.opacity = "1"
+                    document.getElementById("right-arrow-side").style.zIndex = "1000"
+                  }
+                </script>
                 <div class="line-curved" id="line-change5" onclick="changeOpacity2()">
                   <div class="line-mask"></div>
                   <div class="plus-container plus-brands turn45" id="plus-close-icon5"><img

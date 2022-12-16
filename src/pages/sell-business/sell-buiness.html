@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <title>Sell Your Buiness</title>
 </head>
@@ -37,10 +38,12 @@
             class=" menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Work with us</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="genius" href="/src/pages/geniusWire/geniusWire.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">GeniusWire™</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="sell" href="/src/pages/sell-business/sell-buiness.htmls"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Sell your business</div>
             <div class="line white anim-line-hover"></div>
           </a><a id="team" href="/src/pages/meet-our-team/meet-our-team.html"
@@ -395,12 +398,12 @@
 
               <div class="horizontal-section first" onclick="openValue()">
 
-                <a href="#valuation-part" class="div-block-26 w-inline-block" id="nameValue">
+                <a class="div-block-26 w-inline-block" id="nameValue">
                   <div class="plus-container plus-drawer" id="plusdrawer1"></div>
                   <div class="titles vertical">Valuation</div>
                 </a>
 
-                <div class="horizontal-drawer first-drawer" id="valuation-part" style="display: none;">
+                <div class="horizontal-drawer first-drawer first-scroll" id="valuation-part" style="display: none;">
                   <div class="subtitles min-wtdh" id="days-value">
                     (5-10 days)*
                     <br>
@@ -430,8 +433,12 @@
                     document.getElementById("subtitle-text-value").style.width = "50vw";
                     document.getElementById("subtitle-text-value").style.marginTop = "3vw";
                     document.getElementById("valuation-part").style.justifyContent = "end";
-                    document.getElementById("valuation-part").style.width = "70vw";
+                    document.getElementById("valuation-part").style.width = "65vw";
                     document.getElementById("valuation-part").style.opacity = "1";
+
+                    document.getElementById("open-Due").style.display = "none";
+                    document.getElementById("open-agreement").style.display = "none";
+
                   }
                 }
 
@@ -448,7 +455,7 @@
                   <div class="titles vertical">Due diligence</div>
                 </a>
 
-                <div class="first-drawer" id="open-Due" style="display: none;">
+                <div class="first-drawer second-scroll" id="open-Due" style="display: none;">
                   <div class="subtitles min-wtdh" id="days-due">
                     (15-45 days)*
                     <br>
@@ -479,8 +486,11 @@
                     document.getElementById("subtitle-text-due").style.width = "50vw"
                     document.getElementById("subtitle-text-due").style.marginTop = "3vw"
                     document.getElementById("open-Due").style.justifyContent = "end"
-                    document.getElementById("open-Due").style.width = "70vw";
+                    document.getElementById("open-Due").style.width = "65vw";
                     document.getElementById("open-Due").style.opacity = "1";
+
+                    document.getElementById("valuation-part").style.display = "none";
+                    document.getElementById("open-agreement").style.display = "none";
                   }
                 }
 
@@ -495,7 +505,7 @@
                   <div class="titles vertical">Agreement</div>
                 </a>
 
-                <div class="first-drawer" id="open-agreement" style="display: none;">
+                <div class="first-drawer third-scroll" id="open-agreement" style="display: none;">
                   <div class="subtitles min-wtdh" id="days">
                     (5-10 days)*
                     <br>
@@ -525,8 +535,11 @@
                     document.getElementById("subtitle-text").style.width = "50vw"
                     document.getElementById("subtitle-text").style.marginTop = "3vw"
                     document.getElementById("open-agreement").style.justifyContent = "end"
-                    document.getElementById("open-agreement").style.width = "70vw";
+                    document.getElementById("open-agreement").style.width = "65vw";
                     document.getElementById("open-agreement").style.opacity = "1";
+
+                    document.getElementById("valuation-part").style.display = "none";
+                    document.getElementById("open-Due").style.display = "none";
                   }
                 }
 
@@ -538,6 +551,110 @@
 
           </div>
         </div>
+
+        <script>
+
+
+          // $(document).ready(function() {
+          //   let scrollPosition = 0;
+          //   $(document).scroll(function() {
+          //     scrollPosition = $(this).scrollTop();
+          //     console.log(scrollPosition);
+          //     if(scrollPosition > 1490 ) {
+          //       $('.first-scroll').css('display', 'none')
+          //       $('.second-scroll').css('display', 'flex')
+          //     } else if (scrollPosition > 1690) {
+          //       $('.third-scroll').css('display', 'flex')
+          //       $('.second-scroll').css('display', 'none')
+          //     } 
+          //   })
+          // })
+
+          $(document).ready(function () {
+            let scrollFirst = 0;
+            $(document).scroll(function () {
+              scrollFirst = $(this).scrollTop();
+              console.log(scrollFirst);
+
+              if (scrollFirst > 1500) {
+                $('#valuation-part').css('display', 'flex')
+                $('#valuation-part').css('opacity', '1')
+                $('#valuation-part').css('width', '65vw')
+                $('#valuation-part').css('flex-direction', 'column')
+                $('#valuation-part').css('margin-left', '50px')
+                $('#valuation-part').css('justify-content', 'end')
+
+                $('#open-Due').css('display', 'none')
+                $('#open-agreement').css('display', 'none')
+              } else {
+                $('#valuation-part').css('opacity', '1')
+              }
+            })
+          })
+
+          $(document).ready(function () {
+            let scrollsecond = 0;
+            $(document).scroll(function () {
+              scrollsecond = $(this).scrollTop();
+
+              if (scrollsecond > 1800) {
+                $('#open-Due').css('display', 'flex')
+                $('#open-Due').css('opacity', '1')
+                $('#open-Due').css('width', '65vw')
+                $('#open-Due').css('flex-direction', 'column')
+                $('#open-Due').css('margin-left', '50px')
+                $('#open-Due').css('justify-content', 'end')
+
+                $('#valuation-part').css('display', 'none')
+                $('#open-agreement').css('display', 'none')
+              } else {
+                $('#valuation-part').css('opacity', '1')
+              }
+            })
+          })
+
+          $(document).ready(function () {
+            let scrollthird = 0;
+            $(document).scroll(function () {
+              scrollthird = $(this).scrollTop();
+
+              if (scrollthird > 2200) {
+                $('#open-agreement').css('display', 'flex')
+                $('#open-agreement').css('opacity', '1')
+                $('#open-agreement').css('width', '65vw')
+                $('#open-agreement').css('flex-direction', 'column')
+                $('#open-agreement').css('margin-left', '50px')
+                $('#open-agreement').css('justify-content', 'end')
+
+                $('#open-Due').css('display', 'none')
+                $('#valuation-part').css('display', 'none')
+              } else {
+                $('#valuation-part').css('opacity', '1')
+              }
+            })
+          })
+
+          $(document).ready(function () {
+            let scrollthird = 0;
+            $(document).scroll(function () {
+              scrollthird = $(this).scrollTop();
+
+              if (scrollthird > 2200) {
+                $('#open-agreement').css('display', 'flex')
+                $('#open-agreement').css('opacity', '1')
+                $('#open-agreement').css('width', '65vw')
+                $('#open-agreement').css('flex-direction', 'column')
+                $('#open-agreement').css('margin-left', '50px')
+                $('#open-agreement').css('justify-content', 'end')
+
+                $('#open-Due').css('display', 'none')
+                $('#valuation-part').css('display', 'none')
+              } else {
+                $('#valuation-part').css('opacity', '1')
+              }
+            })
+          })
+        </script>
 
 
 
@@ -634,50 +751,59 @@
     <div class="rounded-section red last">
       <div class="section no-padding">
         <div class="form w-form">
-          <form id="wf-form-client-form" name="email-form" class="form">
-            <div class="questions-container">
-              <div class="w-tabs">
+          <form id="wf-form-client-form" name="email-form" data-name="Email Form" method="get" class="form"
+            aria-label="Email Form">
+            <div bloc="question-container" class="questions-container">
+              <div data-duration-in="300" data-duration-out="100" data-current="email" data-easing="ease"
+                class="w-tabs">
 
-
-                <div class="tabs-menu w-tab-menu">
-                  <a class="w-inline-block w-tab-link w--current" id="w-tabs-0-data-w-tab-0" href="#">
+                <div class="tabs-menu w-tab-menu" role="tablist">
+                  <a data-w-tab="myname" class="w-inline-block w-tab-link w--current" id="w-tabs-0-data-w-tab-0"
+                    href="#w-tabs-0-data-w-pane-0" role="tab" aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true">
                     <div>Tab 1</div>
                   </a>
-                  <a class="w-inline-block w-tab-link" id="w-tabs-0-data-w-tab-1" href="#">
+                  <a data-w-tab="message" class="w-inline-block w-tab-link" tabindex="-1" id="w-tabs-0-data-w-tab-1"
+                    href="#w-tabs-0-data-w-pane-1" role="tab" aria-controls="w-tabs-0-data-w-pane-1"
+                    aria-selected="false">
                     <div>Tab 2</div>
                   </a>
-                  <a class="w-inline-block w-tab-link" id="w-tabs-0-data-w-tab-2" href="#">
+                  <a data-w-tab="email" class="w-inline-block w-tab-link" tabindex="-1" id="w-tabs-0-data-w-tab-2"
+                    href="#w-tabs-0-data-w-pane-2" role="tab" aria-controls="w-tabs-0-data-w-pane-2"
+                    aria-selected="false">
                     <div>Tab 3</div>
                   </a>
                 </div>
 
-
                 <div class="w-tab-content">
-                  <div class="w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0">
+                  <div class="w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0" role="tabpanel">
 
 
                     <div class="hero-text-container desktop">
                       <div class="line-text min-height">
                         <div class="lottie-intext-container no-padding-left more-padding-right">
-                          <div class="icone-intext-lottie">
+                          <div class="icone-intext-lottie" 
+                            data-animation-type="lottie"
+                            data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
+                            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
+                            data-renderer="svg" data-default-duration="3" data-duration="0">
 
-                            <!-- SVG FILE -->
+                            <!-- SVG FILES -->
 
                           </div>
                         </div>
 
-                        <div href="" class="big-title typewriter" data-period="2000"
-                          data-type='["HI!", "What is your name?"]'>
+                        <div href="" class="big-title typewrite" data-period="2000"
+                          data-type='[ "Hi!", "What is your name?"]'>
                           <span class="wrap"></span>
                         </div>
-
                         <script>
-
                           var TxtType = function (el, toRotate, period) {
                             this.toRotate = toRotate;
                             this.el = el;
                             this.loopNum = 0;
                             this.period = parseInt(period, 8) || 2000;
+                            this.txt = '';
                             this.tick();
                             this.isDeleting = false;
                           };
@@ -687,9 +813,9 @@
                             var fullTxt = this.toRotate[i];
 
                             if (this.isDeleting) {
-                              this.txt = fullText.subString(0, this.txt.length - 1);
+                              this.txt = fullTxt.substring(0, this.txt.length - 1);
                             } else {
-                              this.txt = fullTxt.subString(0, this.txt.length + 1);
+                              this.txt = fullTxt.substring(0, this.txt.length + 1);
                             }
 
                             this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
@@ -722,25 +848,26 @@
                                 new TxtType(elements[i], JSON.parse(toRotate), period);
                               }
                             }
-
+                            // INJECT CSS
                             var css = document.createElement("style");
                             css.type = "text/css";
-                            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid white }";
+                            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
                             document.body.appendChild(css);
-                          }
-
+                          };
                         </script>
 
                       </div>
                     </div>
 
-
                     <div class="hero-text-container mobile-landscape">
                       <div class="line-text">
                         <div class="lottie-intext-container no-padding-left more-padding-right">
-                          <div class="icone-intext-lottie">
+                          <div class="icone-intext-lottie" data-w-id="c1074286-8513-314f-52f4-3fde4e0a6354"
+                            data-animation-type="lottie"
+                            data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
+                            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
+                            data-renderer="svg" data-default-duration="3" data-duration="0">
 
-                            <!-- SVG FILES -->
 
                           </div>
                         </div>
@@ -748,11 +875,14 @@
                       </div>
                     </div>
 
-
                     <div class="hero-text-container mobile-portrait">
                       <div class="line-text">
                         <div class="lottie-intext-container no-padding-left more-padding-right">
-                          <div class="icone-intext-lottie">
+                          <div class="icone-intext-lottie" data-w-id="c703211a-0be8-5488-f8d3-eade25084284"
+                            data-animation-type="lottie"
+                            data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
+                            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
+                            data-renderer="svg" data-default-duration="3" data-duration="0">
 
                             <!-- SVG FILES -->
 
@@ -766,62 +896,89 @@
                     </div>
 
 
-                    <input type="text" class="text-field w-input" maxlength="256" name="myname"
-                      placeholder="Company Name" id="myname">
+                    <input type="text" class="text-field w-input" maxlength="256" name="myname" data-name="myname"
+                      placeholder="My name is..." id="myname">
+
+
                   </div>
-                  <div class="w-tab-pane" id="w-tabs-0-data-w-pane-1">
+
+
+                  <div data-w-tab="message" class="w-tab-pane" id="w-tabs-0-data-w-pane-1" role="tabpanel"
+                    aria-labelledby="w-tabs-0-data-w-tab-1">
                     <div class="hero-text-container desktop">
-
-
                       <div class="line-text">
-                        <div class="big-title">Please enter your</div>
-                        <div id="yourname" class="big-title margin-right">message</div>
+                        <div class="big-title">Nice&nbsp;to meet you&nbsp;
+                        </div>
+                        <div id="yourname" class="big-title margin-right">you</div>
                         <div class="big-title">!</div>
                         <div class="lottie-intext-container">
-                          <div class="icone-intext-lottie">
+                          <div class="icone-intext-lottie" data-w-id="46849f47-c47a-97ee-f5bc-b388eb4f207d"
+                            data-animation-type="lottie"
+                            data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
+                            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
+                            data-renderer="svg" data-default-duration="3" data-duration="0">
 
                             <!-- SVG FILES -->
 
                           </div>
                         </div>
                       </div>
-
-
+                      <div class="line-text">
+                        <div id="typped-help" class="big-title">How can we help you ?</div>
+                      </div>
                     </div>
 
 
                     <div class="hero-text-container mobile-landscape">
                       <div class="line-text">
-                        <div class="big-title">Please enter your message.</div>
+                        <div class="big-title">Nice&nbsp;to meet you&nbsp;!</div>
                         <div class="lottie-intext-container">
-                          <div class="icone-intext-lottie">
+                          <div class="icone-intext-lottie" data-w-id="e608b765-ee58-10cb-34ff-488be33bd547"
+                            data-animation-type="lottie"
+                            data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
+                            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
+                            data-renderer="svg" data-default-duration="3" data-duration="0">
 
                             <!-- SVG FILES -->
 
                           </div>
                         </div>
                       </div>
-
+                      <div class="line-text">
+                        <div class="big-title">How can we help you ?</div>
+                      </div>
                     </div>
 
 
                     <div class="hero-text-container mobile-portrait">
                       <div class="line-text">
-                        <div class="big-title">Please enter your message.</div>
+                        <div class="big-title">Nice&nbsp;to meet you !</div>
                         <div class="lottie-intext-container">
-                          <div class="icone-intext-lottie">
+                          <div class="icone-intext-lottie" data-w-id="44364aba-65a2-4a57-2e4b-89c24e338ca5"
+                            data-animation-type="lottie"
+                            data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
+                            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
+                            data-renderer="svg" data-default-duration="3" data-duration="0">
 
                             <!-- SVG FILES -->
 
                           </div>
                         </div>
                       </div>
+                      <div class="line-text">
+                        <div class="big-title">How can we help you ?<br></div>
+                      </div>
                     </div>
 
+
                     <textarea placeholder="Leave us a message..." maxlength="5000" id="message" name="message"
-                      class="text-field w-input"></textarea>
+                      data-name="message" class="text-field w-input">
+                    </textarea>
                   </div>
-                  <div class="w-tab-pane" id="w-tabs-0-data-w-pane-2">
+
+
+                  <div data-w-tab="email" class="w-tab-pane" id="w-tabs-0-data-w-pane-2" role="tabpanel"
+                    aria-labelledby="w-tabs-0-data-w-tab-2">
                     <div class="hero-text-container desktop">
                       <div class="line-text">
                         <div class="big-title">What is your email ?</div>
@@ -845,26 +1002,38 @@
                       <div class="line-text">
                         <div class="big-title">So we can reach you.</div>
                       </div>
-                    </div><input type="text" class="text-field w-input" maxlength="256" name="Email" data-name="Email"
+                    </div>
+
+                    <input type="text" class="text-field w-input" maxlength="256" name="Email" data-name="Email"
                       placeholder="My email is..." id="Email-3" required="">
-                    <div class="submit-bouttons-container submit">
-                      <div class="submit-button">Prev</div>
+
+
+                    <div bloc="submit" class="submit-bouttons-container submit">
+                      <div bloc="prev-question" class="submit-button">Prev</div>
                       <div class="submit-button submit-form">Submit</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="submit-bouttons-container">
-                <div class="submit-button">Prev</div>
-                <div class="submit-button">Next</div>
+              <div bloc="prevnext" class="submit-bouttons-container">
+                <div bloc="prev-question" class="submit-button" id="prevBtn">Prev</div>
+                <div bloc="next-question" class="submit-button" id="nextBtn" onclick="changeTheColorOfButtonDemo()">Next
+                </div>
+
               </div>
             </div>
           </form>
+
+
           <div class="success-message w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
             <div class="hero-text-container mobile-portrait">
               <div class="line-text">
                 <div class="lottie-intext-container no-padding-left more-padding-right">
-                  <div class="icone-intext-lottie">
+                  <div class="icone-intext-lottie" data-w-id="329360b3-eb3e-50a2-6d59-d0a494d206e3"
+                    data-animation-type="lottie"
+                    data-src="https://assets.website-files.com/610c251287ec86f4848cd877/61255306a778891037b771d9_clindoeil-jaune.json"
+                    data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg"
+                    data-default-duration="2.5" data-duration="0">
 
                     <!-- SVG FILES -->
 
@@ -877,10 +1046,15 @@
               </div>
             </div>
 
+            
             <div class="hero-text-container mobile-landscape">
               <div class="line-text">
                 <div class="lottie-intext-container no-padding-left more-padding-right">
-                  <div class="icone-intext-lottie">
+                  <div class="icone-intext-lottie" data-w-id="53b9aea5-0b3a-dac0-14c9-b9e5a8038828"
+                    data-animation-type="lottie"
+                    data-src="https://assets.website-files.com/610c251287ec86f4848cd877/61255306a778891037b771d9_clindoeil-jaune.json"
+                    data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg"
+                    data-default-duration="2.5" data-duration="0">
 
                     <!-- SVG FILES -->
 
@@ -892,10 +1066,15 @@
                 <div class="big-title">to you as soon as possible.</div>
               </div>
             </div>
+            
             <div class="hero-text-container desktop">
               <div class="line-text">
                 <div class="lottie-intext-container no-padding-left more-padding-right">
-                  <div class="icone-intext-lottie">
+                  <div class="icone-intext-lottie" data-w-id="229080ba-1683-bcda-6b40-62c228dc3a3a"
+                    data-animation-type="lottie"
+                    data-src="https://assets.website-files.com/610c251287ec86f4848cd877/61255306a778891037b771d9_clindoeil-jaune.json"
+                    data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg"
+                    data-default-duration="2.5" data-duration="0">
 
                     <!-- SVG FILES -->
 
@@ -908,7 +1087,7 @@
               </div>
             </div>
           </div>
-          <div class="w-form-fail" tabindex="-1">
+          <div class="w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure">
             <div>Oops! Something went wrong while submitting the form.</div>
           </div>
         </div>

@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/src/css/care/care.css" />
-  <title>Document</title>
+  <link rel="stylesheet" href="/src/css/homepage/homepage.css" />
+  <title>Care</title>
 </head>
 
 <body>
@@ -31,10 +32,10 @@
             class=" menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Work with us</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="genius" href="/geniuswire" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="genius" href="/src/pages/geniusWire/geniusWire.html" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">GeniusWire™</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="sell" href="/sell-your-business" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="sell" href="/src/pages/sell-business/sell-buiness.html" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Sell your business</div>
             <div class="line white anim-line-hover"></div>
           </a><a id="team" href="/src/pages/meet-our-team/meet-our-team.html"
@@ -253,7 +254,6 @@
 
             window.onscroll = function () {
               var theta = document.documentElement.scrollTop / 75 % Math.PI;
-
               document.getElementsByClassName("text").style.transform = 'rotate(' + theta + 'rad)';
             }
 
@@ -382,9 +382,12 @@
 
     </div>
 
+    <!-- RED PART -->
+
     <div class="rounded-section red last">
       <div class="section no-padding">
         <div class="form w-form">
+
           <form id="wf-form-client-form" name="email-form" data-name="Email Form" method="get" class="form"
             aria-label="Email Form">
             <div bloc="question-container" class="questions-container">
@@ -407,90 +410,94 @@
                     <div>Tab 3</div>
                   </a>
                 </div>
+
                 <div class="w-tab-content">
-                  <div data-w-tab="myname" class="w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0" role="tabpanel"
-                    aria-labelledby="w-tabs-0-data-w-tab-0">
+                  <div class="w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0" role="tabpanel">
+
                     <div class="hero-text-container desktop">
                       <div class="line-text min-height">
                         <div class="lottie-intext-container no-padding-left more-padding-right">
-                          <div class="icone-intext-lottie" data-w-id="1e58cfd2-5961-8e36-a5aa-d5a0eb1abe7e"
-                            data-animation-type="lottie"
-                            data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
-                            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
-                            data-renderer="svg" data-default-duration="3" data-duration="0">
+                          <div class="icone-intext-lottie"
+                          data-animation-type="lottie"
+                          data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
+                          data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
+                          data-renderer="svg" data-default-duration="3" data-duration="0">
+                        
+                          <!-- SVG -->
 
-                            <!-- SVG FILES -->
-
-                          </div>
+                        </div>
                         </div>
 
                         <div href="" class="big-title typewrite" data-period="2000"
-                          data-type='[ "Hi!", "What is your name?"]'>
-                          <span class="wrap"></span>
-                        </div>
-                        <script>
-                          var TxtType = function (el, toRotate, period) {
-                            this.toRotate = toRotate;
-                            this.el = el;
-                            this.loopNum = 0;
-                            this.period = parseInt(period, 8) || 2000;
-                            this.txt = '';
-                            this.tick();
+                        data-type='["Hi!", "What is your name?"]'>
+                        <span class="wrap"></span>
+                      </div>
+
+
+                      <script>
+                        var TxtType = function(el, toRotate, period){
+                          this.toRotate = toRotate;
+                          this.el = el;
+                          this.loopNum = 0;
+                          this.period = parseInt(period, 8) || 2000;
+                          this.txt = '';
+                          this.tick();
+                          this.isDeleting = false;
+                        };
+
+                        TxtType.prototype.tick = function() {
+                          var i = this.loopNum % this.toRotate.length;
+                          var fullTxt = this.toRotate[i];
+
+                          if (this.isDeleting) {
+                            this.txt = fullTxt.substring(0, this.txt.length - 1);
+                          } else {
+                            this.txt = fullTxt.substring(0, this.txt.length + 1);
+                          }
+
+                          this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+                          var that = this;
+                          var delta = 200 - Math.random() * 100;
+
+                          if(this.isDeleting) { delta /= 2; }
+
+                          if (!this.isDeleting && this.txt === fullTxt) {
+                            delta = this.period;
+                            this.isDeleting = true;
+                          } else if (this.isDeleting && this.txt === '') {
                             this.isDeleting = false;
-                          };
+                            this.loopNum++;
+                            delta = 500;
+                          }
 
-                          TxtType.prototype.tick = function () {
-                            var i = this.loopNum % this.toRotate.length;
-                            var fullTxt = this.toRotate[i];
+                          setTimeout(function() {
+                            that.tick();
+                          }, delta);
+                        };
 
-                            if (this.isDeleting) {
-                              this.txt = fullTxt.substring(0, this.txt.length - 1);
-                            } else {
-                              this.txt = fullTxt.substring(0, this.txt.length + 1);
+                        window.onload = function() {
+                          var elements = document.getElementsByClassName('typewrite');
+                          for (var i = 0; i < elements.length; i++) {
+                            var toRotate = elements[i].getAttribute('data-type');
+                            var period = elements[i].getAttribute('data-period');
+                            if (toRotate) {
+                              new TxtType(elements[i], JSON.parse(toRotate), period);
                             }
+                          }
 
-                            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+                          var css = document.createElement("style");
+                          css.type = "text/css";
+                          css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #ffff }";
+                          document.body.appendChild(css);
+                        };
 
-                            var that = this;
-                            var delta = 200 - Math.random() * 100;
-
-                            if (this.isDeleting) { delta /= 2; }
-
-                            if (!this.isDeleting && this.txt === fullTxt) {
-                              delta = this.period;
-                              this.isDeleting = true;
-                            } else if (this.isDeleting && this.txt === '') {
-                              this.isDeleting = false;
-                              this.loopNum++;
-                              delta = 500;
-                            }
-
-                            setTimeout(function () {
-                              that.tick();
-                            }, delta);
-                          };
-
-                          window.onload = function () {
-                            var elements = document.getElementsByClassName('typewrite');
-                            for (var i = 0; i < elements.length; i++) {
-                              var toRotate = elements[i].getAttribute('data-type');
-                              var period = elements[i].getAttribute('data-period');
-                              if (toRotate) {
-                                new TxtType(elements[i], JSON.parse(toRotate), period);
-                              }
-                            }
-                            // INJECT CSS
-                            var css = document.createElement("style");
-                            css.type = "text/css";
-                            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-                            document.body.appendChild(css);
-                          };
-                        </script>
+                      </script>
 
                       </div>
                     </div>
 
-                    <!-- <div class="hero-text-container mobile-landscape">
+                    <div class="hero-text-container mobile-landscape">
                       <div class="line-text">
                         <div class="lottie-intext-container no-padding-left more-padding-right">
                           <div class="icone-intext-lottie" data-w-id="c1074286-8513-314f-52f4-3fde4e0a6354"
@@ -502,9 +509,9 @@
 
                           </div>
                         </div>
-                        <div class="big-title">Hi ! What is your name ?</div>
+                        <div class="biig-title">Hi ! What is your name ?</div>
                       </div>
-                    </div> -->
+                    </div>
 
                     <div class="hero-text-container mobile-portrait">
                       <div class="line-text">
@@ -519,85 +526,89 @@
 
                           </div>
                         </div>
-                        <div class="big-title">Hi ! What is your </div>
+                        <div class="big-title">Hi! What is your </div>
                       </div>
                       <div class="line-text">
                         <div class="big-title">name?</div>
                       </div>
                     </div>
 
-
                     <input type="text" class="text-field w-input" maxlength="256" name="myname" data-name="myname"
-                      placeholder="My name is..." id="myname">
-
+                    placeholder="My name is..." id="myname">
 
                   </div>
+
                   <div data-w-tab="message" class="w-tab-pane" id="w-tabs-0-data-w-pane-1" role="tabpanel"
                     aria-labelledby="w-tabs-0-data-w-tab-1">
-                    <div class="hero-text-container desktop">
-                      <div class="line-text">
-                        <div class="big-title">Nice&nbsp;to meet you&nbsp;
-                        </div>
-                        <div id="yourname" class="big-title margin-right">you</div>
-                        <div class="big-title">!</div>
-                        <div class="lottie-intext-container">
-                          <div class="icone-intext-lottie" data-w-id="46849f47-c47a-97ee-f5bc-b388eb4f207d"
-                            data-animation-type="lottie"
-                            data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
-                            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
-                            data-renderer="svg" data-default-duration="3" data-duration="0">
+                      <div class="hero-text-container desktop">
+                        <div class="line-text">
+                          <div class="big-title">Nice&nbsp;to meet you&nbsp;</div>
+                          <div id="yourname" class="big-title margin-right">you</div>
+                          <div class="big-title">!</div>
+                          <div class="lottie-intext-container">
+                            <div class="icone-intext-lottie" data-w-id="46849f47-c47a-97ee-f5bc-b388eb4f207d"
+                              data-animation-type="lottie"
+                              data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
+                              data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0">
 
-                            <!-- SVG FILES -->
+                              <!-- SVG -->
 
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="line-text">
-                        <div id="typped-help" class="big-title">How can we help you ?</div>
-                      </div>
-                    </div>
-                    <div class="hero-text-container mobile-landscape">
-                      <div class="line-text">
-                        <div class="big-title">Nice&nbsp;to meet you&nbsp;!</div>
-                        <div class="lottie-intext-container">
-                          <div class="icone-intext-lottie" data-w-id="e608b765-ee58-10cb-34ff-488be33bd547"
-                            data-animation-type="lottie"
-                            data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
-                            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
-                            data-renderer="svg" data-default-duration="3" data-duration="0">
-
-                            <!-- SVG FILES -->
-
-                          </div>
+                        <div class="line-text">
+                          <div id="typped-help" class="big-title">How can we help you ?</div>
                         </div>
                       </div>
-                      <div class="line-text">
-                        <div class="big-title">How can we help you ?</div>
-                      </div>
-                    </div>
-                    <div class="hero-text-container mobile-portrait">
-                      <div class="line-text">
-                        <div class="big-title">Nice&nbsp;to meet you !</div>
-                        <div class="lottie-intext-container">
-                          <div class="icone-intext-lottie" data-w-id="44364aba-65a2-4a57-2e4b-89c24e338ca5"
-                            data-animation-type="lottie"
-                            data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
-                            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
-                            data-renderer="svg" data-default-duration="3" data-duration="0">
 
-                            <!-- SVG FILES -->
 
+                      <div class="hero-text-container mobile-landscape">
+                        <div class="line-text">
+                          <div class="big-title">Nice&nbsp;to meet you&nbsp;!</div>
+                          <div class="lottie-intext-container">
+                            <div class="icone-intext-lottie" data-w-id="e608b765-ee58-10cb-34ff-488be33bd547"
+                              data-animation-type="lottie"
+                              data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
+                              data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
+                              data-renderer="svg" data-default-duration="3" data-duration="0">
+  
+                              <!-- SVG FILES -->
+  
+                            </div>
                           </div>
                         </div>
+                        <div class="line-text">
+                          <div class="big-title">How can we help you ?</div>
+                        </div>
                       </div>
-                      <div class="line-text">
-                        <div class="big-title">How can we help you ?<br></div>
+
+                      <div class="hero-text-container mobile-portrait">
+                        <div class="line-text">
+                          <div class="big-title">Nice&nbsp;to meet you !</div>
+                          <div class="lottie-intext-container">
+                            <div class="icone-intext-lottie" data-w-id="44364aba-65a2-4a57-2e4b-89c24e338ca5"
+                              data-animation-type="lottie"
+                              data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
+                              data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
+                              data-renderer="svg" data-default-duration="3" data-duration="0">
+                            
+                              <!-- SVG -->
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="line-text">
+                          <div class="big-title">How can we help you ?<br></div>
+                        </div>
                       </div>
-                    </div>
-                    <textarea placeholder="Leave us a message..." maxlength="5000" id="message" name="message"
+
+                      <textarea placeholder="Leave us a message..." maxlength="5000" id="message" name="message"
                       data-name="message" class="text-field w-input">
                     </textarea>
+
                   </div>
+
+
                   <div data-w-tab="email" class="w-tab-pane" id="w-tabs-0-data-w-pane-2" role="tabpanel"
                     aria-labelledby="w-tabs-0-data-w-tab-2">
                     <div class="hero-text-container desktop">
@@ -628,85 +639,24 @@
                     <input type="text" class="text-field w-input" maxlength="256" name="Email" data-name="Email"
                       placeholder="My email is..." id="Email-3" required="">
 
+                      <div bloc="submit" class="submit-bouttons-container submit">
+                        <div bloc="prev-question" class="submit-button">Prev</div>
+                        <div class="submit-button submit-form">Submit</div>
+                      </div>
 
-                    <div bloc="submit" class="submit-bouttons-container submit">
-                      <div bloc="prev-question" class="submit-button">Prev</div>
-                      <div class="submit-button submit-form">Submit</div>
+                  </div>
+
+                  <div bloc="prevnext" class="submit-bouttons-container">
+                    <div bloc="prev-question" class="submit-button" id="prevBtn">Prev</div>
+                    <div bloc="next-question" class="submit-button" id="nextBtn" onclick="changeTheColorOfButtonDemo()">Next
                     </div>
                   </div>
                 </div>
               </div>
-              <div bloc="prevnext" class="submit-bouttons-container">
-                <div bloc="prev-question" class="submit-button" id="prevBtn">Prev</div>
-                <div bloc="next-question" class="submit-button" id="nextBtn" onclick="changeTheColorOfButtonDemo()">Next
-                </div>
-
-                <!-- <script>
-
-                  var currentTab = 0;
-                  showTab(currentTab);
-
-                  function fixStepIndicator(n) {
-                    // This function removes the "active" class of all steps...
-                    var i, x = document.getElementsByClassName("step");
-                    for (i = 0; i < x.length; i++) {
-                      x[i].className = x[i].className.replace(" active", "");
-                    }
-                    //... and adds the "active" class on the current step:
-                    x[n].className += " active";
-                  }
-
-                  function showTab(n) {
-                    var x = document.getElementsByClassName("message");
-                    x[n].style.display = "block";
-                    if (n == 0) {
-                      document.getElementById("prevBtn").style.display = "none";
-                    } else {
-                      document.getElementById("prevBtn").style.display = "inline";
-                    }
-                    if (n == (x.length - 1)) {
-                      document.getElementById("nextBtn").innerHTML = "Submit";
-                    } else {
-                      document.getElementById("nextBtn").innerHTML = "Next";
-                    }
-                    fixStepIndicator(n)
-                  }
-
-                  function validateForm() {
-                    var x, y, i, valid = true;
-                    x = document.getElementsByClassName("message");
-                    y = x[currentTab].getElementsByTagName("input");
-                    for (i = 0; i < y.length; i++) {
-                      if (y[i].value == "") {
-                        // add an "invalid" class to the field:
-                        y[i].className += " invalid";
-                        valid = false;
-                      }
-                    }
-                    if (valid) {
-                      document.getElementsByClassName("step")[currentTab].className += " finish";
-                    }
-                    return valid;
-                  }
-
-                  function nextPrev(n) {
-                    var x = document.getElementById("myname");
-                    if (n == 1 && !validateForm()) return false;
-                    x[currentTab].style.display = "none";
-                    currentTab = currentTab + n;
-                    if (currentTab >= x.length) {
-                      document.getElementById("regForm").submit();
-                      return false;
-                    }
-                    showTab(currentTab);
-                  }
-
-
-                </script> -->
-
-              </div>
             </div>
           </form>
+
+
           <div class="success-message w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
             <div class="hero-text-container mobile-portrait">
               <div class="line-text">
@@ -724,9 +674,10 @@
                 <div class="big-title">Thank you ! <br></div>
               </div>
               <div class="line-text">
-                <div class="big-title">We'll get back to you as soon as possible.</div>
+                <div class="big-title">We'll get back to you as soom as possible.</div>
               </div>
             </div>
+
             <div class="hero-text-container mobile-landscape">
               <div class="line-text">
                 <div class="lottie-intext-container no-padding-left more-padding-right">
@@ -735,7 +686,6 @@
                     data-src="https://assets.website-files.com/610c251287ec86f4848cd877/61255306a778891037b771d9_clindoeil-jaune.json"
                     data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg"
                     data-default-duration="2.5" data-duration="0">
-
 
                     <!-- SVG FILES -->
 
@@ -747,7 +697,8 @@
                 <div class="big-title">to you as soon as possible.</div>
               </div>
             </div>
-            <div class="hero-text-container desktop">
+
+            <div class="heo-text-container desktop">
               <div class="line-text">
                 <div class="lottie-intext-container no-padding-left more-padding-right">
                   <div class="icone-intext-lottie" data-w-id="229080ba-1683-bcda-6b40-62c228dc3a3a"
@@ -763,11 +714,12 @@
                 <div class="big-title">Thank you ! We'll get back <br></div>
               </div>
               <div class="line-text">
-                <div class="big-title">to you as soon as possible.</div>
+                <div class="big-title"> to you as soon as possible.</div>
               </div>
             </div>
+
           </div>
-          <div class="w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure">
+          <div class="w-form-fail" tabindex="-1" role="regoin" aria-label="Email Form failure">
             <div>Oops! Something went wrong while submitting the form.</div>
           </div>
         </div>

@@ -13,6 +13,7 @@ strong {
 }
 img {
   border: 0;
+  transform: translate();
 }
 svg:not(:root) {
   overflow: hidden;
@@ -1035,7 +1036,7 @@ a {
   display: flex;
   overflow: hidden;
   width: 0vw;
-  max-width: 0vw;
+  /* max-width: 0vw; */
   padding: 0em;
   flex-direction: column;
   justify-content: flex-end;
@@ -1943,3 +1944,6 @@ a {
   font-style: normal;
   font-display: swap;
 }
+  *{
+    scroll-behavior: smooth;
+  }

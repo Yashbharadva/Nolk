@@ -28,7 +28,7 @@
             <div class="footer-links">Explore our brands</div>
             <div class="line white anim-line-hover"></div>
           </a>
-          <a id="work" href="/src/pages/work-with-us/work-with-us.html"
+          <a id="work" href="/src/pages/work-with-us/work-with-us.html#Benefits"
             class=" menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Work with us</div>
             <div class="line white anim-line-hover"></div>
@@ -386,6 +386,7 @@
                   var scroll_pos = 0;
                   $(document).scroll(function () {
                     scroll_pos = $(this).scrollTop();
+                    console.log(scroll_pos);
                     if (scroll_pos > 750) {
                       $('.believe12').css('border-radius', '0px 0 20em 0px');
                       $('.nolkKnow12').css('border-radius', '15em 0px 0% 15em');
@@ -830,6 +831,7 @@
             <div bloc="question-container" class="questions-container">
               <div data-duration-in="300" data-duration-out="100" data-current="email" data-easing="ease"
                 class="w-tabs">
+
                 <div class="tabs-menu w-tab-menu" role="tablist">
                   <a data-w-tab="myname" class="w-inline-block w-tab-link w--current" id="w-tabs-0-data-w-tab-0"
                     href="#w-tabs-0-data-w-pane-0" role="tab" aria-controls="w-tabs-0-data-w-pane-0"
@@ -847,15 +849,15 @@
                     <div>Tab 3</div>
                   </a>
                 </div>
+
                 <div class="w-tab-content">
-                  <div data-w-tab="myname" class="w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0" role="tabpanel"
-                    aria-labelledby="w-tabs-0-data-w-tab-0">
+                  <div class="w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0" role="tabpanel">
 
 
                     <div class="hero-text-container desktop">
                       <div class="line-text min-height">
                         <div class="lottie-intext-container no-padding-left more-padding-right">
-                          <div class="icone-intext-lottie" data-w-id="1e58cfd2-5961-8e36-a5aa-d5a0eb1abe7e"
+                          <div class="icone-intext-lottie" 
                             data-animation-type="lottie"
                             data-src="https://assets.website-files.com/610c251287ec86f4848cd877/612553c81aada17a11af3cb7_sourire-jaune.json"
                             data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
@@ -932,7 +934,7 @@
                       </div>
                     </div>
 
-                    <!-- <div class="hero-text-container mobile-landscape">
+                    <div class="hero-text-container mobile-landscape">
                       <div class="line-text">
                         <div class="lottie-intext-container no-padding-left more-padding-right">
                           <div class="icone-intext-lottie" data-w-id="c1074286-8513-314f-52f4-3fde4e0a6354"
@@ -946,7 +948,7 @@
                         </div>
                         <div class="big-title">Hi ! What is your name ?</div>
                       </div>
-                    </div> -->
+                    </div>
 
                     <div class="hero-text-container mobile-portrait">
                       <div class="line-text">
@@ -974,6 +976,8 @@
 
 
                   </div>
+
+
                   <div data-w-tab="message" class="w-tab-pane" id="w-tabs-0-data-w-pane-1" role="tabpanel"
                     aria-labelledby="w-tabs-0-data-w-tab-1">
                     <div class="hero-text-container desktop">
@@ -998,6 +1002,8 @@
                         <div id="typped-help" class="big-title">How can we help you ?</div>
                       </div>
                     </div>
+
+
                     <div class="hero-text-container mobile-landscape">
                       <div class="line-text">
                         <div class="big-title">Nice&nbsp;to meet you&nbsp;!</div>
@@ -1017,6 +1023,8 @@
                         <div class="big-title">How can we help you ?</div>
                       </div>
                     </div>
+
+
                     <div class="hero-text-container mobile-portrait">
                       <div class="line-text">
                         <div class="big-title">Nice&nbsp;to meet you !</div>
@@ -1036,10 +1044,14 @@
                         <div class="big-title">How can we help you ?<br></div>
                       </div>
                     </div>
+
+
                     <textarea placeholder="Leave us a message..." maxlength="5000" id="message" name="message"
                       data-name="message" class="text-field w-input">
                     </textarea>
                   </div>
+
+
                   <div data-w-tab="email" class="w-tab-pane" id="w-tabs-0-data-w-pane-2" role="tabpanel"
                     aria-labelledby="w-tabs-0-data-w-tab-2">
                     <div class="hero-text-container desktop">
@@ -1083,72 +1095,11 @@
                 <div bloc="next-question" class="submit-button" id="nextBtn" onclick="changeTheColorOfButtonDemo()">Next
                 </div>
 
-                <!-- <script>
-
-                  var currentTab = 0;
-                  showTab(currentTab);
-
-                  function fixStepIndicator(n) {
-                    // This function removes the "active" class of all steps...
-                    var i, x = document.getElementsByClassName("step");
-                    for (i = 0; i < x.length; i++) {
-                      x[i].className = x[i].className.replace(" active", "");
-                    }
-                    //... and adds the "active" class on the current step:
-                    x[n].className += " active";
-                  }
-
-                  function showTab(n) {
-                    var x = document.getElementsByClassName("message");
-                    x[n].style.display = "block";
-                    if (n == 0) {
-                      document.getElementById("prevBtn").style.display = "none";
-                    } else {
-                      document.getElementById("prevBtn").style.display = "inline";
-                    }
-                    if (n == (x.length - 1)) {
-                      document.getElementById("nextBtn").innerHTML = "Submit";
-                    } else {
-                      document.getElementById("nextBtn").innerHTML = "Next";
-                    }
-                    fixStepIndicator(n)
-                  }
-
-                  function validateForm() {
-                    var x, y, i, valid = true;
-                    x = document.getElementsByClassName("message");
-                    y = x[currentTab].getElementsByTagName("input");
-                    for (i = 0; i < y.length; i++) {
-                      if (y[i].value == "") {
-                        // add an "invalid" class to the field:
-                        y[i].className += " invalid";
-                        valid = false;
-                      }
-                    }
-                    if (valid) {
-                      document.getElementsByClassName("step")[currentTab].className += " finish";
-                    }
-                    return valid;
-                  }
-
-                  function nextPrev(n) {
-                    var x = document.getElementById("myname");
-                    if (n == 1 && !validateForm()) return false;
-                    x[currentTab].style.display = "none";
-                    currentTab = currentTab + n;
-                    if (currentTab >= x.length) {
-                      document.getElementById("regForm").submit();
-                      return false;
-                    }
-                    showTab(currentTab);
-                  }
-
-
-                </script> -->
-
               </div>
             </div>
           </form>
+
+
           <div class="success-message w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
             <div class="hero-text-container mobile-portrait">
               <div class="line-text">
@@ -1169,6 +1120,8 @@
                 <div class="big-title">We'll get back to you as soon as possible.</div>
               </div>
             </div>
+
+            
             <div class="hero-text-container mobile-landscape">
               <div class="line-text">
                 <div class="lottie-intext-container no-padding-left more-padding-right">
@@ -1188,6 +1141,7 @@
                 <div class="big-title">to you as soon as possible.</div>
               </div>
             </div>
+            
             <div class="hero-text-container desktop">
               <div class="line-text">
                 <div class="lottie-intext-container no-padding-left more-padding-right">
@@ -1262,7 +1216,7 @@
             <div class="footer-links in-footer">Explore our brands</div>
             <div class="line white anim-line-hover"></div>
           </a>
-          <a id="work2" href="/work-with-us" class="menu-links-container anim-transition w-inline-block">
+          <a id="work2" href="/work-with-us#Benefits" class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links in-footer">Work with us</div>
             <div class="line white anim-line-hover"></div>
           </a>
