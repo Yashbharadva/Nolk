@@ -23,19 +23,24 @@
             class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Explore our brands</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="work" href="/src/pages/work-with-us/work-with-us.html" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="work" href="/src/pages/work-with-us/work-with-us.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Work with us</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="genius" href="/src/pages/geniusWire/geniusWire.html" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="genius" href="/src/pages/geniusWire/geniusWire.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">GeniusWire™</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="sell" href="/src/pages/sell-business/sell-buiness.html" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="sell" href="/src/pages/sell-business/sell-buiness.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Sell your business</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="team" href="/src/pages/meet-our-team/meet-our-team.html" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="team" href="/src/pages/meet-our-team/meet-our-team.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">Meet our team</div>
             <div class="line white anim-line-hover"></div>
-          </a><a id="cares" href="/src/pages/care/care.html" class="menu-links-container anim-transition w-inline-block">
+          </a><a id="cares" href="/src/pages/care/care.html"
+            class="menu-links-container anim-transition w-inline-block">
             <div class="footer-links">nolk cares</div>
             <div class="line white anim-line-hover"></div>
           </a>
@@ -419,7 +424,7 @@
 
 
                 <div class="brands-infos-container" id="first-rachel" style="opacity: 1; display: flex;">
-                  <div data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348"
+                  <div data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348" id="image-to-expand-1"
                     style="background-image: url(&quot;https://assets.website-files.com/6113db8b6628664e9136dbfd/6129554b98e64be83646c226_Remplace%20la%20photo%201%20rachel%20par%20c%CC%A7a.jpg&quot;); width: 33%; height: 31vw;"
                     class="brands-image shape-add-1">
                     <div data-delay="4000" data-animation="fade" class="slider w-slider" data-autoplay="false"
@@ -443,11 +448,13 @@
                         <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
                       </div>
                       <div class="left-arrow w-slider-arrow-left" role="button" tabindex="0"
-                        aria-controls="w-slider-mask-0" aria-label="previous slide"><img
+                        aria-controls="w-slider-mask-0" aria-label="previous slide">
+                        <img id="left-arrow-1" style="opacity: 0;"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140540ffa05a338e2878d4_Arrow.png"
                           loading="lazy" alt="" class="image-3"></div>
                       <div class="right-arrow w-slider-arrow-right" role="button" tabindex="0"
-                        aria-controls="w-slider-mask-0" aria-label="next slide"><img
+                        aria-controls="w-slider-mask-0" aria-label="next slide">
+                        <img id="right-arrow-1" style="opacity: 0;"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140596d72abbbb9771c369_Arrow-right.png"
                           loading="lazy" alt="" class="image-3"></div>
                       <div class="slide-nav w-slider-nav w-round">
@@ -462,9 +469,41 @@
                           role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
                       </div>
                     </div>
+
+                    <div data-w-id="136261a0-daa6-02fd-54cc-bebbcd2def88" class="close-image-slider">
+                      <div data-is-ix2-target="1" class="lottie-openphoto" id="image-bottom-arrows"
+                        data-w-id="bb97ed5d-048e-7f12-9032-6f2473d2b09c" data-animation-type="lottie"
+                        data-src="https://assets.website-files.com/610c251287ec86f4848cd877/6129346698e64b0335459588_FlechesPhotos.json"
+                        data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg"
+                        data-default-duration="0.9342675628807704" data-duration="0" data-ix2-initial-state="0">
+                        <img onclick="expandImage1()" src="/src/assets/image/arrows.png" />
+                      </div>
+                    </div>
                     <div class="w-embed">
                       <div class="shape-1"></div>
                     </div>
+
+                    <script>
+
+                      function expandImage1() {
+                        if (document.getElementById("left-arrow-1").style.opacity === "0") {
+                          document.getElementById("image-to-expand-1").style.width = "100%"
+                          document.getElementById("image-to-expand-1").style.height = "45vw"
+                          document.getElementById("image-to-expand-1").style.borderRadius = "6em"
+                          document.getElementById("left-arrow-1").style.opacity = "1"
+                          document.getElementById("right-arrow-1").style.opacity = "1"     
+                          document.getElementById("caro-1").style.display = "block"                   
+                        } else {
+                          document.getElementById("image-to-expand-1").style.width = "30%"
+                          document.getElementById("image-to-expand-1").style.height = "31vw"
+                          document.getElementById("image-to-expand-1").style.borderRadius = "6em"
+                          document.getElementById("left-arrow-1").style.opacity = "0"
+                          document.getElementById("right-arrow-1").style.opacity = "0"     
+                          document.getElementById("caro-1").style.display = "none" 
+                        }
+                      }
+
+                    </script>
                   </div>
 
 
@@ -548,13 +587,13 @@
                 </div>
 
                 <div class="brands-infos-container" id="wolf-first" style="opacity: 1;">
-                  <div data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348"
+                  <div data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348" id="image-to-expand-2"
                     style="background-image: url(&quot;https://assets.website-files.com/6113db8b6628664e9136dbfd/6129551cdcf1007cbdfdeb90_WG_1.jpg&quot;); width: 33%; height: 31vw;"
                     class="brands-image shape-add-2">
                     <div data-delay="4000" data-animation="fade" class="slider w-slider" data-autoplay="false"
                       data-easing="ease" data-hide-arrows="false" data-disable-swipe="false"
                       data-w-id="2eb48576-1294-f109-bc6c-d840bf77f34a" data-autoplay-limit="0" data-nav-spacing="3"
-                      data-duration="400" data-infinite="true" style="display: none; opacity: 0;" role="region"
+                      data-duration="400" data-infinite="true" style="display: none;" id="caro-2" role="region"
                       aria-label="carousel">
                       <div class="w-slider-mask" id="w-slider-mask-1">
                         <div
@@ -572,11 +611,13 @@
                         <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
                       </div>
                       <div class="left-arrow w-slider-arrow-left" role="button" tabindex="0"
-                        aria-controls="w-slider-mask-1" aria-label="previous slide"><img
+                        aria-controls="w-slider-mask-1" aria-label="previous slide">
+                        <img id="left-arrow-2" style="opacity: 0;"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140540ffa05a338e2878d4_Arrow.png"
                           loading="lazy" alt="" class="image-3"></div>
                       <div class="right-arrow w-slider-arrow-right" role="button" tabindex="0"
-                        aria-controls="w-slider-mask-1" aria-label="next slide"><img
+                        aria-controls="w-slider-mask-1" aria-label="next slide">
+                        <img id="right-arrow-2" style="opacity: 0;"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140596d72abbbb9771c369_Arrow-right.png"
                           loading="lazy" alt="" class="image-3"></div>
                       <div class="slide-nav w-slider-nav w-round">
@@ -591,6 +632,41 @@
                           role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
                       </div>
                     </div>
+
+                    <script>
+
+                      function expandImage2() {
+                        if (document.getElementById("right-arrow-2").style.opacity === "0") {
+                          document.getElementById("image-to-expand-2").style.width = "100%"
+                          document.getElementById("image-to-expand-2").style.height = "45vw"
+                          document.getElementById("image-to-expand-2").style.borderRadius = "50px"
+                          document.getElementById("left-arrow-2").style.opacity = "1"
+                          document.getElementById("right-arrow-2").style.opacity = "1"
+                          document.getElementById("caro-2").style.display = "block"
+                        } else {
+                          document.getElementById("image-to-expand-2").style.width = "30%"
+                          document.getElementById("image-to-expand-2").style.height = "31vw"
+                          document.getElementById("image-to-expand-2").style.borderRadius = "0em 20em 0em 0em"
+                          document.getElementById("left-arrow-2").style.opacity = "0"
+                          document.getElementById("right-arrow-2").style.opacity = "0"
+                          document.getElementById("caro-2").style.display = "none"
+                        }
+                      }
+
+                    </script>
+
+                    <div data-w-id="136261a0-daa6-02fd-54cc-bebbcd2def88" class="close-image-slider">
+                      <div data-is-ix2-target="1" class="lottie-openphoto" id="image-bottom-arrows"
+                        data-w-id="bb97ed5d-048e-7f12-9032-6f2473d2b09c" data-animation-type="lottie"
+                        data-src="https://assets.website-files.com/610c251287ec86f4848cd877/6129346698e64b0335459588_FlechesPhotos.json"
+                        data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg"
+                        data-default-duration="0.9342675628807704" data-duration="0" data-ix2-initial-state="0">
+                        <img onclick="expandImage2()" src="/src/assets/image/arrows.png" />
+                      </div>
+                    </div>
+
+                   
+
                     <div class="w-embed">
                       <div class="shape-2"></div>
                     </div>
@@ -675,13 +751,13 @@
                   </div>
                 </div>
                 <div class="brands-infos-container" id="kana-first" style="opacity: 1;">
-                  <div data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348"
+                  <div id="image-to-expand-3" data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348"
                     style="background-image: url(&quot;https://assets.website-files.com/6113db8b6628664e9136dbfd/61258074a61101bf3384b55a_kana_0.jpg&quot;); width: 33%; height: 31vw;"
                     class="brands-image shape-add-3">
                     <div data-delay="4000" data-animation="fade" class="slider w-slider" data-autoplay="false"
                       data-easing="ease" data-hide-arrows="false" data-disable-swipe="false"
                       data-w-id="2eb48576-1294-f109-bc6c-d840bf77f34a" data-autoplay-limit="0" data-nav-spacing="3"
-                      data-duration="400" data-infinite="true" style="display: none; opacity: 0;" role="region"
+                      data-duration="400" data-infinite="true" style="display: none;" id="caro-3" role="region"
                       aria-label="carousel">
                       <div class="w-slider-mask" id="w-slider-mask-2">
                         <div
@@ -699,13 +775,17 @@
                         <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
                       </div>
                       <div class="left-arrow w-slider-arrow-left" role="button" tabindex="0"
-                        aria-controls="w-slider-mask-2" aria-label="previous slide"><img
+                        aria-controls="w-slider-mask-2" aria-label="previous slide">
+                        <img id="left-arrow-3" style="opacity: 0;"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140540ffa05a338e2878d4_Arrow.png"
-                          loading="lazy" alt="" class="image-3"></div>
+                          loading="lazy" alt="" class="image-3">
+                      </div>
                       <div class="right-arrow w-slider-arrow-right" role="button" tabindex="0"
-                        aria-controls="w-slider-mask-2" aria-label="next slide"><img
+                        aria-controls="w-slider-mask-2" aria-label="next slide">
+                        <img id="right-arrow-3" style="opacity: 0;"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140596d72abbbb9771c369_Arrow-right.png"
-                          loading="lazy" alt="" class="image-3"></div>
+                          loading="lazy" alt="" class="image-3">
+                      </div>
                       <div class="slide-nav w-slider-nav w-round">
                         <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 4"
                           aria-pressed="true" role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;">
@@ -718,10 +798,24 @@
                           role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
                       </div>
                     </div>
-                    <div class="w-embed">
-                      <div class="shape-3"></div>
+
+                    <div data-w-id="136261a0-daa6-02fd-54cc-bebbcd2def88" class="close-image-slider">
+                      <div data-is-ix2-target="1" class="lottie-openphoto" id="image-bottom-arrows"
+                        data-w-id="bb97ed5d-048e-7f12-9032-6f2473d2b09c" data-animation-type="lottie"
+                        data-src="https://assets.website-files.com/610c251287ec86f4848cd877/6129346698e64b0335459588_FlechesPhotos.json"
+                        data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg"
+                        data-default-duration="0.9342675628807704" data-duration="0" data-ix2-initial-state="0">
+                        <img onclick="expandImage3()" src="/src/assets/image/arrows.png" />
+                      </div>
                     </div>
                   </div>
+
+                  <div class="w-embed">
+                    <div class="shape-3"></div>
+                  </div>
+
+
+
                   <div class="brands-infos"><img
                       src="https://assets.website-files.com/6113db8b6628664e9136dbfd/612943cc6f7699de8cfb2186_kana.png"
                       loading="lazy" alt="" sizes="(max-width: 479px) 85vw, 8vw"
@@ -756,6 +850,28 @@
                       loading="lazy" alt="" class="plus"></div>
                 </div>
               </div>
+
+              <script>
+
+                function expandImage3() {
+                  if (document.getElementById("right-arrow-3").style.opacity === "0") {
+                    document.getElementById("image-to-expand-3").style.width = "100%"
+                    document.getElementById("image-to-expand-3").style.height = "45vw"
+                    document.getElementById("image-to-expand-3").style.borderRadius = "50px"
+                    document.getElementById("left-arrow-3").style.opacity = "1"
+                    document.getElementById("right-arrow-3").style.opacity = "1"
+                    document.getElementById("caro-3").style.display = "block"
+                  } else {
+                    document.getElementById("image-to-expand-3").style.width = "30%"
+                    document.getElementById("image-to-expand-3").style.height = "31vw"
+                    document.getElementById("image-to-expand-3").style.borderRadius = "20em 20em 0em 0em"
+                    document.getElementById("left-arrow-3").style.opacity = "0"
+                    document.getElementById("right-arrow-3").style.opacity = "0"
+                    document.getElementById("caro-3").style.display = "none"
+                  }
+                }
+
+              </script>
 
               <!-- FOURTH BLCOK -->
 
@@ -800,13 +916,13 @@
                   </div>
                 </div>
                 <div class="brands-infos-container" id="loctote-first" style="opacity: 1;">
-                  <div data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348"
+                  <div id="image-to-expand-4" data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348"
                     style="background-image: url(&quot;https://assets.website-files.com/6113db8b6628664e9136dbfd/61257f34ce9ee055ce6fd895_Loctote.jpg&quot;); width: 33%; height: 31vw;"
                     class="brands-image shape-add-4">
                     <div data-delay="4000" data-animation="fade" class="slider w-slider" data-autoplay="false"
                       data-easing="ease" data-hide-arrows="false" data-disable-swipe="false"
                       data-w-id="2eb48576-1294-f109-bc6c-d840bf77f34a" data-autoplay-limit="0" data-nav-spacing="3"
-                      data-duration="400" data-infinite="true" style="display: none; opacity: 0;" role="region"
+                      data-duration="400" data-infinite="true" style="display: none;" id="caro-4" role="region"
                       aria-label="carousel">
                       <div class="w-slider-mask" id="w-slider-mask-3">
                         <div
@@ -824,13 +940,17 @@
                         <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
                       </div>
                       <div class="left-arrow w-slider-arrow-left" role="button" tabindex="0"
-                        aria-controls="w-slider-mask-3" aria-label="previous slide"><img
+                        aria-controls="w-slider-mask-3" aria-label="previous slide">
+                        <img id="left-arrow-4" style="opacity: 0;"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140540ffa05a338e2878d4_Arrow.png"
-                          loading="lazy" alt="" class="image-3"></div>
+                          loading="lazy" alt="" class="image-3">
+                      </div>
                       <div class="right-arrow w-slider-arrow-right" role="button" tabindex="0"
-                        aria-controls="w-slider-mask-3" aria-label="next slide"><img
+                        aria-controls="w-slider-mask-3" aria-label="next slide">
+                        <img id="right-arrow-4" style="opacity: 0;"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140596d72abbbb9771c369_Arrow-right.png"
-                          loading="lazy" alt="" class="image-3"></div>
+                          loading="lazy" alt="" class="image-3">
+                      </div>
                       <div class="slide-nav w-slider-nav w-round">
                         <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 4"
                           aria-pressed="true" role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;">
@@ -841,6 +961,17 @@
                           role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
                         <div class="w-slider-dot" data-wf-ignore="" aria-label="Show slide 4 of 4" aria-pressed="false"
                           role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
+                      </div>
+                    </div>
+
+                    <div data-w-id="136261a0-daa6-02fd-54cc-bebbcd2def88" class="close-image-slider">
+                      <div data-is-ix2-target="1" class="lottie-openphoto" id="image-bottom-arrows"
+                        data-w-id="bb97ed5d-048e-7f12-9032-6f2473d2b09c" data-animation-type="lottie"
+                        data-src="https://assets.website-files.com/610c251287ec86f4848cd877/6129346698e64b0335459588_FlechesPhotos.json"
+                        data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg"
+                        data-default-duration="0.9342675628807704" data-duration="0" data-ix2-initial-state="0">
+
+                        <img onclick="expnadImage4()" src="/src/assets/image/arrows.png" />
                       </div>
                     </div>
                     <div class="w-embed">
@@ -885,6 +1016,28 @@
                       loading="lazy" alt="" class="plus"></div>
                 </div>
               </div>
+
+              <script>
+
+                function expnadImage4() {
+                  if (document.getElementById("right-arrow-4").style.opacity === "0") {
+                    document.getElementById("image-to-expand-4").style.width = "100%";
+                    document.getElementById("image-to-expand-4").style.height = "45vw";
+                    document.getElementById("image-to-expand-4").style.borderRadius = "50px"
+                    document.getElementById("left-arrow-4").style.opacity = "1"
+                    document.getElementById("right-arrow-4").style.opacity = "1"
+                    document.getElementById("caro-4").style.display = "block"
+                  } else {
+                    document.getElementById("image-to-expand-4").style.width = "30%"
+                    document.getElementById("image-to-expand-4").style.height = "31vw"
+                    document.getElementById("image-to-expand-4").style.borderRadius = "0em 10em"
+                    document.getElementById("left-arrow-4").style.opacity = "0"
+                    document.getElementById("right-arrow-4").style.opacity = "0"
+                    document.getElementById("caro-4").style.display = "none"
+                  }
+                }
+
+              </script>
 
               <!-- FIFTH BLOCK   -->
 
@@ -964,14 +1117,15 @@
                     <div class="subtitles">A phone mount that's built different </div>
                   </div>
                 </div>
-                <div onclick="expandImage()" class="brands-infos-container" id="freak-first" style="opacity: 1;">
+
+                <div class="brands-infos-container" id="freak-first" style="opacity: 1;">
                   <div id="image-to-expand" data-w-id="e2e85d72-3bf5-9b4c-fd5c-95ebac114348"
                     style="background-image: url(&quot;https://assets.website-files.com/6113db8b6628664e9136dbfd/61295536426e80295e463c47_Freakmount_3.jpg&quot;); width: 33%; height: 31vw;"
                     class="brands-image shape-add-5">
                     <div data-delay="4000" data-animation="fade" class="slider w-slider" data-autoplay="false"
                       data-easing="ease" data-hide-arrows="false" data-disable-swipe="false"
                       data-w-id="2eb48576-1294-f109-bc6c-d840bf77f34a" data-autoplay-limit="0" data-nav-spacing="3"
-                      data-duration="400" data-infinite="true" style="display: none; opacity: 0;" role="region"
+                      data-duration="400" data-infinite="true" style="display: none;" id="caro" role="region"
                       aria-label="carousel">
                       <div class="w-slider-mask" id="w-slider-mask-4">
                         <div
@@ -989,14 +1143,17 @@
                         <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
                       </div>
                       <div class="left-arrow w-slider-arrow-left" role="button" tabindex="0"
-                        aria-controls="w-slider-mask-4" aria-label="previous slide"><img
+                        aria-controls="w-slider-mask-4" aria-label="previous slide">
+                        <img style="opacity: 1;" id="left-arrow"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140540ffa05a338e2878d4_Arrow.png"
-                          loading="lazy" alt="" class="image-3"></div>
+                          loading="lazy" alt="" class="image-3">
+                      </div>
                       <div class="right-arrow w-slider-arrow-right" role="button" tabindex="0"
                         aria-controls="w-slider-mask-4" aria-label="next slide">
-                        <img id="right-arrow-side" style="opacity: 0;"
+                        <img id="right-arrow" style="opacity: 0;"
                           src="https://assets.website-files.com/610c251287ec86f4848cd877/61140596d72abbbb9771c369_Arrow-right.png"
-                          loading="lazy" alt="" class="image-3"></div>
+                          loading="lazy" alt="" class="image-3">
+                      </div>
                       <div class="slide-nav w-slider-nav w-round">
                         <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 4"
                           aria-pressed="true" role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;">
@@ -1009,6 +1166,18 @@
                           role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
                       </div>
                     </div>
+
+                    <div data-w-id="136261a0-daa6-02fd-54cc-bebbcd2def88" class="close-image-slider">
+                      <div data-is-ix2-target="1" class="lottie-openphoto" id="image-bottom-arrows"
+                        data-w-id="bb97ed5d-048e-7f12-9032-6f2473d2b09c" data-animation-type="lottie"
+                        data-src="https://assets.website-files.com/610c251287ec86f4848cd877/6129346698e64b0335459588_FlechesPhotos.json"
+                        data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg"
+                        data-default-duration="0.9342675628807704" data-duration="0" data-ix2-initial-state="0">
+                        <img onclick="expandImage()" src="/src/assets/image/arrows.png" />
+                      </div>
+                    </div>
+
+
                     <div class="w-embed">
                       <div class="shape-5"></div>
                     </div>
@@ -1046,12 +1215,23 @@
                 </div>
 
                 <script>
-                  function expandImage(){
-                    document.getElementById("image-to-expand").style.width = "950px"
-                    document.getElementById("image-to-expand").style.height = "440px"
-                    document.getElementById("image-to-expand").style.borderRadius = "50px"
-                    document.getElementById("right-arrow-side").style.opacity = "1"
-                    document.getElementById("right-arrow-side").style.zIndex = "1000"
+
+                  function expandImage() {
+                    if (document.getElementById("right-arrow").style.opacity === "0") {
+                      document.getElementById("image-to-expand").style.width = "100%"
+                      document.getElementById("image-to-expand").style.height = "45vw"
+                      document.getElementById("image-to-expand").style.borderRadius = "50px"
+                      document.getElementById("left-arrow").style.opacity = "1"
+                      document.getElementById("right-arrow").style.opacity = "1"
+                      document.getElementById("caro").style.display = "block"
+                    } else {
+                      document.getElementById("image-to-expand").style.width = "30%"
+                      document.getElementById("image-to-expand").style.height = "31vw"
+                      document.getElementById("image-to-expand").style.borderRadius = "20em 0em 0em"
+                      document.getElementById("left-arrow").style.opacity = "0"
+                      document.getElementById("right-arrow").style.opacity = "0"
+                      document.getElementById("caro").style.display = "none"
+                    }
                   }
                 </script>
                 <div class="line-curved" id="line-change5" onclick="changeOpacity2()">
